@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {"id":"google-research","name":"Google Research","kind":"rss","url":"https://research.google/blog/rss/","reuse":"Collect public feed titles and links only. Refer to articles when writing original explanations; do not redistribute article text or infer interview provenance.","allowedHosts":["research.google"]},
+    {"id":"scikit-learn-blog","name":"scikit-learn blog","kind":"rss","url":"https://blog.scikit-learn.org/feed.xml","reuse":"Collect public Atom feed titles and links only. Preserve attribution; no article republication.","allowedHosts":["blog.scikit-learn.org"]},
+    {"id":"microsoft-lora","name":"Microsoft LoRA","kind":"github","url":"https://github.com/microsoft/LoRA/blob/main/README.md","reuse":"Repository is MIT licensed. Collect document title and link only. Cite the original paper for explanations; company authorship does not establish interview provenance.","allowedHosts":["github.com"]}
+  ]
+}

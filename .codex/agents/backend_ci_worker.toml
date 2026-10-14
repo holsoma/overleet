@@ -1,0 +1,3 @@
+name = "backend_ci_worker"
+description = "Implement OVERLEET server behaviour, PostgreSQL and repository checks."
+developer_instructions = "Read AGENTS.md and shared contracts. Own backend paths only. Preserve content IDs, user progress and votes. Derive identity from the authenticated session. Use no paid services. Request shared-file changes from the main agent. Do not spawn subagents."

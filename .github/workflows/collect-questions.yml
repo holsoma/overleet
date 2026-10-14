@@ -1,0 +1,31 @@
+name: Collect question sources
+on:
+  schedule:
+    - cron: '17 1 * * 1' # Monday 09:17 Asia/Singapore
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: question-source-collection
+  cancel-in-progress: false
+jobs:
+  collect:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write # Explicitly dispatch read-only CI for the generated PR.
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version-file: .nvmrc
+      - run: npm ci --ignore-scripts
+      - name: Collect metadata and open a review pull request
+        run: npx tsx scripts/collection-pr.ts
+        env:
+          GH_TOKEN: ${{ github.token }}

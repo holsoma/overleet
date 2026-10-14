@@ -1,0 +1,7 @@
+# OVERLEET visual system
+
+The agreed dark interface supports a candidate reading questions and writing explanations during an evening study session. Use a restrained charcoal palette with a muted lime accent for current navigation and primary actions. Keep neutral colours slightly tinted.
+
+Use system sans-serif text, tabular numerals for counts and a monospace wordmark. The desktop shell has a slim navigation rail and a wide question table. A single daily-question strip sits above the table. Filters use ordinary labelled controls. The question view has two reading/writing columns, stacked on small screens. Avoid large marketing headlines, gradients, glass, decorative charts and nested cards.
+
+Use 1px separators, restrained corner radii, a 4px spacing base, 14-16px interface text and 65-75ch answer prose. State transitions are brief, respect reduced motion and never delay input. Provide consistent focus, hover, disabled, loading and error states.

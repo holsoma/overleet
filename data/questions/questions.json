@@ -1,0 +1,661 @@
+{
+  "schemaVersion": 1,
+  "questions": [
+    {
+      "id": "train-validation-test",
+      "title": "What belongs in the training, validation and test sets?",
+      "difficulty": "easy",
+      "category": "ml_theory",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "You are choosing a classifier and its decision threshold. What should the training, validation and test sets each be used for, and when would a random split be inappropriate?",
+      "tldrAnswer": "Fit model parameters on training data, make modelling choices on validation data, then assess the frozen procedure once on a held-out test set. Split by time or group when that matches future use.",
+      "detailedAnswerMarkdown": "A model's evaluation should imitate the situation in which it will be used. The training set supplies examples for fitting parameters. The validation set supports choices such as features, model family, regularisation strength and the classification threshold. The test set estimates the performance of the completed selection procedure on data that did not influence those choices.\n\nIf you repeatedly inspect test results and then modify the model, the test set has become another validation set. The resulting estimate can favour choices that happened to fit its particular examples. Cross-validation can make validation more efficient, but any final test set should remain separate from that process.\n\nAll fitted preprocessing belongs inside the training procedure. For example, fit a standardisation mean on training examples, then apply that same mean to validation and test examples.\n\n### Assumptions\n\nA random split is suitable only when its observations reasonably represent the independence and distribution expected at deployment. For future forecasting, train on earlier observations and evaluate on later ones. For several records from each patient or customer, split whole people if the intended task concerns previously unseen people. Preserve important class proportions when appropriate, without violating those boundaries.\n\n### Common mistake\n\nCalling a split a test set does not protect it from leakage. Choosing a threshold using its labels already uses information from that set, even if the model's fitted weights never change.",
+      "keyTakeaways": [
+        "Distinguish parameter fitting, model selection and final evaluation.",
+        "Explain why threshold selection uses validation data.",
+        "Match time or group splitting to the intended deployment.",
+        "Fit preprocessing only within each training split."
+      ],
+      "sources": [
+        {
+          "name": "scikit-learn: Cross-validation",
+          "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "precision-recall-tradeoff",
+      "title": "How do precision and recall respond to a threshold?",
+      "difficulty": "easy",
+      "category": "ml_theory",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "A fraud model returns a score for each payment. Explain precision and recall, how the decision threshold affects them, and why accuracy alone can be misleading.",
+      "tldrAnswer": "Precision measures the fraction of flagged payments that are fraud; recall measures the fraction of frauds that are flagged. A higher threshold cannot increase recall on fixed scores, but precision need not rise monotonically.",
+      "detailedAnswerMarkdown": "For a chosen decision threshold, let TP, FP and FN denote true positives, false positives and false negatives. Then\n\n$$\n\\mathrm{precision}=\\frac{\\mathrm{TP}}{\\mathrm{TP}+\\mathrm{FP}},\n\\qquad\n\\mathrm{recall}=\\frac{\\mathrm{TP}}{\\mathrm{TP}+\\mathrm{FN}}.\n$$\n\nPrecision asks how reliable a fraud alert is. Recall asks how much fraud the system catches. These quantities answer different operational questions: the first affects investigation workload, while the second affects missed fraud.\n\nOn a fixed labelled dataset, increasing the threshold removes some positive predictions. True positives cannot increase, so recall cannot increase. Precision often improves if higher scores rank fraud well, but it is not mathematically guaranteed to increase at every threshold. Removing a true positive can reduce precision. If there are no predicted positives, precision has a zero denominator and requires an explicit reporting convention.\n\n### Assumptions\n\nThe labels, score ordering and evaluation population are fixed for this comparison. The evaluation period should reflect the population where the threshold will be used. Precision depends on fraud prevalence, so a value measured on a deliberately balanced dataset will not generally describe production alerts.\n\n### Common mistake\n\nOptimising accuracy can hide a useless system when fraud is rare. Predicting every payment as legitimate may have high accuracy and zero fraud recall. Choose a threshold using validation data and the costs or capacity constraints of the actual decision process, then evaluate it on held-out data.",
+      "keyTakeaways": [
+        "Define precision and recall with the correct denominators.",
+        "Explain the guaranteed recall change and the non-guaranteed precision change.",
+        "Connect the threshold to investigation capacity or error costs.",
+        "Explain why class prevalence affects precision and accuracy."
+      ],
+      "sources": [
+        {
+          "name": "Google Machine Learning Crash Course: Accuracy, precision and recall",
+          "url": "https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "regularisation-purpose",
+      "title": "Why can regularisation improve prediction?",
+      "difficulty": "easy",
+      "category": "ml_theory",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "What does regularisation change during model fitting? Explain the role of its strength and distinguish L1 and L2 penalties.",
+      "tldrAnswer": "Regularisation penalises particular model behaviours during fitting. It can reduce sensitivity to noise at the cost of greater bias; its strength should be chosen on validation data.",
+      "detailedAnswerMarkdown": "A common fitting objective combines empirical loss with a penalty:\n\n$$\n\\hat{\\theta}=\\arg\\min_\\theta\n\\left\\{\\frac{1}{n}\\sum_{i=1}^{n}\\ell(y_i,f_\\theta(x_i))\n+\\lambda R(\\theta)\\right\\}.\n$$\n\nThe first term rewards fitting the training examples. The second discourages parameter values specified by the penalty. Increasing $\\lambda$ makes that preference stronger. A regularised model may fit the training data less closely yet predict new examples better because it reacts less strongly to accidental variation in the sample.\n\nFor linear models, an L2 penalty sums squared coefficients and tends to shrink them smoothly. An L1 penalty sums absolute coefficients and can produce exact zeros, depending on the model and optimisation problem. These are different assumptions about useful solutions, not guarantees that one penalty will win.\n\n### Assumptions\n\nThe penalty must make sense for the model and feature scales. Scaling a feature changes the coefficient required to represent the same relationship, which changes its penalty unless preprocessing accounts for scale. Intercepts are often excluded from coefficient penalties. The definition of the loss, including whether it is averaged or summed, also changes the numerical interpretation of $\\lambda$.\n\n### Common mistake\n\nStronger regularisation is not always better. Too much can remove useful signal and cause underfitting. Select its strength inside validation or cross-validation, including preprocessing within each training split. Keep the final test set out of that selection.",
+      "keyTakeaways": [
+        "Explain the loss-plus-penalty objective and the role of its strength.",
+        "Describe the different effects of L1 and L2 penalties.",
+        "Connect regularisation to the bias and variance trade-off.",
+        "Discuss feature scaling and validation without claiming guaranteed improvement."
+      ],
+      "sources": [
+        {
+          "name": "Google Machine Learning Crash Course: Model complexity and regularisation",
+          "url": "https://developers.google.com/machine-learning/crash-course/overfitting/model-complexity",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "preprocessing-data-leakage",
+      "title": "Where can preprocessing leak information?",
+      "difficulty": "medium",
+      "category": "ml_theory",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "You standardise all examples, select the ten features most correlated with the target, and then run cross-validation. What is wrong with this procedure, and how should it be changed?",
+      "tldrAnswer": "Both fitted transformations must be learned separately within each training fold. Use a pipeline so validation examples cannot influence scaling or supervised feature selection.",
+      "detailedAnswerMarkdown": "Cross-validation is meant to evaluate a complete training procedure on examples that procedure has not used. Fitting transformations before forming the folds breaks that separation. The scaler uses the held-out feature distribution; supervised feature selection also uses held-out labels. The latter can select features that look useful partly because of random correlations in the validation examples.\n\nFor each fold, fit the scaler on the training portion, fit the feature selector using that portion and its labels, then fit the model. Apply the already fitted transformations to the validation portion without refitting them. A pipeline places these operations inside the estimator that cross-validation clones and fits.\n\nThe same boundary applies to imputation, learned encodings, dimensionality reduction and data-driven outlier rules. Target encodings may additionally require training-only internal folds to avoid directly encoding each training row's own label.\n\n### Assumptions\n\nThe objective is to predict previously unseen observations under the proposed split scheme. Some transductive tasks explicitly permit access to all unlabelled features, but that is a different evaluation contract and must be stated. For dependent or temporal data, a pipeline alone is insufficient: the split itself must also respect those dependencies.\n\n### Common mistake\n\nOnly checking whether the final estimator saw validation labels is too narrow. Any earlier choice influenced by validation examples can alter the fitted procedure. Nested cross-validation is needed when an outer evaluation is intended to assess a procedure that itself tunes hyperparameters by cross-validation.",
+      "keyTakeaways": [
+        "Identify leakage from both scaling and supervised feature selection.",
+        "Fit every learned preprocessing step inside each training fold.",
+        "Explain why pipelines do not fix an inappropriate time or group split.",
+        "Distinguish inner model selection from outer evaluation."
+      ],
+      "sources": [
+        {
+          "name": "scikit-learn: Common pitfalls and recommended practices",
+          "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "bias-variance-decomposition",
+      "title": "What does the bias-variance decomposition actually assume?",
+      "difficulty": "medium",
+      "category": "ml_theory",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "State the bias-variance decomposition for squared prediction error at a fixed input. What expectations does it involve, and what does it say about increasing model flexibility?",
+      "tldrAnswer": "For squared loss, expected test error separates into squared bias, prediction variance across training samples, and irreducible noise. More flexibility can alter both bias and variance, but no universal monotonic rule applies.",
+      "detailedAnswerMarkdown": "Let $D$ be a random training dataset and let a fresh response at input $x$ satisfy $Y=f(x)+\\varepsilon$, with conditional mean-zero noise. Under the assumptions below,\n\n$$\n\\mathbb{E}_{D,Y}\\!\\left[(Y-\\hat f_D(x))^2\\mid x\\right]\n=\n\\left(\\mathbb{E}_D[\\hat f_D(x)]-f(x)\\right)^2\n+\\operatorname{Var}_D(\\hat f_D(x))\n+\\operatorname{Var}(Y\\mid x).\n$$\n\nThe first term is squared bias: how far the average fitted prediction lies from the true conditional mean. The second is variance: how much that prediction changes when the training sample changes. The final term is response variation remaining even if the conditional mean were known.\n\nThe decomposition describes an expectation over repeated training samples and fresh test noise. It does not partition the residual from a single fitted model into three directly observed numbers. Integrating over the input distribution gives a population-average decomposition.\n\n### Assumptions\n\nUse squared loss, finite second moments, an independent test response, and a training-sample distribution that is held fixed across the comparison. Here $f(x)=\\mathbb{E}[Y\\mid x]$; it need not belong to the fitted model class.\n\n### Common mistake\n\nThe decomposition does not prove that every larger model must have lower bias and higher variance. Regularisation, optimisation, sample size and the way model classes are enlarged all matter. Nor can the same formula be transferred unchanged to classification error or cross-entropy. Assess the actual training procedure using an appropriate validation design.",
+      "keyTakeaways": [
+        "State the three terms under squared loss.",
+        "Identify the expectation over repeated training datasets.",
+        "State independent test noise and finite-second-moment assumptions.",
+        "Avoid claiming a universal complexity curve or applying the formula to every loss."
+      ],
+      "sources": [
+        {
+          "name": "scikit-learn: Bias-variance decomposition example",
+          "url": "https://scikit-learn.org/stable/auto_examples/ensemble/plot_bias_variance.html",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "probability-calibration",
+      "title": "How can a classifier rank well but be poorly calibrated?",
+      "difficulty": "medium",
+      "category": "ml_theory",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "A classifier has strong ROC AUC, but only 60% of examples assigned probability 0.9 are positive. Explain the issue and how you would assess and improve it.",
+      "tldrAnswer": "The scores may rank examples well while overstating probabilities. Assess calibration on held-out data and fit any recalibration using data separate from base-model fitting and final evaluation.",
+      "detailedAnswerMarkdown": "Discrimination concerns ordering: are positives generally ranked above negatives? Calibration concerns numerical probability meaning. For a calibrated predictor $p(X)$, the population condition is\n\n$$\n\\mathbb{E}[Y\\mid p(X)]=p(X).\n$$\n\nIf examples assigned probabilities near 0.9 are positive only about 60% of the time, those predictions appear overconfident. Strong ROC AUC does not rule this out because AUC is unchanged by a strictly increasing transformation of the scores.\n\nInspect a reliability diagram, comparing mean predicted probabilities with observed event frequencies in bins. Include bin counts or uncertainty because small bins can be noisy, and conclusions can depend on binning. Proper scoring rules such as log loss and Brier score provide complementary summaries, but they reflect more than calibration alone.\n\n### Assumptions\n\nThe evaluation observations and labels represent the intended deployment population. Calibration measured before a change in prevalence or data collection may not persist afterwards. Also, a probability bin need not be calibrated separately within every demographic or operational subgroup even if aggregate calibration looks good.\n\n### Common mistake\n\nFitting a calibration map on the base model's training predictions can overfit. Use a separate calibration set or an appropriate cross-validation procedure, then evaluate the full process on untouched data. Sigmoid calibration imposes a simple shape; isotonic calibration is more flexible and needs enough data. Neither creates missing predictive information or guarantees improvement on new data.",
+      "keyTakeaways": [
+        "Distinguish ranking quality from probability accuracy.",
+        "Explain the population calibration condition and bin uncertainty.",
+        "Use held-out data for both calibration fitting and final assessment.",
+        "Discuss distribution changes and subgroup limitations."
+      ],
+      "sources": [
+        {
+          "name": "scikit-learn: Probability calibration",
+          "url": "https://scikit-learn.org/stable/modules/calibration.html",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "pca-objective-and-limits",
+      "title": "What does PCA optimise, and what does it ignore?",
+      "difficulty": "hard",
+      "category": "ml_theory",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "For centred data, explain the optimisation solved by the first principal component and the reconstruction objective of a rank-k PCA projection. Why might PCA remove useful predictive information?",
+      "tldrAnswer": "PCA finds orthogonal directions of maximum feature variance, equivalently the best rank-k orthogonal reconstruction under squared error. It ignores the target, so high variance need not mean high predictive value.",
+      "detailedAnswerMarkdown": "For centred data with covariance matrix $S$, the first principal direction solves\n\n$$\nv_1=\\arg\\max_{\\|v\\|_2=1}v^\\top S v.\n$$\n\nIt is an eigenvector associated with the largest eigenvalue. Later directions maximise the remaining variance subject to orthogonality. Their signs are arbitrary; tied eigenvalues can also make individual directions non-unique.\n\nFor an $n$ by $d$ centred matrix $X$, the first $k$ directions form an orthonormal matrix $V_k$. Their projection minimises\n\n$$\n\\|X-XVV^\\top\\|_F^2\n\\quad\\text{subject to }V^\\top V=I_k.\n$$\n\nThus retained variance and squared reconstruction error express the same optimisation for this orthogonal linear projection. This does not establish that the projection is best for a downstream supervised task.\n\n### Assumptions\n\nThis formulation uses Euclidean geometry and centred numeric features. Scaling defines which directions have large variance: a feature measured in thousands can dominate one measured in fractions. Standardisation can be appropriate, but it changes the objective rather than merely improving computation. Fit both centring and PCA within training data.\n\n### Common mistake\n\nA low-variance direction can strongly predict the outcome while a high-variance direction reflects nuisance variation. Selecting components by an explained-variance threshold alone can therefore discard useful signal. Evaluate the number of components within the downstream validation procedure. Outliers and nonlinear structure can also limit the usefulness of ordinary PCA.",
+      "keyTakeaways": [
+        "Connect the Rayleigh-quotient objective to covariance eigenvectors.",
+        "State the orthogonal squared-reconstruction objective.",
+        "Explain how centring and scaling change PCA.",
+        "Explain why retained feature variance need not preserve target information."
+      ],
+      "sources": [
+        {
+          "name": "scikit-learn: Principal component analysis",
+          "url": "https://scikit-learn.org/stable/modules/decomposition.html#pca",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "bagging-correlated-errors",
+      "title": "Why does correlation limit the benefit of bagging?",
+      "difficulty": "hard",
+      "category": "ml_theory",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "Suppose M regression estimators have equal variance and the same pairwise correlation. Derive the variance of their average, and explain what this says about bagging and random forests.",
+      "tldrAnswer": "The average has variance equal to a shared-correlation term plus a term that shrinks with ensemble size. More estimators cannot remove variation common to all of them.",
+      "detailedAnswerMarkdown": "At a fixed input, let each estimator have variance $\\sigma^2$ across repeated training and algorithmic randomness. Suppose every distinct pair has correlation $\\rho$. For the average $\\bar f=M^{-1}\\sum_{m=1}^{M}\\hat f_m$,\n\n$$\n\\operatorname{Var}(\\bar f)\n=\\frac{M\\sigma^2+M(M-1)\\rho\\sigma^2}{M^2}\n=\\sigma^2\\left(\\rho+\\frac{1-\\rho}{M}\\right).\n$$\n\nWhen $\\rho=0$, variance falls as $1/M$. With a fixed positive $\\rho$, the limiting variance is $\\rho\\sigma^2$. Averaging cannot eliminate a component of variation that the estimators share.\n\nBagging fits estimators to bootstrap samples. It often helps unstable estimators because small changes in training data can produce different fits whose fluctuations partly cancel. Random forests additionally vary the features considered at splits, which can reduce dependence among trees. This may also change each tree's variance and bias, so the correlation formula alone does not determine overall prediction error.\n\n### Assumptions\n\nThe calculation concerns real-valued regression predictions with equal finite variances and equal pairwise correlations. Actual ensembles may violate those simplifications; the general calculation sums all variances and covariances. Correlations must form a valid covariance matrix, so an arbitrary negative constant cannot be held fixed while ensemble size grows without limit.\n\n### Common mistake\n\nAdding trees is not equivalent to adding independent data. The trees still reuse the same observed sample. Bagging does not automatically remove bias, and the formula is not directly a formula for majority-vote classification error.",
+      "keyTakeaways": [
+        "Derive the average's variance by summing covariances.",
+        "Explain the positive-correlation variance floor.",
+        "Relate bootstrap sampling and feature sampling to dependence between estimators.",
+        "State the equal-variance assumption and distinguish variance from total error."
+      ],
+      "sources": [
+        {
+          "name": "scikit-learn: Ensembles",
+          "url": "https://scikit-learn.org/stable/modules/ensemble.html",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "confidence-interval-meaning",
+      "title": "What does a 95% confidence interval mean?",
+      "difficulty": "easy",
+      "category": "statistics",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "A study reports a 95% confidence interval from 12 to 18 for a population mean. Explain what the confidence level means and what it does not mean.",
+      "tldrAnswer": "The procedure covers the fixed population mean in 95% of repeated samples under its assumptions. It does not assign a 95% frequentist probability to the mean lying in this already computed interval.",
+      "detailedAnswerMarkdown": "A confidence interval is a random interval before the data are observed. A 95% confidence procedure is designed so that, over repeated samples drawn under its assumptions, 95% of the resulting intervals contain the fixed population parameter. Once the interval from 12 to 18 has been calculated, it either contains that parameter or it does not.\n\nFor independent normal observations with unknown variance, an interval for the mean is\n\n$$\n\\bar x \\pm t_{0.975,n-1}\\frac{s}{\\sqrt n}.\n$$\n\nThe multiplier comes from the Student t distribution, and $s/\\sqrt n$ estimates the standard error of the sample mean. Larger samples usually narrow the interval when the sampling process and variability stay comparable. Wider confidence levels produce wider intervals using the same data and method.\n\n### Assumptions\n\nCoverage depends on the sampling design and interval construction. The displayed t interval is exact under independent normal sampling; it may be approximately useful under broader conditions with enough observations. Selection bias, dependence and unmodelled measurement problems are not repaired by a confidence label.\n\n### Common mistake\n\nThe interval does not mean that 95% of individual observations lie between 12 and 18. That is a different question about the outcome distribution. It is also not a Bayesian credible interval, which assigns probability to parameter values under a specified prior and likelihood. Report the estimate, interval and sampling assumptions together.",
+      "keyTakeaways": [
+        "Explain repeated-sampling coverage for a fixed parameter.",
+        "Distinguish a mean interval from a range for individual outcomes.",
+        "Relate interval width to standard error and confidence level.",
+        "State that coverage relies on the sampling and modelling assumptions."
+      ],
+      "sources": [
+        {
+          "name": "NIST Engineering Statistics Handbook: Confidence limits for the mean",
+          "url": "https://itl.nist.gov/div898/handbook/eda/section3/eda352.htm",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "p-value-meaning",
+      "title": "What does a p-value tell you?",
+      "difficulty": "easy",
+      "category": "statistics",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "A valid two-sided test of equal population means produces p = 0.03. Explain this result without treating it as the probability that the null hypothesis is true.",
+      "tldrAnswer": "Under the null model and the test's assumptions, results at least as extreme as the observed test statistic have probability 0.03. This is not the probability of the null, an effect size or a replication guarantee.",
+      "detailedAnswerMarkdown": "A p-value compares the observed test statistic with its distribution under a specified null hypothesis. For a two-sided test with a symmetric continuous null distribution, one common form is\n\n$$\np=\\Pr_{H_0}\\left(|T|\\geq |t_{\\mathrm{obs}}|\\right).\n$$\n\nThe definition of “at least as extreme” comes from the chosen test and alternative hypothesis. A value of 0.03 means the observed statistic lies in a tail region that has probability 0.03 under that null model. It does not give a probability distribution over competing hypotheses.\n\nIf a significance threshold of 0.05 was chosen in advance and the testing procedure is valid, this result leads to rejection of the null. That decision still has an error rate across repeated experiments; it is not proof that an effect exists in this particular study.\n\n### Assumptions\n\nThe null distribution must match the design and analysis, including independence or an appropriate treatment of dependence. The test choice, outcome selection and stopping rule matter. Searching many outcomes or repeatedly stopping when a small p-value appears can invalidate a nominal threshold unless the procedure accounts for that search.\n\n### Common mistake\n\nA small p-value is not evidence that an effect is large or useful. With enough data, a tiny difference may be statistically detectable. Report an effect estimate and uncertainty, and compare them with a practical threshold. Conversely, a large p-value does not prove equality; a study may simply have low power.",
+      "keyTakeaways": [
+        "Interpret the tail probability conditional on the null model.",
+        "Reject the claim that the p-value is the probability of the null.",
+        "Separate statistical significance from effect size and practical value.",
+        "Explain why selection and stopping rules affect validity."
+      ],
+      "sources": [
+        {
+          "name": "SciPy: Independent-sample t-test and p-values",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "central-limit-theorem",
+      "title": "When does the central limit theorem justify a normal approximation?",
+      "difficulty": "medium",
+      "category": "statistics",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "State a standard central limit theorem for a sample mean. Explain why neither a sample size of 30 nor a large dataset alone guarantees a useful normal approximation.",
+      "tldrAnswer": "For independent, identically distributed observations with finite non-zero variance, the standardised sample mean converges in distribution to a standard normal as sample size grows. Approximation quality depends on the distribution and sampling process.",
+      "detailedAnswerMarkdown": "Let $X_1,\\ldots,X_n$ be independent and identically distributed with mean $\\mu$ and finite variance $0<\\sigma^2<\\infty$. The classical central limit theorem states\n\n$$\n\\frac{\\sqrt n(\\bar X_n-\\mu)}{\\sigma}\n\\xrightarrow{d}N(0,1).\n$$\n\nIt concerns the sampling distribution of an average, not the distribution of individual observations. A highly skewed outcome can remain highly skewed even when an average of many independent observations is approximately normal.\n\nThe theorem is asymptotic and does not supply a universal adequate sample size. Strong skewness or rare, very large observations can make convergence slow. With a finite third absolute moment, quantitative bounds can relate approximation error to that moment and sample size, but even those bounds need not be tight for the application.\n\n### Assumptions\n\nIndependence and finite variance are essential to this particular statement. A Cauchy distribution does not satisfy the variance assumption, and its sample mean does not become a concentrated normal estimator. Dependent observations need an appropriate theorem and variance calculation. Thousands of repeated measurements on a small number of correlated users do not behave like thousands of independent users.\n\n### Common mistake\n\n“More than 30 observations” is not a general proof that a normal confidence interval is valid. Inspect the design, tail behaviour and statistic. The central limit theorem for a mean does not automatically establish normality for a maximum, ratio or any other statistic. Such quantities require their own arguments.",
+      "keyTakeaways": [
+        "State independence, identical distribution and finite non-zero variance.",
+        "Identify the standardised mean as the quantity converging to normality.",
+        "Explain why skewness and tails affect finite-sample accuracy.",
+        "Distinguish observation count from independent information."
+      ],
+      "sources": [
+        {
+          "name": "Penn State STAT 500: Sampling distributions and the central limit theorem",
+          "url": "https://online.stat.psu.edu/stat500/Lesson04",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "welch-versus-pooled-test",
+      "title": "When would you choose Welch's t-test?",
+      "difficulty": "medium",
+      "category": "statistics",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "Two independent groups have different sample sizes and visibly different spreads. Compare Welch's t-test with the pooled-variance t-test, including their assumptions.",
+      "tldrAnswer": "Welch's test estimates the two variance contributions separately and adjusts the degrees of freedom. The pooled test assumes a common population variance, which can be unsafe when unequal variances combine with unequal sample sizes.",
+      "detailedAnswerMarkdown": "For two independent groups, Welch's statistic is\n\n$$\nT=\\frac{\\bar X_1-\\bar X_2-\\Delta_0}\n{\\sqrt{s_1^2/n_1+s_2^2/n_2}},\n$$\n\nwhere $\\Delta_0$ is the mean difference under the null. Its reference distribution uses approximate degrees of freedom:\n\n$$\n\\nu\\approx\n\\frac{(s_1^2/n_1+s_2^2/n_2)^2}\n{(s_1^2/n_1)^2/(n_1-1)+(s_2^2/n_2)^2/(n_2-1)}.\n$$\n\nThe pooled test instead estimates one common variance from both groups, then uses that estimate in the standard error. Under independent normal sampling with equal population variances, its Student t reference distribution is exact. If variances differ, particularly with unbalanced group sizes, the pooled standard error can be misleading.\n\nWelch's test avoids the equal-variance requirement and is a reasonable default for comparing independent means when that requirement lacks support. It does not require the sample sizes to be equal.\n\n### Assumptions\n\nObservations should be independent within and across the groups, with meaningful finite population variances. Approximate inference can be poor for small samples with severe skewness or extreme observations. A matched or before-and-after design requires analysis of the pairing rather than either independent-samples test.\n\n### Common mistake\n\nChoosing the pooled test solely because a preliminary variance test was non-significant does not establish equal variances. That preliminary test may have little power and makes the overall decision procedure more complicated. Also, Welch's test compares means: it does not test whether two complete distributions are identical.",
+      "keyTakeaways": [
+        "Write the separate variance contributions in Welch's standard error.",
+        "Explain the pooled test's equal-population-variance assumption.",
+        "Identify independence, pairing and small-sample limitations.",
+        "Distinguish a comparison of means from a comparison of entire distributions."
+      ],
+      "sources": [
+        {
+          "name": "SciPy: Welch and pooled independent-sample t-tests",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "type-errors-and-power",
+      "title": "How are significance, power and sample size related?",
+      "difficulty": "medium",
+      "category": "statistics",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "Explain Type I error, Type II error and power. Why does a study's power need a specified alternative effect rather than just a significance level?",
+      "tldrAnswer": "Type I error rejects a true null; Type II error misses a specified alternative. Power is the probability of rejecting at that alternative and depends on effect size, variability, sample size and the analysis.",
+      "detailedAnswerMarkdown": "A Type I error occurs when a test rejects a true null hypothesis. A test with significance level $\\alpha$ controls that probability at or below $\\alpha$ under its null assumptions. A Type II error occurs when the test fails to reject despite a particular alternative being true. If its probability at effect $\\delta$ is $\\beta(\\delta)$, power is\n\n$$\n\\operatorname{Power}(\\delta)=1-\\beta(\\delta).\n$$\n\nPower is a curve over possible effects, not a single universal property of a test. Larger effects are usually easier to detect. More independent observations generally reduce standard error and improve power at a fixed effect and significance level. Greater outcome variability usually does the opposite.\n\nFor a fixed sample size, making the rejection rule more demanding usually lowers Type I error while also reducing power. Design therefore requires a practical effect size, an error threshold, a target power and assumptions about variability.\n\n### Assumptions\n\nThese error probabilities concern repeated applications of a specified design and decision rule. They assume that the sampling, model and stopping rules used in the calculation match the actual study. Dependence, missing data or a different allocation ratio can change the achieved power.\n\n### Common mistake\n\nFailure to reject does not prove that the null is true. The study might have been unable to detect an effect that still matters. Examine a confidence interval relative to meaningful effects. Computing “observed power” from the same estimated effect generally adds little beyond the test result and should not replace prospective planning.",
+      "keyTakeaways": [
+        "Define both error types and power without reversing them.",
+        "State that power is evaluated at a specified alternative effect.",
+        "Relate sample size, variability and the rejection threshold to power.",
+        "Explain why non-significance does not establish no meaningful effect."
+      ],
+      "sources": [
+        {
+          "name": "NIST Engineering Statistics Handbook: Hypothesis tests",
+          "url": "https://www.itl.nist.gov/div898/handbook/prc/section1/prc13.htm",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "multiple-testing-bonferroni",
+      "title": "Why does Bonferroni work without independence?",
+      "difficulty": "hard",
+      "category": "statistics",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "You test m hypotheses and want the chance of any false rejection to be at most alpha. Derive the Bonferroni rule and state what it controls.",
+      "tldrAnswer": "Test each hypothesis at alpha divided by m. The union bound controls the family-wise probability of at least one false rejection without requiring independence, provided each null p-value is valid.",
+      "detailedAnswerMarkdown": "Let $I_0$ index the true null hypotheses among a pre-specified family of $m$ tests. Reject test $j$ when $p_j\\leq\\alpha/m$. If each true-null p-value satisfies $\\Pr(p_j\\leq u)\\leq u$, then\n\n$$\n\\Pr(\\text{at least one false rejection})\n\\leq\n\\sum_{j\\in I_0}\\Pr(p_j\\leq\\alpha/m)\n\\leq\n|I_0|\\alpha/m\n\\leq\\alpha.\n$$\n\nThe first inequality is the union bound, which does not require independent events. This gives family-wise error rate control under arbitrary dependence among the tests. Equivalently, compare adjusted p-values $\\min(1,mp_j)$ with $\\alpha$.\n\nThe price is reduced power: a family with many tests uses a small threshold for each. Strong dependence or discrete p-values can make the rule conservative. Other procedures can improve power while controlling an explicitly chosen error criterion, but family-wise error and false discovery rate are different targets.\n\n### Assumptions\n\nEach p-value must already be valid for its own null, including its sampling design and stopping rule. Define the family to include the hypotheses from which conclusions will be selected. A correction for ten reported tests does not cover an undisclosed search through hundreds of alternatives.\n\n### Common mistake\n\nBonferroni does not mean that the probability of any particular reported result being false is $\\alpha/m$. It controls a repeated-sampling event across the family. It also cannot repair invalid p-values from confounding, selective stopping or an incorrect variance model merely by making them numerically larger.",
+      "keyTakeaways": [
+        "Use the union bound over the true null hypotheses.",
+        "Explain why independence is unnecessary.",
+        "Distinguish family-wise error from false discovery rate.",
+        "Require valid individual p-values and an honest definition of the test family."
+      ],
+      "sources": [
+        {
+          "name": "NIST Engineering Statistics Handbook: Bonferroni method",
+          "url": "https://www.itl.nist.gov/div898/handbook/prc/section4/prc473.htm",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "bootstrap-validity",
+      "title": "When can a bootstrap confidence interval fail?",
+      "difficulty": "hard",
+      "category": "statistics",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "Explain the ordinary nonparametric bootstrap for a statistic. Give reasons why a large number of bootstrap replicates does not by itself make the resulting confidence interval reliable.",
+      "tldrAnswer": "The bootstrap resamples observations from the empirical distribution to approximate a statistic's sampling distribution. More replicates reduce simulation error, but cannot fix an unsuitable resampling unit, non-regular statistic or unrepresentative sample.",
+      "detailedAnswerMarkdown": "For $n$ independent observations, an ordinary nonparametric bootstrap draws $n$ observations with replacement from the observed sample and recalculates the statistic. Repeating this produces an empirical approximation to its sampling distribution under the empirical data-generating distribution. Percentile, basic and bias-corrected-and-accelerated intervals use that distribution differently; they are not interchangeable guarantees of coverage.\n\nThere are two distinct sources of error. A finite number of resamples creates simulation error. Even with infinitely many resamples, the bootstrap approximation itself can be poor because the observed sample or resampling method does not represent the relevant sampling process.\n\n### Assumptions\n\nOrdinary observation-level resampling is appropriate for independent sampling and statistics with suitable regularity. For paired measurements, resample complete pairs. For clustered observations, consider whole-cluster resampling; for a time series, a suitable block or model-based method may be needed. There must also be enough independent units for the chosen approximation to be credible.\n\n### Common mistake\n\nThe bootstrap cannot invent unobserved tail behaviour. It can fail for small samples, extreme quantiles, boundary parameters or some non-smooth statistics. For example, the ordinary bootstrap sample maximum never exceeds the observed maximum, which creates problems for estimating an unknown distribution endpoint.\n\nInspect resampled distributions, degeneracy warnings and sensitivity to interval method. Bias-corrected intervals can themselves become undefined for degenerate samples. Increasing the number of replicates only stabilises the calculation already being performed; it does not establish that the calculation answers the inferential question correctly.",
+      "keyTakeaways": [
+        "Describe sampling with replacement and recalculating the statistic.",
+        "Separate simulation error from bootstrap approximation error.",
+        "Choose a resampling unit that preserves pairing or dependence.",
+        "Give a concrete non-regular or degenerate case where coverage can fail."
+      ],
+      "sources": [
+        {
+          "name": "SciPy: Bootstrap confidence intervals",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "randomisation-unit",
+      "title": "How should you choose the randomisation unit?",
+      "difficulty": "easy",
+      "category": "ab_testing",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "You are testing a shared collaboration feature used by teams. Should you randomise page views, users or teams, and how does that choice affect analysis?",
+      "tldrAnswer": "Randomise at a unit that gives stable exposure and limits spillover between groups. For a shared team feature, team assignment may be necessary, and the analysis must account for users within the same team being dependent.",
+      "detailedAnswerMarkdown": "The randomisation unit is the entity assigned to treatment or control. It should match how treatment is delivered and where its effects can spread. Page-view assignment can expose one person to inconsistent versions. User assignment is often more stable, but it may still mix treatment and control within a team that shares a workspace.\n\nFor a feature that changes shared team behaviour, assigning whole teams can reduce contamination. The trade-off is fewer independent assignment units. A thousand users in ten teams do not provide the same information as a thousand independently assigned users.\n\nAnalysis must reflect the assignment design. One option is to construct an outcome per team and compare assigned teams. Another uses individual outcomes with an appropriate cluster-aware estimator and uncertainty calculation. State whether the target is an average effect per team or per user, because unequal team sizes make those different quantities.\n\n### Assumptions\n\nCausal interpretation requires that the randomisation is implemented correctly and that interference between assigned units is absent or addressed by the design. Team randomisation does not solve spillover between teams that collaborate with each other. Stable assignment also requires an identifier that persists across visits.\n\n### Common mistake\n\nUsing every click as an independent observation can greatly understate uncertainty. Neither a large event table nor a standard t-test compensates for shared assignment and correlated behaviour. Plan sample size around the independent units and their expected within-unit dependence.",
+      "keyTakeaways": [
+        "Choose a stable unit that limits treatment spillover.",
+        "Explain why shared team exposure can require team assignment.",
+        "Match uncertainty estimation to clustered assignment.",
+        "Distinguish an average effect per team from an average effect per user."
+      ],
+      "sources": [
+        {
+          "name": "Microsoft Research: Trustworthy experimentation before the experiment",
+          "url": "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "primary-and-guardrail-metrics",
+      "title": "How should primary and guardrail metrics guide a decision?",
+      "difficulty": "easy",
+      "category": "ab_testing",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "A new search layout increases click-through rate but may slow the page. How would you define a primary metric, guardrails and a decision rule before running the experiment?",
+      "tldrAnswer": "Choose a primary outcome tied to the intended benefit, define acceptable harm on guardrails such as latency, and specify the decision rule before examining results. A non-significant guardrail change alone does not demonstrate safety.",
+      "detailedAnswerMarkdown": "A primary metric represents the benefit the experiment is designed to assess. For search, click-through rate might be useful, but it can also rise because results are confusing or users need extra clicks. Choose a measure that reflects the intended user or business outcome, and explain the causal path from the product change to that outcome.\n\nGuardrail metrics track unacceptable side effects, such as response time, error rate or abandonment. Pre-specify how each is calculated, its analysis population, its direction of improvement and the largest harm considered acceptable. Specify the experiment duration and how uncertainty will enter the decision.\n\nFor example, a decision could require evidence of useful primary improvement and a confidence bound ruling out more than a chosen latency increase. The exact thresholds are product decisions that should be made before seeing treatment results. An inconclusive experiment should remain inconclusive rather than being forced into a launch decision.\n\n### Assumptions\n\nInstrumentation and eligibility rules must be comparable across groups. Metrics based on actions affected by treatment need careful denominators: conditioning on users who clicked can compare different populations. If several metrics or variants can independently justify success, account for that multiple testing in the decision procedure.\n\n### Common mistake\n\n“No statistically significant guardrail harm” is not the same as “harm is acceptably small”. An imprecise interval may include serious harm. Likewise, changing the primary metric after observing results turns a confirmatory claim into an exploratory one.",
+      "keyTakeaways": [
+        "Tie the primary metric to the intended outcome.",
+        "Pre-specify guardrail harm limits and a decision rule.",
+        "Use uncertainty to distinguish acceptable harm from an inconclusive result.",
+        "Address treatment-affected denominators and multiple opportunities to claim success."
+      ],
+      "sources": [
+        {
+          "name": "Microsoft Research: Trustworthy experimentation during the experiment",
+          "url": "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "sample-ratio-mismatch",
+      "title": "What should you do when group sizes do not match assignment?",
+      "difficulty": "medium",
+      "category": "ab_testing",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "An experiment was configured for a 50:50 split, but the recorded eligible users are 55:45 in a large sample. Explain sample ratio mismatch and how you would investigate it.",
+      "tldrAnswer": "Compare observed assignment counts with their expected proportions. A substantial mismatch can signal broken assignment, logging or selection; investigate it before interpreting treatment effects.",
+      "detailedAnswerMarkdown": "Sample ratio mismatch means the observed counts across assigned groups are inconsistent with the allocation expected from the experiment design. For independent assignment to groups with expected counts $E_g$, a common large-sample check is\n\n$$\n\\chi^2=\\sum_g\\frac{(O_g-E_g)^2}{E_g}.\n$$\n\nThe reference degrees of freedom are the number of groups minus one when allocation probabilities are fixed in advance. For small expected counts or a different assignment scheme, use a test suited to that design. A 55:45 split becomes increasingly surprising under independent 50:50 assignment as the sample grows.\n\nStart by checking the configured allocation and the unit counted. Compare assignment logs with exposure, eligibility and outcome logs. Break results down by time, platform, region and application version to locate where the imbalance begins. Investigate missing events, unstable identifiers, redirects, bot filtering and eligibility changes.\n\n### Assumptions\n\nThe expected ratio must correspond to the actual assignment design and counting unit. Counting events instead of assigned users can produce a ratio affected by treatment behaviour without implying randomisation failed. Conversely, restricting the analysis to a post-treatment event can introduce selection bias even if the original assignment was correct.\n\n### Common mistake\n\nDo not simply reweight the groups or discard enough users to restore 50:50 counts. Those actions can conceal the cause without repairing it. Resolve the discrepancy, determine which data remain valid and rerun the experiment if necessary before making a causal claim.",
+      "keyTakeaways": [
+        "Compare observed counts with the design's expected allocation.",
+        "Distinguish assigned users from treatment-affected event counts.",
+        "Trace assignment, exposure and logging to locate the mismatch.",
+        "Avoid treating reweighting as a substitute for diagnosing the cause."
+      ],
+      "sources": [
+        {
+          "name": "Microsoft Research: Diagnosing sample ratio mismatch",
+          "url": "https://www.microsoft.com/en-us/research/articles/diagnosing-sample-ratio-mismatch-in-a-b-testing/",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "experiment-sample-size",
+      "title": "How do you plan sample size for a conversion experiment?",
+      "difficulty": "medium",
+      "category": "ab_testing",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "An equal-allocation experiment has a baseline conversion rate near 10%. You want to detect an absolute increase of one percentage point with 80% power using a two-sided 5% test. Explain an approximate sample-size calculation and its limits.",
+      "tldrAnswer": "Under a simple independent two-group normal approximation, about 14,100 observations per group are needed. This is a planning estimate, with variance held near the baseline, not a promise of exact achieved power.",
+      "detailedAnswerMarkdown": "First distinguish an absolute increase of one percentage point, from 0.10 to 0.11, from a 1% relative increase, which would reach 0.101. The effect used in planning must match the decision that matters.\n\nFor equal group sizes, independent Bernoulli outcomes and a small difference around rate $p$, a useful approximation for observations per group is\n\n$$\nn\\approx\n\\frac{2p(1-p)(z_{1-\\alpha/2}+z_{1-\\beta})^2}{\\delta^2}.\n$$\n\nThe factor of two comes from adding the independent groups' variances: $\\operatorname{Var}(\\hat p_T-\\hat p_C)\\approx 2p(1-p)/n$. Here $\\delta$ is the absolute difference, $1-\\beta$ is power, and the $z$ values are standard normal quantiles. Using $p=0.10$, $\\delta=0.01$, $\\alpha=0.05$ and power 0.80 gives approximately 14,100 observations in each group, or 28,200 overall. The approximation holds both groups' variance near the baseline; a fuller two-proportion calculation uses the planned treatment and control rates and can give a different result.\n\n### Assumptions\n\nOutcomes are measured once per independent assignment unit, allocation is equal, and the final analysis uses the planned fixed-sample test. Clustering, unequal allocation, attrition, multiple comparisons or sequential monitoring require changes to the calculation. Check whether enough successes and failures are expected for a normal approximation.\n\n### Common mistake\n\nA target sample size is not permission to stop as soon as a significant result appears. Specify the stopping rule in advance. Also allow sufficient calendar duration to cover relevant weekly patterns; reaching the numeric target unusually quickly does not guarantee representative exposure.",
+      "keyTakeaways": [
+        "Distinguish absolute percentage-point changes from relative changes.",
+        "Identify the formula as an approximation for each group.",
+        "State the independence, allocation and fixed-sample assumptions.",
+        "Account for experiment duration and changes to the analysis design."
+      ],
+      "sources": [
+        {
+          "name": "NIST Engineering Statistics Handbook: Sample-size planning",
+          "url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc222.htm",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence. NIST supports the general normal-approximation sample-size planning argument. The two-proportion formula here is derived from the independent groups' variances, not reproduced from that page."
+        },
+        {
+          "name": "Microsoft Research: Trustworthy experimentation before the experiment",
+          "url": "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "repeated-peeking",
+      "title": "Why can repeated significance checks inflate false positives?",
+      "difficulty": "medium",
+      "category": "ab_testing",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "You inspect a fixed-sample A/B test every hour and stop the first time p drops below 0.05. Why is the usual 5% error guarantee no longer sufficient, and what are valid alternatives?",
+      "tldrAnswer": "Repeatedly offering the same fixed-sample test a chance to trigger stopping changes the overall rejection rule. Pre-plan one final analysis, or use a sequential method whose error control covers the monitoring and stopping procedure.",
+      "detailedAnswerMarkdown": "A fixed-sample p-value is calibrated for a specified analysis at a specified sampling design. If the rule becomes “reject whenever any hourly p-value is below 0.05”, the relevant event is the union of all those possible rejections. Its probability under the null can exceed 0.05 even when each individual check is valid at its own fixed sample size.\n\nThe hourly statistics are dependent because they reuse observations. Therefore the overall false-positive probability is not generally $1-0.95^k$ for $k$ checks. Dependence changes the amount of inflation, but does not restore the original fixed-sample guarantee.\n\nOne option is to commit to a final sample size or duration and reserve the efficacy decision for that analysis. Another is a group-sequential design with planned looks and calibrated boundaries, such as an alpha-spending procedure. Methods based on suitable always-valid inference can permit broader monitoring, but still have specific assumptions and implementation requirements.\n\n### Assumptions\n\nThe stopping rule includes more than the number of looks: metric switching, selecting promising variants and extending only borderline experiments can also alter inference. Operational checks for broken logging or serious harm may still be necessary, but their role in final inferential claims must be specified.\n\n### Common mistake\n\nWaiting a few more days after a favourable result does not retroactively repair the selection. Report the actual monitoring procedure. If an exploratory look changes the decision plan, a fresh confirmatory experiment may be the clearest way to obtain reliable evidence.",
+      "keyTakeaways": [
+        "Explain the changed rejection event under repeated monitoring.",
+        "Avoid assuming repeated looks are independent.",
+        "Describe fixed-horizon and properly calibrated sequential alternatives.",
+        "Include metric selection and discretionary extension in the stopping rule."
+      ],
+      "sources": [
+        {
+          "name": "Microsoft Research: Trustworthy experimentation during the experiment",
+          "url": "https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-during-experiment-stage/",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "cuped-variance-reduction",
+      "title": "How does CUPED reduce experiment variance?",
+      "difficulty": "hard",
+      "category": "ab_testing",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "Let Y be a post-experiment outcome and X a pre-experiment covariate. Derive a scalar CUPED adjustment, explain when it preserves the treatment effect, and state the limits of the familiar one-minus-correlation-squared result.",
+      "tldrAnswer": "CUPED subtracts a centred pre-treatment covariate with a fixed coefficient. With the population-optimal scalar coefficient, adjusted outcome variance is multiplied by one minus squared correlation; applying this to treatment estimates needs the experiment's variance assumptions.",
+      "detailedAnswerMarkdown": "Define an adjusted outcome using a common fixed coefficient:\n\n$$\nY^{\\mathrm{adj}}=Y-\\theta(X-\\mu_X),\n\\qquad\n\\theta^*=\\frac{\\operatorname{Cov}(Y,X)}{\\operatorname{Var}(X)}.\n$$\n\nFor a single population with finite second moments and $\\operatorname{Var}(X)>0$,\n\n$$\n\\operatorname{Var}(Y^{\\mathrm{adj}})\n=\\operatorname{Var}(Y)+\\theta^2\\operatorname{Var}(X)\n-2\\theta\\operatorname{Cov}(Y,X).\n$$\n\nMinimising over $\\theta$ gives $\\operatorname{Var}(Y)(1-\\rho^2)$, where $\\rho$ is the correlation between $X$ and $Y$. A strongly predictive pre-treatment covariate can therefore remove predictable outcome variation.\n\nThe adjusted treatment-minus-control estimate equals the raw outcome difference minus $\\theta$ times the covariate difference. Random assignment makes the expected pre-treatment covariate difference zero. With a common fixed coefficient, adjustment therefore preserves the average treatment effect in expectation while potentially improving precision.\n\n### Assumptions\n\nThe covariate is measured before treatment and cannot be changed by it. The variance reduction formula describes a simple scalar population calculation; the variance of an experiment estimator also depends on allocation, clustering and arm-specific covariance. A single common coefficient need not be optimal in both arms.\n\n### Common mistake\n\nUsing post-treatment behaviour as the covariate can remove part of the treatment effect or introduce bias. Estimating $\\theta$ from the same finite experiment also requires care: the fixed-coefficient unbiasedness argument cannot simply be reused without qualification. Historical estimates or an appropriate cross-fitting and inference procedure can address that issue. Plan handling of missing pre-period data before inspecting results.",
+      "keyTakeaways": [
+        "Derive the adjusted variance and optimal scalar coefficient.",
+        "Explain preservation of the treatment effect under random assignment and a fixed common coefficient.",
+        "Limit the one-minus-correlation-squared claim to its population assumptions.",
+        "Reject post-treatment covariates and qualify coefficients estimated on the experiment itself."
+      ],
+      "sources": [
+        {
+          "name": "Microsoft Research: Variance reduction in online experiments",
+          "url": "https://www.microsoft.com/en-us/research/articles/deep-dive-into-variance-reduction/",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "next-token-prediction",
+      "title": "What does next-token training teach a language model?",
+      "difficulty": "easy",
+      "category": "llms",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "Explain the next-token training objective of an autoregressive language model. Why can a model trained this way produce useful answers without guaranteeing factual accuracy?",
+      "tldrAnswer": "A model learns conditional probabilities for the next token from previous tokens. This can capture useful linguistic and factual patterns, but a likely continuation is not a verified statement.",
+      "detailedAnswerMarkdown": "An autoregressive language model represents a sequence probability as a product of conditional token probabilities:\n\n$$\np_\\theta(x_1,\\ldots,x_T)\n=\\prod_{t=1}^{T}p_\\theta(x_t\\mid x_{<t}).\n$$\n\nTraining commonly minimises the negative log-probability of the observed next tokens, summed or averaged over positions and examples. During training, each prediction normally receives the actual preceding tokens from the example. During generation, previous generated tokens become part of the context, so an early error can influence later outputs.\n\nA token need not be a word. Tokenisation may split a word into several pieces or represent punctuation and spaces separately. The model learns patterns in these sequences, including grammar, relationships and recurring factual associations. Later instruction tuning or preference training can change how it responds to requests without turning its output into a fact-checking procedure.\n\n### Assumptions\n\nThis describes a causal, autoregressive model with access only to the permitted prefix at each prediction position. Other language-model training objectives exist. The training corpus, context length and subsequent training stages affect what information the model can use.\n\n### Common mistake\n\nHigh probability does not establish truth. The data can contain false or conflicting claims, and the model can combine familiar patterns into an unsupported answer. Sampling temperature changes the output distribution, but lowering it does not guarantee factual accuracy. Evaluate correctness on relevant tasks and use external evidence when the answer requires current or verifiable facts.",
+      "keyTakeaways": [
+        "Factor sequence probability into conditional next-token probabilities.",
+        "Distinguish training prefixes from generated prefixes.",
+        "Explain that tokens are not necessarily complete words.",
+        "Separate a likely continuation from a verified factual claim."
+      ],
+      "sources": [
+        {
+          "name": "Google Machine Learning Crash Course: Large language models",
+          "url": "https://developers.google.com/machine-learning/crash-course/llm",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "scaled-dot-product-attention",
+      "title": "Why is dot-product attention scaled?",
+      "difficulty": "medium",
+      "category": "llms",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "State the scaled dot-product attention equation, explain the shapes and roles of Q, K and V, and describe the scaling factor and causal mask.",
+      "tldrAnswer": "Attention uses query-key similarity to form row-wise weights over value vectors. Dividing by the square root of key dimension controls dot-product scale under a simple variance model; a causal mask blocks future positions.",
+      "detailedAnswerMarkdown": "For self-attention over $n$ positions, let $Q,K\\in\\mathbb{R}^{n\\times d_k}$ and $V\\in\\mathbb{R}^{n\\times d_v}$. The operation is\n\n$$\n\\operatorname{Attention}(Q,K,V)\n=\\operatorname{softmax}\\left(\\frac{QK^\\top}{\\sqrt{d_k}}+M\\right)V.\n$$\n\nQueries describe what each output position seeks; keys are compared with those queries; values supply the vectors to be combined. The softmax acts across key positions separately for each query row. Its output has shape $n$ by $n$, and the final weighted values have shape $n$ by $d_v$.\n\nIf query and key components are independent, mean zero and unit variance in a simplified model, their dot product has variance proportional to $d_k$. Dividing by $\\sqrt{d_k}$ keeps that variance near one. Otherwise large logits can concentrate softmax weights and lead to small gradients. Learned components need not meet those idealised assumptions exactly.\n\n### Assumptions\n\nIn ordinary self-attention, learned projections of the same input produce queries, keys and values. Cross-attention can instead use queries from one sequence and keys and values from another. An autoregressive causal mask sets forbidden future logits to negative infinity before softmax, giving them zero weight.\n\n### Common mistake\n\nAttention is not simply an average of raw input tokens. It combines learned value vectors using content-dependent weights, often across several heads. Nor does the scaling make dense attention linear in sequence length: the query-key interaction still involves all permitted position pairs.",
+      "keyTakeaways": [
+        "Give the attention equation with row-wise softmax and correct dimensions.",
+        "Explain queries, keys and learned value vectors.",
+        "Derive the square-root scaling from the simplified variance argument.",
+        "Place the causal mask before softmax and identify the pairwise computation."
+      ],
+      "sources": [
+        {
+          "name": "Vaswani and colleagues: Attention Is All You Need",
+          "url": "https://arxiv.org/abs/1706.03762",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "retrieval-augmented-generation",
+      "title": "What does retrieval add to a language model?",
+      "difficulty": "medium",
+      "category": "llms",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "Describe a retrieval-augmented generation system for answering questions about an organisation's documents. Which failures remain even when the answer includes citations?",
+      "tldrAnswer": "Retrieve relevant authorised passages, supply them as context, and generate an answer grounded in that evidence. Retrieval can improve access to specific or updated information, but it does not guarantee evidence coverage or faithful use.",
+      "detailedAnswerMarkdown": "A retrieval-augmented generation system first searches an external collection for material relevant to a request. A practical pipeline prepares documents, divides them into passages, indexes those passages, retrieves candidates and optionally reranks them. It then supplies selected evidence to a language model alongside the question and instructions for answering.\n\nThis separates stored model parameters from a document collection that can be updated independently. It is useful when answers depend on organisation-specific information or documents newer than the model's training data. However, adding a document to an index does not guarantee that retrieval will find it for every relevant wording.\n\n### Assumptions\n\nThe corpus must contain suitable evidence, and the retrieval step must respect the requester's access rights before passages reach the generator. Document dates, versions and source identifiers should remain attached to retrieved content. Retrieved text is evidence to inspect, not authority to override system instructions or execute embedded commands.\n\n### Common mistake\n\nA citation proves only that a source was referenced, not that it supports the nearby claim. The retriever can miss the decisive passage; the context can contain obsolete or conflicting versions; the generator can misread evidence or invent a conclusion.\n\nEvaluate retrieval coverage separately from answer correctness and citation support. Include questions that are unanswerable from the corpus, and require an explicit statement of insufficient evidence when appropriate. More retrieved passages are not always better because irrelevant material can distract the generator and consume its context budget.",
+      "keyTakeaways": [
+        "Describe document preparation, retrieval and evidence-conditioned generation.",
+        "Distinguish corpus freshness from successful retrieval.",
+        "Check access rights and treat retrieved instructions as untrusted text.",
+        "Evaluate citation support and unanswerable questions as well as answer fluency."
+      ],
+      "sources": [
+        {
+          "name": "Lewis and colleagues: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "url": "https://arxiv.org/abs/2005.11401",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "lora-parameter-count",
+      "title": "How many parameters does a LoRA update train?",
+      "difficulty": "hard",
+      "category": "llms",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "A frozen linear layer has a weight matrix with 4,096 input and 4,096 output dimensions. Explain a rank-8 LoRA update, calculate its trainable parameter count, and state what resource savings this does and does not imply.",
+      "tldrAnswer": "Factor the weight update into two rank-8 matrices, giving 65,536 trainable parameters instead of 16,777,216 for the full weight matrix. This reduces trainable state, but the base model and activation costs remain.",
+      "detailedAnswerMarkdown": "For a frozen matrix $W_0\\in\\mathbb{R}^{d_{\\mathrm{out}}\\times d_{\\mathrm{in}}}$, a LoRA layer commonly uses\n\n$$\nW=W_0+\\frac{\\alpha}{r}BA,\n\\quad\nB\\in\\mathbb{R}^{d_{\\mathrm{out}}\\times r},\n\\quad\nA\\in\\mathbb{R}^{r\\times d_{\\mathrm{in}}}.\n$$\n\nOnly the factors are trained in this simplified example. Their parameter count is $r(d_{\\mathrm{in}}+d_{\\mathrm{out}})$. With both dimensions equal to 4,096 and rank 8, that is $8(4,096+4,096)=65,536$, compared with $4,096^2=16,777,216$ full-matrix parameters. The factor count is about 0.39% of the full count.\n\nThe update $BA$ has rank at most $r$, so the method restricts how that layer can change. The base matrix need not be low rank. A common initialisation makes one factor zero and the other random, producing no initial change while allowing learning to begin; making both factors zero would give both zero gradients initially.\n\n### Assumptions\n\nThis count concerns one adapted matrix, with biases and other modules excluded. Total trainable parameters depend on which layers are adapted and whether additional parameters are unfrozen. The scaling convention and chosen rank are configuration choices.\n\n### Common mistake\n\nA 99.6% reduction in trainable parameters for this matrix does not imply the same reduction in total training memory or compute. Frozen weights must still be available, and activations and base-model operations remain. A compatible adapter can be merged into the base weight for inference, but that merge must preserve the intended adapter and scaling.",
+      "keyTakeaways": [
+        "State the factor shapes and derive the parameter-count formula.",
+        "Calculate 65,536 versus 16,777,216 parameters.",
+        "Distinguish the rank of the update from the rank of the base matrix.",
+        "Explain why trainable-parameter savings do not equal total memory or compute savings."
+      ],
+      "sources": [
+        {
+          "name": "Hu and colleagues: LoRA, Low-Rank Adaptation of Large Language Models",
+          "url": "https://arxiv.org/abs/2106.09685",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET question, explanation and examples. Source cited for the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        }
+      ],
+      "active": true
+    }
+  ]
+}
