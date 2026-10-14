@@ -1,1 +1,75 @@
-{"schemaVersion":1,"candidates":[]}
+{
+  "schemaVersion": 1,
+  "candidates": [
+    {
+      "id": "f366508f96854306126fa981",
+      "url": "https://research.google/blog/research-2026-10-ways-were-amplifying-human-ingenuity/",
+      "title": "Research@ 2026: 10 ways we're amplifying human ingenuity",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-14T18:37:13.340Z"
+    },
+    {
+      "id": "4c456e668ef45cba83b59adb",
+      "url": "https://research.google/blog/putting-earth-ai-to-work-geospatial-agents-for-our-planets-biggest-challenges/",
+      "title": "Putting Earth AI to work: Geospatial agents for our planet's biggest challenges",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-14T18:37:13.340Z"
+    },
+    {
+      "id": "6c3fa003d587daac7dd7e8a1",
+      "url": "https://research.google/blog/analyzing-technical-documents-with-deep-review/",
+      "title": "Analyzing technical documents with Deep Review",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-14T18:37:13.340Z"
+    },
+    {
+      "id": "b96cc914fffc078602a8102a",
+      "url": "https://research.google/blog/does-better-work-always-mean-better-workers/",
+      "title": "Does better work always mean better workers?",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-14T18:37:13.340Z"
+    },
+    {
+      "id": "c02127d349672db4a213f696",
+      "url": "https://research.google/blog/earth-ais-planetary-geospatial-foundation-models-for-global-public-health/",
+      "title": "Unlocking Earth AI’s planetary geospatial foundation models for global public health",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-14T18:37:13.340Z"
+    },
+    {
+      "id": "7eeb0a9dde53453907ecbc46",
+      "url": "https://research.google/blog/open-and-emergent-problems-in-agentic-privacy-and-security-a-contextual-angle/",
+      "title": "Open and Emergent Problems in Agentic Privacy and Security: A Contextual Angle",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-14T18:37:13.340Z"
+    },
+    {
+      "id": "a47750453f6e45044c5cc5e9",
+      "url": "https://research.google/blog/toward-provably-private-learning-from-federated-data/",
+      "title": "Toward provably private learning from federated data",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-14T18:37:13.340Z"
+    },
+    {
+      "id": "5cc8f180d7d24936a05928ca",
+      "url": "https://research.google/blog/how-diffusion-controller-unifies-and-simplifies-ai-image-generation/",
+      "title": "How Diffusion Controller unifies and simplifies AI image generation",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-14T18:37:13.340Z"
+    },
+    {
+      "id": "8451e6726f36736772159469",
+      "url": "https://research.google/blog/coherent-long-form-video-generation/",
+      "title": "Automating coherent long-form video generation",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-14T18:37:13.340Z"
+    },
+    {
+      "id": "a7f1f0b4928f996bc8f693ef",
+      "url": "https://research.google/blog/millemiglia-a-realistic-instance-generator-for-middle-mile-logistics/",
+      "title": "MilleMiglia: A realistic instance generator for middle-mile logistics",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-14T18:37:13.340Z"
+    }
+  ]
+}
