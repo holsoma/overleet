@@ -4,9 +4,17 @@ Use Vercel Hobby for Next.js and Neon Free for PostgreSQL. This keeps the applic
 
 Checked on 15 October 2026: [Vercel Hobby](https://vercel.com/docs/plans/hobby) is free for personal, non-commercial projects, with usage limits that can pause service. [Neon Free](https://neon.com/pricing) has no time limit and requires no card. Its database sleeps when idle, so the first request may be slower. Select the free plans, not a paid trial or paid add-on. Recheck the providers' terms before using this app commercially or increasing its traffic. No paid model, crawler, runner or custom domain is required.
 
+## Current installation
+
+The public app is [overleet.vercel.app](https://overleet.vercel.app/), hosted in the `holsoma/overleet` Vercel project on Hobby. Its dedicated Neon database is on Free. Both use Singapore; Vercel runs Node.js 22 and the managed database reports PostgreSQL 18.6. Local development and CI continue to use PostgreSQL 17.
+
+The database contains all 250 accepted questions. Committed migrations and an unchanged second content sync succeeded. Database credentials and the session secret are scoped to production. Neon Auth is disabled because this application uses NextAuth. Production GitHub OAuth credentials have not been configured, so account sign-in is unavailable; guest study is working.
+
+The initial release was deployed from `expand-question-bank-and-deploy`. [Content PR #2](https://github.com/holsoma/overleet/pull/2) remains open for human review. Vercel's automatic production branch is `main`: review and merge the release PR before other changes to `main`, because any push there can replace the manually deployed release with that branch's application code. Do not bypass the repository's review rules.
+
 ## Create the database
 
-1. Create a dedicated Neon Free project named `overleet` with PostgreSQL 17. Choose a region near the Vercel function region. Do not reuse a database containing unrelated data.
+1. Create a dedicated Neon Free project named `overleet`. Choose a region near the Vercel function region. The Vercel Marketplace integration may choose the PostgreSQL version; the current installation was verified on 18.6. Do not reuse a database containing unrelated data.
 2. Copy its pooled connection URL into `DATABASE_URL` in a private local environment. Copy the direct connection URL into `DIRECT_DATABASE_URL` for migrations. Keep the supplied TLS settings. Both URLs must identify the same database. Never commit or paste the credentials into an issue or PR.
 3. From the reviewed revision, run `npm ci`, `npm run db:generate`, then `npm run db:deploy`. The last command validates content, applies committed migrations and synchronises the canonical question bank. It preserves user progress, votes and Daily Question assignments.
 4. Run `npm run db:sync` again. An unchanged bank should report zero creations and zero updates. Restore the local database environment after administering the remote database.

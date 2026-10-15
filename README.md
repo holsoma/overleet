@@ -2,6 +2,8 @@
 
 Think it through. A sourced question bank for Data Science, Machine Learning, Statistics, A/B Testing and LLM interview practice.
 
+Try [OVERLEET online](https://overleet.vercel.app/). The public installation supports guest study; GitHub account sign-in still needs production OAuth configuration.
+
 Browse 250 original questions, write your answer, reveal the explanation and check it against a short rubric. Guests keep progress in their browser. GitHub sign-in synchronises completion status through PostgreSQL. Draft answers and rubric selections stay in the current browser.
 
 Run locally with PostgreSQL, or use the [free public deployment guide](docs/deployment.md) for Vercel Hobby and Neon Free. No paid model, scraping service or hosted database plan is required.

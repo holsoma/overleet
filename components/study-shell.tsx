@@ -22,7 +22,7 @@ function ShellContents({ children }: { children: React.ReactNode }) {
   const activeQuestions = data.questions.filter(q => q.active);
   const completed = activeQuestions.filter(q => progress[q.id] === "completed").length;
   async function authenticate() {
-    if (!data.authConfigured) { setAuthNotice("GitHub sign-in is not configured. Add GITHUB_ID, GITHUB_SECRET and NEXTAUTH_SECRET to your local environment as described in the README, then restart the app. You can practise as a guest now."); return; }
+    if (!data.authConfigured) { setAuthNotice("GitHub sign-in is not configured for this installation. You can practise as a guest."); return; }
     setAuthBusy(true);
     try { await signIn("github", { callbackUrl: window.location.pathname + window.location.search }); }
     catch { setAuthNotice("GitHub sign-in could not start. Check your connection and try again."); setAuthBusy(false); }
