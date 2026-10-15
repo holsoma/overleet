@@ -4,6 +4,14 @@ import { useCallback, useMemo, useSyncExternalStore } from "react";
 import type { ProgressStatus } from "@/lib/contracts";
 
 const eventName = "overleet-storage";
+const subscribeToHydration = () => () => {};
+const clientHydrationSnapshot = () => true;
+const serverHydrationSnapshot = () => false;
+
+export function useHydrated() {
+  return useSyncExternalStore(subscribeToHydration, clientHydrationSnapshot, serverHydrationSnapshot);
+}
+
 export const guestProgressKey = "overleet:v1:guest:progress";
 function subscribe(callback: () => void) {
   window.addEventListener("storage", callback);

@@ -8,7 +8,12 @@ export function getDb(): PrismaClient {
   if (!connectionString) throw new Error("Database is not configured.");
   if (!globalDatabase.overleetDatabase) {
     globalDatabase.overleetDatabase = new PrismaClient({
-      adapter: new PrismaPg({ connectionString, connectionTimeoutMillis: 5000 }),
+      adapter: new PrismaPg({
+        connectionString,
+        max: 3,
+        idleTimeoutMillis: 10000,
+        connectionTimeoutMillis: 15000,
+      }),
     });
   }
   return globalDatabase.overleetDatabase;

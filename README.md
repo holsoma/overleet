@@ -2,9 +2,11 @@
 
 Think it through. A sourced question bank for Data Science, Machine Learning, Statistics, A/B Testing and LLM interview practice.
 
-Browse 25 original questions, write your answer, reveal the explanation and check it against a short rubric. Guests keep progress in their browser. GitHub sign-in synchronises completion status through PostgreSQL. Draft answers and rubric selections stay in the current browser.
+Try [OVERLEET online](https://overleet.vercel.app/). The public installation supports guest study and GitHub sign-in.
 
-This release is a local application and a public source repository. It does not deploy a public website or require a paid model, scraping service or hosted database.
+Browse 250 original questions, write your answer, reveal the explanation and check it against a short rubric. Guests keep progress in their browser. GitHub sign-in synchronises completion status through PostgreSQL. Draft answers and rubric selections stay in the current browser.
+
+Run locally with PostgreSQL, or use the [free public deployment guide](docs/deployment.md) for Vercel Hobby and Neon Free. No paid model, scraping service or hosted database plan is required.
 
 ## Requirements
 
@@ -59,6 +61,8 @@ Popularity means the number of account upvotes. It is not a claim about intervie
 The Daily Question resets at 00:00 UTC. Its selection is stored once per date, so adding content does not replace that day's question. An archived question keeps its permalink and existing progress.
 
 ## Content and updates
+
+The bank contains 85 ML Theory, 80 Statistics, 45 A/B Testing and 40 LLM questions. Each category includes easy, medium and hard questions. The table shows 25 questions per page; filters, sorting and the page number remain in the URL. See [the source policy](ATTRIBUTION.md) for the distinction between topic discovery and independently written explanations.
 
 `data/questions/questions.json` is the canonical, version-controlled content. It contains no user data. `lib/question-schema.ts` is the shared validation contract. IDs remain stable when titles change. Retire a question with `active: false`; do not remove its ID.
 
@@ -115,7 +119,9 @@ npm run check:files
 
 Integration tests require `TEST_DATABASE_URL` to point to a separate database whose name ends in `_test`, for example `overleet_test`, with the committed migrations already applied. They delete test records inside that guarded database. Never point tests at a database containing real progress. To apply migrations there, temporarily set `DATABASE_URL` to the test connection when running `npm run db:migrate`, then restore the application URL. Playwright's Chromium browser is installed with `npx playwright install chromium`. CI supplies PostgreSQL and Chromium, checks the production build, and scans Git history and tracked files for secrets. Automated authentication tests use mocks; they do not replace a real OAuth login check.
 
-Browser tests also require `TEST_DATABASE_URL`. Before running them, apply migrations and synchronise the original question bank in that disposable database. If integration tests left synthetic questions behind, run `node --import tsx scripts/reset-test-database.ts` with `TEST_DATABASE_URL` set, then run `db:sync` with `DATABASE_URL` set to the same test database. Restore the application environment afterwards. Browser tests use signed test-session cookies and fake OAuth configuration in their own server process; no real GitHub login is attempted.
+Browser tests also require `TEST_DATABASE_URL`. Before running them, apply migrations and synchronise the canonical question bank in that disposable database. If integration tests left synthetic questions behind, run `node --import tsx scripts/reset-test-database.ts` with `TEST_DATABASE_URL` set, then run `db:sync` with `DATABASE_URL` set to the same test database. Restore the application environment afterwards. Browser tests use signed test-session cookies and fake OAuth configuration in their own server process; no real GitHub login is attempted.
+
+If `DIRECT_DATABASE_URL` is set, Prisma migrations prefer it over `DATABASE_URL`. Clear it or set it to the same disposable test database before applying test migrations. Never leave a deployment database URL active while preparing tests.
 
 ## Backup and restore
 

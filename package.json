@@ -20,6 +20,7 @@
     "db:migrate": "prisma migrate deploy",
     "db:generate": "prisma generate",
     "db:sync": "tsx scripts/sync-questions.ts",
+    "db:deploy": "npm run validate:questions && npm run db:migrate && npm run db:sync",
     "validate:questions": "tsx scripts/validate-questions.ts",
     "collect:questions": "tsx scripts/collect-questions.ts",
     "check:files": "tsx scripts/check-tracked-files.ts",

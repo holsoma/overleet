@@ -4,7 +4,7 @@ export function forbiddenTrackedFile(path: string): boolean {
   const value = path.replaceAll("\\", "/");
   const name = value.split("/").at(-1)!;
   if (name.startsWith(".env") && name !== ".env.example") return true;
-  if (/(^|\/)(node_modules|\.next|out|coverage|test-results|playwright-report|\.cache|tmp)(\/|$)/.test(value)) return true;
+  if (/(^|\/)(node_modules|\.next|\.vercel|out|coverage|test-results|playwright-report|\.cache|tmp)(\/|$)/.test(value)) return true;
   if (value.startsWith("lib/generated/")) return true;
   if (name.endsWith(".sql") && !/^prisma\/migrations\/[^/]+\/migration\.sql$/.test(value)) return true;
   if (/\.(backup|bak)$/.test(name) || name === ".pgpass") return true;
