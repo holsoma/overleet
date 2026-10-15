@@ -6479,6 +6479,166 @@
         }
       ],
       "active": true
+    },
+    {
+      "id": "mini-batch-gradient-noise",
+      "title": "Does quadrupling a mini-batch remove four times as much gradient noise?",
+      "difficulty": "medium",
+      "category": "ml_theory",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "At fixed model parameters, each independently sampled training example gives a gradient component with variance 36. Compare the mean-gradient estimates from batches of 9 and 36 examples. What changes if the batch is sampled without replacement?",
+      "tldrAnswer": "Independent averaging gives variances 4 and 1, so the standard deviation halves rather than quarters. Uniform sampling without replacement adds a finite-population correction.",
+      "detailedAnswerMarkdown": "### Assumptions\n\nFix the parameters and a dataset of $N$ examples. The objective is the average of differentiable per-example losses. Sample uniformly; exclude operations whose per-example loss changes with batch composition, such as training-mode batch normalisation.\n\n### Reasoning\n\nLet $g_i$ be one gradient component, $\\bar g$ its dataset mean and $\\sigma^2=N^{-1}\\sum_i(g_i-\\bar g)^2$. Independent sampling with replacement gives\n\n$$\nE[\\hat g_B]=\\bar g,\\qquad \\operatorname{Var}(\\hat g_B)=\\frac{\\sigma^2}{B}.\n$$\n\nThus the stated batches have variances $36/9=4$ and $36/36=1$, and standard deviations 2 and 1. For a uniformly chosen subset without replacement, with $N>1$ and $B\\le N$,\n\n$$\n\\operatorname{Var}(\\hat g_B)=\\frac{\\sigma^2}{B}\\frac{N-B}{N-1}.\n$$\n\nA full-data batch has no sampling noise at these fixed parameters. Larger batches cost more work and memory per update; their benefit depends on hardware, learning rate and the training budget.\n\n### Common mistake\n\nLower estimator variance does not guarantee faster training or better test performance. The calculation concerns a single update, not the whole optimisation trajectory.",
+      "keyTakeaways": [
+        "State fixed parameters, uniform sampling and an additive per-example objective.",
+        "Calculate variances 4 and 1, and distinguish variance from standard deviation.",
+        "Explain the finite-population correction and zero sampling noise for a full batch.",
+        "Separate gradient-estimation precision from training speed and generalisation."
+      ],
+      "sources": [
+        {
+          "name": "Deep Learning: Optimisation for Training Deep Models",
+          "url": "https://www.deeplearningbook.org/contents/optimization.html",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET scenario, explanation and derivation. Reference supports the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        },
+        {
+          "name": "Youssef Hosni: topic discovery only",
+          "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q8-explain-briefly-batch-gradient-descent-stochastic-gradient-descent-and-mini-batch-gradient-descent-and-what-are-the-pros-and-cons-for-each-of-them",
+          "accessedAt": "2026-10-15",
+          "reuse": "Discovery provenance only. No repository licence was identified. No source answer or exercise wording reproduced; OVERLEET supplies an original scenario and independently derived explanation supported by the primary reference. This citation does not claim interview frequency or company provenance."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "active-learning-uncertainty-budget",
+      "title": "Why can uncertain examples consume labels without improving a model?",
+      "difficulty": "medium",
+      "category": "ml_theory",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "A document classifier can request 80 new labels. Its highest-uncertainty queue contains repeated scans and badly corrupted pages. Why might labelling this queue disappoint, and how would you assess a better selection rule?",
+      "tldrAnswer": "Uncertainty can reflect irreducible ambiguity, unusual inputs or repeated information. Combine uncertainty with diversity and relevance, then compare against random selection on a separate representative evaluation set.",
+      "detailedAnswerMarkdown": "### Assumptions\n\nThis is pool-based active learning: unlabelled examples are available and a person can label selected examples before retraining. The aim is performance on the intended document population under a fixed annotation budget.\n\n### Reasoning\n\nA prediction close to a decision boundary does not establish that its label will help many future predictions. Corrupted pages may remain ambiguous even to annotators. Repeated scans spend several labels on nearly the same evidence. Unusual pages can dominate uncertainty while being rare in the target population. Conversely, confident model errors can be missed entirely.\n\nRemove duplicates, record unanswerable cases, and select a diverse batch that also covers relevant parts of the input distribution. Density weighting or a mixture of uncertain and random examples are options to test, not guaranteed improvements; rare but important classes must not be discarded merely for being rare.\n\nCompare learning curves at equal labelling cost against random sampling, using an untouched representative evaluation set and repeated runs.\n\n### Common mistake\n\nAccuracy on the actively selected labels is not an unbiased estimate of target-population accuracy because the selection rule changes which examples receive labels.",
+      "keyTakeaways": [
+        "Explain why uncertainty need not imply useful new information.",
+        "Identify duplicate, ambiguous and unrepresentative selections.",
+        "Propose diversity or mixed selection while retaining important rare cases.",
+        "Compare against random selection using a separate representative evaluation set."
+      ],
+      "sources": [
+        {
+          "name": "Burr Settles: Active Learning Literature Survey",
+          "url": "https://burrsettles.com/pub/settles.activelearning.pdf",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET scenario, explanation and derivation. Reference supports the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        },
+        {
+          "name": "Youssef Hosni: topic discovery only",
+          "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q31-what-is-active-learning-and-discuss-one-strategy-of-it",
+          "accessedAt": "2026-10-15",
+          "reuse": "Discovery provenance only. No repository licence was identified. No source answer or exercise wording reproduced; OVERLEET supplies an original scenario and independently derived explanation supported by the primary reference. This citation does not claim interview frequency or company provenance."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "autoencoder-reconstruction-representation",
+      "title": "Can accurate reconstruction hide a poor representation for classification?",
+      "difficulty": "medium",
+      "category": "ml_theory",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "An image autoencoder reconstructs held-out product photographs accurately, but a classifier trained on its frozen codes struggles to identify defects. Why is this possible, and what evidence would justify changing the representation?",
+      "tldrAnswer": "Reconstruction rewards preserving the input, which may favour background and lighting over subtle defects. Test the codes on the intended task; bottlenecks and regularisation can help but do not guarantee useful features.",
+      "detailedAnswerMarkdown": "### Assumptions\n\nThe autoencoder receives no defect labels. It learns an encoder $f$ and decoder $g$ by reducing a reconstruction loss such as $\\lVert x-g(f(x))\\rVert^2$. The downstream classifier has limited labelled data and capacity.\n\n### Reasoning\n\nMost pixels might describe packaging and background. Reconstructing them well can dominate the loss even if a small defect is poorly represented. A sufficiently flexible network can preserve input details without organising its codes in a form the chosen classifier can use. Even low held-out reconstruction error therefore does not establish downstream usefulness.\n\nCompare classifiers trained on the frozen codes with sensible alternatives, using separate training, validation and test data. Inspect performance across defect types. Vary the code dimension or regularisation using validation results. A denoising objective or a smaller bottleneck may encourage useful structure, but could also remove subtle defect information.\n\n### Common mistake\n\nA smaller code does not automatically capture semantic meaning. Select representation changes by the intended task and evaluate the final choice on held-out examples; reconstruction loss alone cannot settle the decision.",
+      "keyTakeaways": [
+        "Distinguish reconstruction loss from downstream classification performance.",
+        "Explain how background detail or model capacity can undermine useful codes.",
+        "Describe a held-out downstream comparison with alternative representations.",
+        "State why bottlenecks and denoising are hypotheses to test, not guarantees."
+      ],
+      "sources": [
+        {
+          "name": "Deep Learning: Autoencoders",
+          "url": "https://www.deeplearningbook.org/contents/autoencoders.html",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET scenario, explanation and derivation. Reference supports the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        },
+        {
+          "name": "Youssef Hosni: topic discovery only",
+          "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q1-what-are-autoencoders-explain-the-different-layers-of-autoencoders-and-mention-three-practical-usages-of-them",
+          "accessedAt": "2026-10-15",
+          "reuse": "Discovery provenance only. No repository licence was identified. No source answer or exercise wording reproduced; OVERLEET supplies an original scenario and independently derived explanation supported by the primary reference. This citation does not claim interview frequency or company provenance."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "depthwise-separable-convolution-cost",
+      "title": "How much computation does separating spatial and channel filtering save?",
+      "difficulty": "medium",
+      "category": "ml_theory",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "A convolution uses a 5 by 5 kernel to map 12 input channels to 40 output channels. Replace it with one depthwise filter per input channel followed by a 1 by 1 convolution. Count weights and multiply-accumulates per output position. Is the replacement equivalent?",
+      "tldrAnswer": "The standard layer uses 12,000 weights; the separated layers use 300 + 480 = 780. Their multiply-accumulate count is 6.5% of the original per output position, but they constrain the filters and need not preserve accuracy.",
+      "detailedAnswerMarkdown": "### Assumptions\n\nIgnore biases, normalisation and nonlinearities. Use one depthwise filter per input channel, stride one and padding that preserves spatial size, followed by a pointwise layer producing the same output channels.\n\n### Reasoning\n\nA standard convolution has $k^2C_{\\mathrm{in}}C_{\\mathrm{out}}$ weights. A depthwise layer has $k^2C_{\\mathrm{in}}$; the pointwise layer has $C_{\\mathrm{in}}C_{\\mathrm{out}}$.\n\nHere the counts are $25\\times12\\times40=12000$ versus $25\\times12+12\\times40=780$. Each weight contributes one multiply-accumulate per output position. At equal spatial size, the ratio is\n\n$$\n\\frac{1}{C_{\\mathrm{out}}}+\\frac{1}{k^2}=\\frac{1}{40}+\\frac{1}{25}=0.065.\n$$\n\nWithout intervening nonlinearities, the effective kernel satisfies $W_{u,v,i,o}=D_{u,v,i}P_{i,o}$. For each input channel, all output channels share a spatial filter up to scaling. An arbitrary standard kernel need not satisfy that constraint.\n\n### Common mistake\n\nA 93.5% arithmetic reduction does not imply identical accuracy or a 93.5% latency reduction. Memory traffic, kernel implementation and hardware utilisation also matter; measure the trained model on the target device.",
+      "keyTakeaways": [
+        "Count 12,000 standard weights and 780 separated weights under explicit assumptions.",
+        "Derive the cost ratio and relate it to equal output spatial size.",
+        "Explain the restriction imposed by sharing one spatial filter per input channel.",
+        "Distinguish arithmetic savings from measured latency and predictive accuracy."
+      ],
+      "sources": [
+        {
+          "name": "Howard et al.: MobileNets",
+          "url": "https://arxiv.org/abs/1704.04861",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET scenario, explanation and derivation. Reference supports the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        },
+        {
+          "name": "Youssef Hosni: topic discovery only",
+          "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q22-what-is-a-depthwise-separable-layer-and-what-are-its-advantages",
+          "accessedAt": "2026-10-15",
+          "reuse": "Discovery provenance only. No repository licence was identified. No source answer or exercise wording reproduced; OVERLEET supplies an original scenario and independently derived explanation supported by the primary reference. This citation does not claim interview frequency or company provenance."
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "uniform-endpoint-maximum-bias",
+      "title": "Why is the largest uniform observation a biased endpoint estimate?",
+      "difficulty": "hard",
+      "category": "statistics",
+      "companyTags": [],
+      "companyEvidence": {},
+      "questionMarkdown": "A simulator draws independent values uniformly from $[0,\\theta]$, with known lower endpoint zero and unknown $\\theta>0$. From 9 draws, the maximum is 18. Derive the maximum-likelihood estimate and an unbiased endpoint estimate. Must the unbiased estimate have the smallest mean squared error?",
+      "tldrAnswer": "The likelihood is maximised at the observed maximum, 18. Since the expected maximum is 9θ/10, multiplying it by 10/9 gives the unbiased estimate 20. Unbiasedness alone does not establish minimum mean squared error.",
+      "detailedAnswerMarkdown": "### Assumptions\n\nThe $n\\ge1$ observations are independent draws from the same continuous uniform distribution with known lower bound zero, without censoring or rounding.\n\n### Reasoning\n\nLet $M=\\max_i X_i$. Using the density convention that includes the endpoints,\n\n$$\nL(\\theta)=\\theta^{-n}\\mathbf{1}\\{\\theta\\ge M\\}.\n$$\n\nFor $M>0$, which holds almost surely, this decreases over the feasible range, so the maximum-likelihood estimate is $M$. Independence gives $P(M\\le m)=(m/\\theta)^n$ for $0\\le m\\le\\theta$. Integrating the survival function yields\n\n$$\nE[M]=\\int_0^\\theta\\left[1-(m/\\theta)^n\\right]dm=\\frac{n\\theta}{n+1}.\n$$\n\nHence $(n+1)M/n$ is unbiased. The observed estimates are 18 and 20. Its unbiasedness concerns repeated samples; it does not mean 20 equals the unknown endpoint for this sample.\n\n### Common mistake\n\nZero bias does not minimise every error criterion. Mean squared error equals variance plus squared bias, so eliminating bias can cost enough variance to worsen that criterion. An unbiased correction is not automatically an optimal estimator under squared-error loss.",
+      "keyTakeaways": [
+        "Use the parameter-dependent support to derive the likelihood and MLE.",
+        "Derive the maximum distribution and its expectation.",
+        "Calculate the correction and the observed values 18 and 20.",
+        "Distinguish unbiasedness from minimum mean squared error."
+      ],
+      "sources": [
+        {
+          "name": "Rossman, Short and Parks: Bayes Estimators for the Continuous Uniform Distribution",
+          "url": "https://jse.amstat.org/v6n3/rossman.html",
+          "accessedAt": "2026-10-15",
+          "reuse": "Original OVERLEET scenario, explanation and derivation. Reference supports the underlying method; no source prose, figures or exercises reproduced. The source retains its own copyright and licence."
+        },
+        {
+          "name": "Youssef Hosni: topic discovery only",
+          "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q12-you-sample-from-a-uniform-distribution-0-d-n-times-what-is-your-best-estimate-of-d",
+          "accessedAt": "2026-10-15",
+          "reuse": "Discovery provenance only. No repository licence was identified. No source answer or exercise wording reproduced; OVERLEET supplies an original scenario and independently derived explanation supported by the primary reference. This citation does not claim interview frequency or company provenance."
+        }
+      ],
+      "active": true
     }
   ]
 }

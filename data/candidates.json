@@ -1,1 +1,194 @@
-{"schemaVersion":1,"candidates":[]}
+{
+  "schemaVersion": 1,
+  "candidates": [
+    {
+      "id": "6130410ea3497e9bb9bb89ab",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q1-mention-three-ways-to-make-your-model-robust-to-outliers",
+      "title": "Mention three ways to make your model robust to outliers.",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:14:48.764Z",
+      "sourceQuestion": {
+        "fingerprint": "520c90ad526e702ebfb02b09b873ae737fde17133092fabd65403e12126219ad",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      }
+    },
+    {
+      "id": "cb48534dc78110dcc7b49c3f",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q1-what-are-autoencoders-explain-the-different-layers-of-autoencoders-and-mention-three-practical-usages-of-them",
+      "title": "What are autoencoders? Explain the different layers of autoencoders and mention three practical usages of them?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:14:48.764Z",
+      "sourceQuestion": {
+        "fingerprint": "f08058334ed1824b7353a12c7e289131004ba5fbdf2b85d84b7e42f86c836d43",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "autoencoder-reconstruction-representation"
+        ],
+        "note": "Original question and answer passed independent mathematical, source and duplication review on 2026-10-15. Reference-title correction resolved. Human review required before publication."
+      }
+    },
+    {
+      "id": "577ce8dc3a6c4506cf8894c4",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q1-explain-the-central-limit-theorem-and-give-examples-of-when-you-can-use-it-in-a-real-world-problem",
+      "title": "Explain the central limit theorem and give examples of when you can use it in a real-world problem.",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:14:48.764Z",
+      "sourceQuestion": {
+        "fingerprint": "7c631ddabedba8746f886d2278aaa45000948e4e570f03a751a479121289ced5",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      }
+    },
+    {
+      "id": "bf755d1195345c5616f73221",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q1-you-and-your-friend-are-playing-a-game-with-a-fair-coin-the-two-of-you-will-continue-to-toss-the-coin-until-the-sequence-hh-or-th-shows-up-if-hh-shows-up-first-you-win-and-if-th-shows-up-first-your-friend-win-what-is-the-probability-of-you-winning-the-game",
+      "title": "You and your friend are playing a game with a fair coin. The two of you will continue to toss the coin until the sequence HH or TH shows up. If HH shows up first, you win, and if TH shows up first your friend win. What is the probability of you winning the game?",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:14:48.764Z",
+      "sourceQuestion": {
+        "fingerprint": "dd9365fd0e475beef050a64ada1ae1ef292e990a449e3f1e6aef204fd1d39006",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      }
+    },
+    {
+      "id": "1f7d6d0628df983a69ae202f",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q2-describe-the-motivation-behind-random-forests-and-mention-two-reasons-why-they-are-better-than-individual-decision-trees",
+      "title": "Describe the motivation behind random forests and mention two reasons why they are better than individual decision trees.",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:14:48.764Z",
+      "sourceQuestion": {
+        "fingerprint": "ec527adde1a92e9e4111c0951d90470f19694750d70957264bc833551703846c",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      }
+    },
+    {
+      "id": "df1b4aeb031e0a5557e915c3",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q2-what-is-an-activation-function-and-discuss-the-use-of-an-activation-function-explain-three-different-types-of-activation-functions",
+      "title": "What is an activation function and discuss the use of an activation function? Explain three different types of activation functions?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:14:48.764Z",
+      "sourceQuestion": {
+        "fingerprint": "7d14d444d17589835dc0bc3a061cebccfbcbd50f8388cc1a2fc79b125bee6d58",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      }
+    },
+    {
+      "id": "f313ed4d363155bb205b37f6",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q2-briefly-explain-the-ab-testing-and-its-application-what-are-some-common-pitfalls-encountered-in-ab-testing",
+      "title": "Briefly explain the A/B testing and its application? What are some common pitfalls encountered in A/B testing?",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:14:48.764Z",
+      "sourceQuestion": {
+        "fingerprint": "409a2dad6df667fc563f6eedb24e8e61894d9f7f6facdcdbb0023578a5bdd769",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      }
+    },
+    {
+      "id": "a5f994ee1d01bc4774e8dc92",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q2-if-you-roll-a-dice-three-times-what-is-the-probability-to-get-two-consecutive-threes",
+      "title": "If you roll a dice three times, what is the probability to get two consecutive threes?",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:14:48.764Z",
+      "sourceQuestion": {
+        "fingerprint": "9f4d9dc7241bff5b03212a63e82d72655fcfb43ecfff79acab71465eebb4807c",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      }
+    },
+    {
+      "id": "4fb0a347a06a9466302010a6",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q3-what-are-the-differences-and-similarities-between-gradient-boosting-and-random-forest-and-what-are-the-advantages-and-disadvantages-of-each-when-compared-to-each-other",
+      "title": "What are the differences and similarities between gradient boosting and random forest? and what are the advantages and disadvantages of each when compared to each other?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:14:48.764Z",
+      "sourceQuestion": {
+        "fingerprint": "bd3163918aa9066b9ac5065e94a17e1ffaeec6ed7e17dbe56bc609b54b7bc9bc",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      }
+    },
+    {
+      "id": "75de34656c69e87d40afb500",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q3-you-are-using-a-deep-neural-network-for-a-prediction-task-after-training-your-model-you-notice-that-it-is-strongly-overfitting-the-training-set-and-that-the-performance-on-the-test-isnt-good-what-can-you-do-to-reduce-overfitting",
+      "title": "You are using a deep neural network for a prediction task. After training your model, you notice that it is strongly overfitting the training set and that the performance on the test isnâ€™t good. What can you do to reduce overfitting?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:14:48.764Z",
+      "sourceQuestion": {
+        "fingerprint": "b44b07a5468865915ebb7e223d60bc69a68bb33fac09e6abe8756aa7b3df7445",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      }
+    },
+    {
+      "id": "789a34144b50d55b419f1d81",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q8-explain-briefly-batch-gradient-descent-stochastic-gradient-descent-and-mini-batch-gradient-descent-and-what-are-the-pros-and-cons-for-each-of-them",
+      "title": "Explain briefly batch gradient descent, stochastic gradient descent, and mini-batch gradient descent. and what are the pros and cons for each of them?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:14:11.852Z",
+      "sourceQuestion": {
+        "fingerprint": "7e845d94bb4b6c1fc1216cd005b335fc2b36b8d1128683935c5a5959d20594f4",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "mini-batch-gradient-noise"
+        ],
+        "note": "Original question and answer passed independent mathematical, source and duplication review on 2026-10-15. Reference-title correction resolved. Human review required before publication."
+      }
+    },
+    {
+      "id": "3a855721de3d0d533e812f5d",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q31-what-is-active-learning-and-discuss-one-strategy-of-it",
+      "title": "What is active learning and discuss one strategy of it?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:14:11.854Z",
+      "sourceQuestion": {
+        "fingerprint": "00934f727addedb51c301948e25f2a081627d58eb6c7da5cb802976518cdf42d",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "active-learning-uncertainty-budget"
+        ],
+        "note": "Original question and answer passed independent mathematical, source and duplication review on 2026-10-15. Reference-title correction resolved. Human review required before publication."
+      }
+    },
+    {
+      "id": "a1c1b73f5269bfd0a8f4f0f1",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q22-what-is-a-depthwise-separable-layer-and-what-are-its-advantages",
+      "title": "What is a depthwise Separable layer and what are its advantages?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:14:11.905Z",
+      "sourceQuestion": {
+        "fingerprint": "d353628bff84f539b8a1beece7c13fea39b3fd257638cf74bbf657ff2cb31244",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "depthwise-separable-convolution-cost"
+        ],
+        "note": "Original question and answer passed independent mathematical, source and duplication review on 2026-10-15. Reference-title correction resolved. Human review required before publication."
+      }
+    },
+    {
+      "id": "775d328d84124046d61e69b5",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q12-you-sample-from-a-uniform-distribution-0-d-n-times-what-is-your-best-estimate-of-d",
+      "title": "You sample from a uniform distribution [0, d] n times. What is your best estimate of d?",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:14:11.928Z",
+      "sourceQuestion": {
+        "fingerprint": "99e13749d5187b8ac8fb9fffbef97e46402eea718ea88ccf856e07e5378da934",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "uniform-endpoint-maximum-bias"
+        ],
+        "note": "Original question and answer passed independent mathematical, source and duplication review on 2026-10-15. Reference-title correction resolved. Human review required before publication."
+      }
+    }
+  ]
+}
