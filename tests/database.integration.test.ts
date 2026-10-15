@@ -55,6 +55,18 @@ integration("PostgreSQL integration", () => {
     await expect(importGuestProgress(db, firstUser, [{ questionId: "first", status: "invalid" }])).rejects.toThrow();
     expect(await db.userProgress.count()).toBe(3);
   });
+  it("mixes 225 additions with changed and unchanged rows, preserving JSON and arrays", async () => {
+    const unchanged = await db.question.findUniqueOrThrow({ where: { id: "second" } });
+    const added = Array.from({ length: 225 }, (_, index) => question(`added-${index}`));
+    const changed = { ...question("first"), title: "Revised first question" };
+    const expanded = bank(changed, question("second"), ...added);
+    expect(await syncQuestions(db, expanded)).toEqual({ created: 225, updated: 1, unchanged: 1 });
+    expect(await db.question.count()).toBe(227);
+    expect(await db.question.findUniqueOrThrow({ where: { id: added[224].id } })).toMatchObject(added[224]);
+    expect((await db.question.findUniqueOrThrow({ where: { id: "first" } })).title).toBe(changed.title);
+    expect((await db.question.findUniqueOrThrow({ where: { id: "second" } })).updatedAt).toEqual(unchanged.updatedAt);
+    expect(await syncQuestions(db, expanded)).toEqual({ created: 0, updated: 0, unchanged: 227 });
+  });
   it("makes repeated vote requests idempotent and removes only the caller's vote", async () => {
     await Promise.all(Array.from({ length: 5 }, () => saveVote(db, firstUser, "first", true)));
     expect(await db.questionVote.count()).toBe(1);

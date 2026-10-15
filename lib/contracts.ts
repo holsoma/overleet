@@ -16,7 +16,8 @@ export const questionFiltersSchema = z.object({
   category: z.enum(categories).optional(), difficulty: z.enum(difficulties).optional(),
   status: statusSchema.optional(), company: z.string().max(80).optional(),
   source: z.string().max(200).optional(), sort: z.enum(["popularity", "difficulty", "title"]).default("popularity"),
-  q: z.string().max(200).optional()
+  q: z.string().max(200).optional(),
+  page: z.coerce.number().int().positive().max(Number.MAX_SAFE_INTEGER).catch(1).default(1)
 });
 export type QuestionFilters = z.infer<typeof questionFiltersSchema>;
 // Server entry points implemented by backend: getAppData() in lib/queries.ts.

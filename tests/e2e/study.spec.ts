@@ -48,20 +48,55 @@ test("filters stay in the URL and empty results can be cleared", async ({ page }
   await page.goto("/");
   await page.getByRole("combobox", { name: "Topic", exact: true }).selectOption("statistics");
   await expect(page).toHaveURL(/category=statistics/);
-  await expect(page.locator("[data-question-link]")).toHaveCount(activeQuestions.filter(question => question.category === "statistics").length);
+  await expect(page.locator("[data-question-link]")).toHaveCount(Math.min(25, activeQuestions.filter(question => question.category === "statistics").length));
   await page.getByRole("combobox", { name: "Difficulty", exact: true }).selectOption("hard");
   await expect(page).toHaveURL(/difficulty=hard/);
   const count = activeQuestions.filter(question => question.category === "statistics" && question.difficulty === "hard").length;
   expect(count).toBeGreaterThan(0);
-  await expect(page.locator("[data-question-link]")).toHaveCount(count);
+  await expect(page.locator("[data-question-link]")).toHaveCount(Math.min(25, count));
   await page.reload();
   await expect(page.getByRole("combobox", { name: "Topic", exact: true })).toHaveValue("statistics");
   await expect(page.getByRole("combobox", { name: "Difficulty", exact: true })).toHaveValue("hard");
-  await expect(page.locator("[data-question-link]")).toHaveCount(count);
+  await expect(page.locator("[data-question-link]")).toHaveCount(Math.min(25, count));
   await page.getByRole("searchbox", { name: "Search questions" }).fill("there is no question with this title");
   await expect(page.getByRole("heading", { name: "No questions match these filters" })).toBeVisible();
   await page.getByRole("button", { name: "Clear filters", exact: true }).first().click();
-  await expect(page.locator("[data-question-link]")).toHaveCount(activeQuestions.length);
+  await expect(page.locator("[data-question-link]")).toHaveCount(Math.min(25, activeQuestions.length));
+});
+
+test("pagination keeps stable rows in the URL and resets when filters or sorting change", async ({ page }) => {
+  const pageCount = Math.ceil(activeQuestions.length / 25);
+  const sorted = [...activeQuestions].sort((a, b) => a.title.localeCompare(b.title, "en") || a.id.localeCompare(b.id, "en"));
+  await page.goto("/?sort=title");
+  await expect(page.locator(".app-shell")).toHaveAttribute("data-hydrated", "true");
+  await expect(page.locator("[data-question-link]")).toHaveCount(Math.min(25, sorted.length));
+  await expect(page.locator("[data-question-link]").first()).toHaveAttribute("href", `/questions/${sorted[0].id}`);
+  if (pageCount > 1) {
+    await page.getByRole("button", { name: "Next", exact: true }).focus();
+    await page.keyboard.press("Enter");
+    await expect(page).toHaveURL(/page=2/);
+    await expect(page.locator("[data-question-link]").first()).toHaveAttribute("href", `/questions/${sorted[25].id}`);
+    await expect(page.getByRole("region", { name: "Question results", exact: true })).toBeFocused();
+    await page.keyboard.press("Tab");
+    await expect(page.locator("[data-question-link]").first()).toBeFocused();
+    await expect(page.locator("tbody tr").first().locator("td").first()).toHaveText("26");
+    await page.reload();
+    await expect(page.locator("[data-question-link]").first()).toHaveAttribute("href", `/questions/${sorted[25].id}`);
+    await page.getByRole("combobox", { name: "Sort by", exact: true }).selectOption("difficulty");
+    await expect(page).not.toHaveURL(/page=/);
+    await page.getByRole("button", { name: "Next", exact: true }).click();
+    await page.getByRole("combobox", { name: "Topic", exact: true }).selectOption("statistics");
+    await expect(page).not.toHaveURL(/page=/);
+  } else {
+    await expect(page.getByRole("navigation", { name: "Question pages", exact: true })).toHaveCount(0);
+  }
+  await page.goto("/?sort=title&page=999999");
+  const lastPageSize = sorted.length % 25 || 25;
+  await expect(page.locator("[data-question-link]")).toHaveCount(lastPageSize);
+  await expect(page.locator("[data-question-link]").first()).toHaveAttribute("href", `/questions/${sorted[(pageCount - 1) * 25].id}`);
+  await page.goto("/?category=statistics&page=invalid");
+  await expect(page.getByRole("combobox", { name: "Topic", exact: true })).toHaveValue("statistics");
+  await expect(page.locator("tbody tr").first().locator("td").first()).toHaveText("01");
 });
 
 test("drafts are separated by question and guest identity", async ({ page }) => {
@@ -99,6 +134,9 @@ test("a storage failure keeps the draft visible and reports unsaved progress", a
 test("mobile layout fits the viewport and supports keyboard study controls", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
+  // Wait for hydration and Next.js focus restoration before the first keyboard input.
+  await expect(page.locator(".app-shell")).toHaveAttribute("data-hydrated", "true");
+  await expect(page.getByRole("heading", { name: "Question bank." })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await capture(page, "question-bank-mobile");
   await page.keyboard.press("Tab");

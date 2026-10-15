@@ -118,6 +118,9 @@ input::placeholder, textarea::placeholder { color: oklch(0.58 0.01 130); }
 .sort-control > span { display: flex; align-items: center; gap: 5px; }
 .results-line { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 52px; color: var(--muted); font-size: 11px; }
 .table-scroll { overflow-x: auto; border-top: 1px solid var(--border); }
+.table-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.question-pagination { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 20px; color: var(--muted); font-size: 12px; }
+.question-pagination > div { display: flex; gap: 8px; }
 .question-table { border-collapse: collapse; width: 100%; text-align: left; }
 .question-table th { height: 40px; border-bottom: 1px solid var(--border); color: var(--muted); font-size: 10px; font-weight: 500; padding: 10px 12px; background: var(--surface); }
 .question-table td { padding: 18px 12px; border-bottom: 1px solid var(--border-subtle); vertical-align: middle; }

@@ -35,3 +35,29 @@ describe("daily selection", () => {
     expect(dailyCandidate([], "2026-10-15")).toBeNull();
   });
 });
+
+describe("pagination query validation", () => {
+  const otherFilters = {
+    category: "statistics", difficulty: "hard", status: "review_later",
+    company: "Example company", source: "Reference", sort: "difficulty", q: "sample mean",
+  };
+
+  it.each(["invalid", "", "0", "-1", "1.5", "NaN", "Infinity", "1e309", "9007199254740992"])(
+    "resets invalid page %j without removing valid filters", page => {
+      const query = Object.fromEntries(new URLSearchParams({ ...otherFilters, page }));
+      expect(questionFiltersSchema.parse(query)).toEqual({ ...otherFilters, page: 1 });
+    },
+  );
+
+  it("accepts the first page, ordinary pages and the maximum safe integer", () => {
+    for (const page of [1, 2, 10, Number.MAX_SAFE_INTEGER]) {
+      expect(questionFiltersSchema.parse({ ...otherFilters, page: String(page) })).toEqual({ ...otherFilters, page });
+    }
+    expect(questionFiltersSchema.parse(otherFilters)).toEqual({ ...otherFilters, page: 1 });
+  });
+
+  it("still rejects invalid filters when the page is repaired", () => {
+    expect(questionFiltersSchema.safeParse({ ...otherFilters, category: "unknown", page: "invalid" }).success).toBe(false);
+    expect(questionFiltersSchema.safeParse({ ...otherFilters, sort: "unknown", page: "0" }).success).toBe(false);
+  });
+});

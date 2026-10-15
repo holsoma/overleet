@@ -8,6 +8,7 @@ import { useState } from "react";
 import type { AppData } from "@/lib/contracts";
 import { Button } from "./ui/button";
 import { StudyProvider, useStudy } from "./study-provider";
+import { useHydrated } from "./browser-storage";
 
 export function StudyShell({ data, children }: { data: AppData; children: React.ReactNode }) {
   return <StudyProvider data={data} key={data.viewer?.id ?? "guest"}><ShellContents>{children}</ShellContents></StudyProvider>;
@@ -15,6 +16,7 @@ export function StudyShell({ data, children }: { data: AppData; children: React.
 function ShellContents({ children }: { children: React.ReactNode }) {
   const { data, progress, error, mergeFailed, merging, clearError, retryMerge } = useStudy();
   const path = usePathname();
+  const hydrated = useHydrated();
   const [authNotice, setAuthNotice] = useState<string | null>(null);
   const [authBusy, setAuthBusy] = useState(false);
   const activeQuestions = data.questions.filter(q => q.active);
@@ -25,7 +27,7 @@ function ShellContents({ children }: { children: React.ReactNode }) {
     try { await signIn("github", { callbackUrl: window.location.pathname + window.location.search }); }
     catch { setAuthNotice("GitHub sign-in could not start. Check your connection and try again."); setAuthBusy(false); }
   }
-  return <div className="app-shell">
+  return <div className="app-shell" data-hydrated={hydrated}>
     <a className="skip-link" href="#main">Skip to content</a>
     <aside className="sidebar" aria-label="Main navigation">
       <Link className="wordmark" href="/" aria-label="OVERLEET home"><span className="brand-symbol" aria-hidden="true">o/</span>OVERLEET<span className="brand-dot">.</span></Link>
