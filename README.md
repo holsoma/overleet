@@ -2,7 +2,7 @@
 
 Think it through. A sourced question bank for Data Science, Machine Learning, Statistics, A/B Testing and LLM interview practice.
 
-Try [OVERLEET online](https://overleet.vercel.app/). The public installation supports guest study; GitHub account sign-in still needs production OAuth configuration.
+Try [OVERLEET online](https://overleet.vercel.app/). The public installation supports guest study and GitHub sign-in.
 
 Browse 250 original questions, write your answer, reveal the explanation and check it against a short rubric. Guests keep progress in their browser. GitHub sign-in synchronises completion status through PostgreSQL. Draft answers and rubric selections stay in the current browser.
 

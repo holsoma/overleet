@@ -5,7 +5,6 @@ import { encode } from "next-auth/jwt";
 import { Pool } from "pg";
 
 const authSecret = "overleet-browser-test-secret";
-const origin = "http://127.0.0.1:3000";
 const guestKey = "overleet:v1:guest:progress";
 const pool = new Pool({ connectionString: process.env.TEST_DATABASE_URL, max: 2, connectionTimeoutMillis: 5000 });
 const createdUsers: string[] = [];
@@ -32,6 +31,9 @@ async function createUser(name: string) {
 
 async function useAccount(context: BrowserContext, user: { id: string; name: string }) {
   const value = await encode({ secret: authSecret, token: { sub: user.id, userId: user.id, name: user.name }, maxAge: 3600 });
+  const baseURL = test.info().project.use.baseURL;
+  if (!baseURL) throw new Error("Authenticated browser tests require a configured baseURL.");
+  const origin = new URL(baseURL).origin;
   await context.addCookies([{ name: "next-auth.session-token", value, url: origin, httpOnly: true, sameSite: "Lax" }]);
 }
 
@@ -64,7 +66,7 @@ test("failed guest import preserves browser records until a successful retry", a
   await page.goto("/");
   await page.evaluate(({ guestKey, guest }) => localStorage.setItem(guestKey, JSON.stringify(guest)), { guestKey, guest });
   let failImport = true;
-  await page.route(`${origin}/**`, route => route.request().method() === "POST" && route.request().headers()["next-action"] && failImport ? route.abort("failed") : route.continue());
+  await page.route(`${new URL(page.url()).origin}/**`, route => route.request().method() === "POST" && route.request().headers()["next-action"] && failImport ? route.abort("failed") : route.continue());
   await useAccount(context, user);
   await page.reload();
   await expect(page.getByRole("button", { name: "Retry guest import", exact: true })).toBeVisible();

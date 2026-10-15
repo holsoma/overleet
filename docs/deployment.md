@@ -8,7 +8,7 @@ Checked on 15 October 2026: [Vercel Hobby](https://vercel.com/docs/plans/hobby) 
 
 The public app is [overleet.vercel.app](https://overleet.vercel.app/), hosted in the `holsoma/overleet` Vercel project on Hobby. Its dedicated Neon database is on Free. Both use Singapore; Vercel runs Node.js 22 and the managed database reports PostgreSQL 18.6. Local development and CI continue to use PostgreSQL 17.
 
-The database contains all 250 accepted questions. Committed migrations and an unchanged second content sync succeeded. Database credentials and the session secret are scoped to production. Neon Auth is disabled because this application uses NextAuth. Production GitHub OAuth credentials have not been configured, so account sign-in is unavailable; guest study is working.
+The database contains all 250 accepted questions. Committed migrations and an unchanged second content sync succeeded. Database credentials, GitHub OAuth credentials and the session secret are scoped to production. Neon Auth is disabled because this application uses NextAuth. GitHub sign-in reaches the authorisation screen with read-only profile access; guest study also works.
 
 The initial release was deployed from `expand-question-bank-and-deploy`. [Content PR #2](https://github.com/holsoma/overleet/pull/2) remains open for human review. Vercel's automatic production branch is `main`: review and merge the release PR before other changes to `main`, because any push there can replace the manually deployed release with that branch's application code. Do not bypass the repository's review rules.
 

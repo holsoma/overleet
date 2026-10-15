@@ -159,3 +159,33 @@ test("guest voting gives a sign-in explanation", async ({ page }) => {
   await page.getByRole("button", { name: /Vote for this question/ }).click();
   await expect(page.getByRole("alert").filter({ hasText: "Sign in with GitHub to vote on a question." })).toBeVisible();
 });
+
+test("advanced filters are disclosed, retain URL state and remain clearable", async ({ page }) => {
+  await page.goto("/");
+  const more = page.getByRole("button", { name: /More filters/ });
+  await expect(more).toHaveAttribute("aria-expanded", "false");
+  await expect(page.getByRole("combobox", { name: "Status", exact: true })).toBeHidden();
+  await more.focus();
+  await page.keyboard.press("Enter");
+  await expect(more).toHaveAttribute("aria-expanded", "true");
+  if (activeQuestions.every(question => !question.companyTags.length)) {
+    await expect(page.getByRole("combobox", { name: "Company", exact: true })).toHaveCount(0);
+  }
+  await page.getByRole("combobox", { name: "Status", exact: true }).selectOption("unseen");
+  const source = activeQuestions[0].sources[0].name;
+  await page.getByRole("combobox", { name: "Source", exact: true }).selectOption(source);
+  await expect(more).toContainText("2");
+  await more.click();
+  await expect(more).toHaveAttribute("aria-expanded", "false");
+  await page.reload();
+  await expect(more).toHaveAttribute("aria-expanded", "true");
+  await expect(page.getByRole("combobox", { name: "Source", exact: true })).toHaveValue(source);
+  await expect(page.getByRole("combobox", { name: "Status", exact: true })).toHaveValue("unseen");
+  await page.getByRole("button", { name: "Clear filters", exact: true }).first().click();
+  await expect(page).toHaveURL(/\/$/);
+  await expect(more).toHaveAttribute("aria-expanded", "false");
+  await page.goto("/?company=Unknown%20company");
+  await expect(more).toHaveAttribute("aria-expanded", "true");
+  await expect(page.getByRole("combobox", { name: "Company", exact: true })).toHaveValue("Unknown company");
+  await expect(page.getByRole("heading", { name: "No questions match these filters" })).toBeVisible();
+});
