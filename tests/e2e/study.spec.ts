@@ -3,12 +3,83 @@ import { expect, test, type Page } from "@playwright/test";
 import questionBank from "../../data/questions/questions.json" with { type: "json" };
 
 const activeQuestions = questionBank.questions.filter(question => question.active);
+const technicalTopics = [
+  { category: "python", label: "Python" },
+  { category: "sql_databases", label: "SQL & databases" },
+] as const;
 
 async function capture(page: Page, name: string) {
   if (process.env.OVERLEET_CAPTURE_UI !== "1") return;
   await mkdir(".cache/ui", { recursive: true });
   await page.screenshot({ path: `.cache/ui/${name}.png`, fullPage: false });
 }
+
+for (const { category, label } of technicalTopics) {
+  test(`${label} supports topic filtering, code answers and progress links`, async ({ page }) => {
+    const questions = activeQuestions.filter(question => question.category === category);
+    expect(questions.length).toBeGreaterThan(0);
+    const codeQuestion = questions.find(question => /```[^\n]*\n[\s\S]+?```/.test(question.detailedAnswerMarkdown));
+    expect(codeQuestion, `${label} needs a code example to verify answer rendering`).toBeDefined();
+
+    await page.goto("/");
+    await page.getByRole("button", { name: label, exact: true }).click();
+    await expect(page).toHaveURL(new RegExp(`category=${category}`));
+    await expect(page.locator("[data-question-link]")).toHaveCount(Math.min(25, questions.length));
+    const expectedPaths = new Set(questions.map(question => `/questions/${question.id}`));
+    for (const href of await page.locator("[data-question-link]").evaluateAll(links => links.map(link => link.getAttribute("href")))) {
+      expect(expectedPaths.has(href!)).toBe(true);
+    }
+    await page.reload();
+    await expect(page.getByRole("button", { name: label, exact: true })).toHaveAttribute("aria-pressed", "true");
+
+    await page.goto(`/questions/${codeQuestion!.id}`);
+    await expect(page.locator("#model-answer")).toBeHidden();
+    await page.getByRole("button", { name: "Reveal model answer", exact: true }).click();
+    const code = page.locator("#model-answer pre code").first();
+    await expect(code).toBeVisible();
+    const expectedCode = codeQuestion!.detailedAnswerMarkdown.match(/```[^\n]*\n([\s\S]+?)```/)![1].trim();
+    expect((await code.textContent())?.trim()).toBe(expectedCode);
+    await page.setViewportSize({ width: 320, height: 844 });
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    const codeBlock = page.locator("#model-answer pre").first();
+    expect(await codeBlock.evaluate(element => getComputedStyle(element).overflowX)).toBe("auto");
+    const scrolling = await codeBlock.evaluate(element => {
+      element.scrollLeft = element.scrollWidth;
+      return { overflows: element.scrollWidth > element.clientWidth, scrollLeft: element.scrollLeft };
+    });
+    if (scrolling.overflows) expect(scrolling.scrollLeft).toBeGreaterThan(0);
+    await page.getByRole("button", { name: "Mark completed", exact: true }).click();
+    await expect(page.getByRole("status")).toContainText("Marked as completed.");
+    await page.getByRole("link", { name: "Your progress", exact: true }).click();
+    await expect(page.getByRole("progressbar", { name: `${label}: 1 of ${questions.length} completed`, exact: true })).toHaveAttribute("value", "1");
+    const topicLink = page.locator(".topic-row").getByRole("link", { name: label, exact: true });
+    await expect(topicLink).toHaveAttribute("href", `/?category=${category}`);
+    await expect(page.locator(".topic-row a")).toHaveCount(6);
+    await expect(page.locator(".topic-row a").filter({ hasText: /career|\bcv\b|r[eé]sum[eé]/i })).toHaveCount(0);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    await topicLink.click();
+    await expect(page).toHaveURL(new RegExp(`category=${category}`));
+    await expect(page.getByRole("button", { name: label, exact: true })).toHaveAttribute("aria-pressed", "true");
+  });
+}
+
+test("all six topic controls wrap within a 320px viewport without career categories", async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 844 });
+  await page.goto("/");
+  const topics = page.getByRole("group", { name: "Filter by topic", exact: true });
+  await expect(topics.getByRole("button")).toHaveText(["All topics", "ML Theory", "Statistics", "A/B Testing", "LLMs", "Python", "SQL & databases"]);
+  const positions: number[] = [];
+  for (const button of await topics.getByRole("button").all()) {
+    await expect(button).toBeVisible();
+    const bounds = await button.boundingBox();
+    expect(bounds).not.toBeNull();
+    expect(bounds!.x).toBeGreaterThanOrEqual(0);
+    expect(bounds!.x + bounds!.width).toBeLessThanOrEqual(320);
+    positions.push(Math.round(bounds!.y));
+  }
+  expect(new Set(positions).size).toBeGreaterThan(1);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+});
 
 test("guest can draft, reveal, self-check and record progress across page loads", async ({ page }) => {
   await page.goto("/");

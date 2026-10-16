@@ -18,10 +18,10 @@ export const candidatesSchema = z.object({ schemaVersion: z.literal(1), candidat
   id: z.string().regex(/^[a-f0-9]{24}$/), url: httpsUrlSchema, title: z.string().min(1).max(300),
   sourceId: slugSchema, retrievedAt: z.iso.datetime(),
   sourceQuestion: z.object({ fingerprint: z.string().regex(/^[a-f0-9]{64}$/), documentUrl: httpsUrlSchema }).strict().optional(),
-  review: z.object({ status: z.enum(["drafted", "dismissed"]), questionIds: z.array(slugSchema).optional(), note: z.string().trim().min(1) }).strict().superRefine((review, context) => {
+  review: z.object({ status: z.enum(["drafted", "covered", "dismissed"]), questionIds: z.array(slugSchema).optional(), note: z.string().trim().min(1) }).strict().superRefine((review, context) => {
     const ids = review.questionIds ?? [];
-    if (review.status === "drafted" && (!ids.length || new Set(ids).size !== ids.length)) context.addIssue({ code: "custom", message: "Drafted candidates require nonempty unique question IDs.", path: ["questionIds"] });
-    if (review.status === "dismissed" && ids.length) context.addIssue({ code: "custom", message: "Dismissed candidates cannot reference drafted questions.", path: ["questionIds"] });
+    if ((review.status === "drafted" || review.status === "covered") && (!ids.length || new Set(ids).size !== ids.length)) context.addIssue({ code: "custom", message: "Drafted and covered candidates require nonempty unique question IDs.", path: ["questionIds"] });
+    if (review.status === "dismissed" && ids.length) context.addIssue({ code: "custom", message: "Dismissed candidates cannot reference questions.", path: ["questionIds"] });
   }).optional(),
 }).strict()) }).strict().superRefine((document, context) => {
   const ids = new Set<string>();

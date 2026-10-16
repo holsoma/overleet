@@ -6,7 +6,7 @@ product
 
 ## Users
 
-People preparing for Data Science, Machine Learning, Statistics, A/B Testing and LLM interviews. They browse by topic and difficulty, write an answer before revealing the explanation, and record what needs further practice.
+People preparing for Data Science, Machine Learning, Statistics, A/B Testing, LLM, Python and SQL/database interviews. They browse by topic and difficulty, write an answer before revealing the explanation, and record what needs further practice. CV and personal-experience questions are outside the question bank.
 
 ## Product Purpose
 

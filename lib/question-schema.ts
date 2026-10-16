@@ -1,9 +1,9 @@
 import { z } from "zod";
 
 export const difficulties = ["easy", "medium", "hard"] as const;
-export const categories = ["ml_theory", "statistics", "ab_testing", "llms"] as const;
+export const categories = ["ml_theory", "statistics", "ab_testing", "llms", "python", "sql_databases"] as const;
 export const statuses = ["unseen", "completed", "review_later"] as const;
-export const categoryLabels = { ml_theory: "ML Theory", statistics: "Statistics", ab_testing: "A/B Testing", llms: "LLMs" } as const;
+export const categoryLabels = { ml_theory: "ML Theory", statistics: "Statistics", ab_testing: "A/B Testing", llms: "LLMs", python: "Python", sql_databases: "SQL & databases" } as const;
 export const statusLabels = { unseen: "Unseen", completed: "Completed", review_later: "Needs review" } as const;
 export const slugSchema = z.string().min(1).max(100).regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
 export const statusSchema = z.enum(statuses);

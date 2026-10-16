@@ -10,6 +10,15 @@
       "sourceQuestion": {
         "fingerprint": "520c90ad526e702ebfb02b09b873ae737fde17133092fabd65403e12126219ad",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "huber-loss-residuals",
+          "robust-feature-scaling",
+          "mae-rmse-outliers"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
       }
     },
     {
@@ -39,6 +48,13 @@
       "sourceQuestion": {
         "fingerprint": "7c631ddabedba8746f886d2278aaa45000948e4e570f03a751a479121289ced5",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "central-limit-theorem"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
       }
     },
     {
@@ -50,6 +66,13 @@
       "sourceQuestion": {
         "fingerprint": "dd9365fd0e475beef050a64ada1ae1ef292e990a449e3f1e6aef204fd1d39006",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "pattern-race-states"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Original patterns and state recurrence; avoid replaying HH/TH wording."
       }
     },
     {
@@ -61,6 +84,14 @@
       "sourceQuestion": {
         "fingerprint": "ec527adde1a92e9e4111c0951d90470f19694750d70957264bc833551703846c",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "bagging-correlated-errors",
+          "forest-feature-subsampling"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
       }
     },
     {
@@ -72,6 +103,13 @@
       "sourceQuestion": {
         "fingerprint": "7d14d444d17589835dc0bc3a061cebccfbcbd50f8388cc1a2fc79b125bee6d58",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "nonlinear-activation"
+        ],
+        "note": "Retain the ID and extend its answer with ReLU, sigmoid and tanh definitions and gradient differences."
       }
     },
     {
@@ -83,6 +121,16 @@
       "sourceQuestion": {
         "fingerprint": "409a2dad6df667fc563f6eedb24e8e61894d9f7f6facdcdbb0023578a5bdd769",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "randomisation-unit",
+          "primary-and-guardrail-metrics",
+          "sample-ratio-mismatch",
+          "repeated-peeking"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
       }
     },
     {
@@ -94,6 +142,13 @@
       "sourceQuestion": {
         "fingerprint": "9f4d9dc7241bff5b03212a63e82d72655fcfb43ecfff79acab71465eebb4807c",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "overlapping-run-events"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Concrete independent sensor alert sequence, count overlap only once."
       }
     },
     {
@@ -105,6 +160,15 @@
       "sourceQuestion": {
         "fingerprint": "bd3163918aa9066b9ac5065e94a17e1ffaeec6ed7e17dbe56bc609b54b7bc9bc",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "bagging-correlated-errors",
+          "gradient-boosting-residuals",
+          "boosting-shrinkage-depth"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
       }
     },
     {
@@ -116,6 +180,15 @@
       "sourceQuestion": {
         "fingerprint": "b44b07a5468865915ebb7e223d60bc69a68bb33fac09e6abe8756aa7b3df7445",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "regularisation-purpose",
+          "dropout-training-inference",
+          "early-stopping-validation"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
       }
     },
     {
@@ -188,6 +261,2323 @@
           "uniform-endpoint-maximum-bias"
         ],
         "note": "Original question and answer passed independent mathematical, source and duplication review on 2026-10-15. Reference-title correction resolved. Human review required before publication."
+      }
+    },
+    {
+      "id": "17718fb6533960b64853f131",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q4-what-are-l1-and-l2-regularization-what-are-the-differences-between-the-two",
+      "title": "What are L1 and L2 regularization? What are the differences between the two?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.368Z",
+      "sourceQuestion": {
+        "fingerprint": "f5b62c1257fab27bf403efa8cf79148b966334dafa5686af9156048b0ac86446",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "regularisation-purpose",
+          "lasso-sparsity",
+          "elastic-net-correlated-features"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "6d8ca401f10479952475a8e5",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q5-what-are-the-bias-and-variance-in-a-machine-learning-model-and-explain-the-bias-variance-trade-off",
+      "title": "What are the Bias and Variance in a Machine Learning Model and explain the bias-variance trade-off?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "194182c481bdc4acef582f9f4e5aa0664a38d8f2fed086616e702b7aff06423a",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "bias-variance-decomposition"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "a546634b95c7384a1beea561",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q6-mention-three-ways-to-handle-missing-or-corrupted-data-in-a-dataset",
+      "title": "Mention three ways to handle missing or corrupted data in a dataset.",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "c0048cab3c9ae7690e36b85789e9e90c8763a61bd0972cc883e39af8386de462",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "imputation-within-validation"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Distinct from missingness indicators; avoid claiming imputation removes MNAR bias."
+      }
+    },
+    {
+      "id": "ddb0bb04b96b83cce6c3d81d",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q7-explain-briefly-the-logistic-regression-model-and-state-an-example-of-when-you-have-used-it-recently",
+      "title": "Explain briefly the logistic regression model and state an example of when you have used it recently.",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "0f1dcf82d18daf05d471a68fce8939d282bdc13ba1fb944cd4ab24197d2ae582",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "logistic-log-odds"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "4ea467b1c2b1fcb2c698e191",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q9-explain-what-is-information-gain-and-entropy-in-the-context-of-decision-trees",
+      "title": "Explain what is information gain and entropy in the context of decision trees.",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "3ddcd8f66bba2f3849c562d07212cc67368c2bafefbfedf1aeadf8556af7fbf0",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "gini-entropy-splits"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "366135ba350ee5a7538cff64",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q10-explain-the-linear-regression-model-and-discuss-its-assumption",
+      "title": "Explain the linear regression model and discuss its assumption.",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "5abfb99869fd6e4e5ace4efdfdbf29ee1b164dfb6a2058f68b5b4b549ebe600f",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "ols-projection-geometry",
+          "ols-error-assumptions"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "93e09571e4566ffbf6f6da8a",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q11-explain-briefly-the-k-means-clustering-and-how-can-we-find-the-best-value-of-k",
+      "title": "Explain briefly the K-Means clustering and how can we find the best value of K?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "98bedfa2945f4c16212efebcea39faf7a1cc045ff92743ed64015dd78ecfb3d1",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "kmeans-objective",
+          "choosing-cluster-count"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "692a80f5f15eb37f5f256bad",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q12-define-precision-recall-and-f1-and-discuss-the-trade-off-between-them",
+      "title": "Define Precision, recall, and F1 and discuss the trade-off between them?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "33ac1fde568b48db61255be41f00f127f0b7689eb55b8cb4e4e1df77134cce4e",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "precision-recall-tradeoff",
+          "f1-ignores-true-negatives"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "8d120726fee1ff266cd5a71a",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q13-what-are-the-differences-between-a-model-that-minimizes-squared-error-and-the-one-that-minimizes-the-absolute-error-and-in-which-cases-each-error-metric-would-be-more-appropriate",
+      "title": "What are the differences between a model that minimizes squared error and the one that minimizes the absolute error? and in which cases each error metric would be more appropriate?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "39ea3e047cc67d6ab52665a037fd4597a7f162a907bba4545f1378b4f91b3581",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "mae-rmse-outliers",
+          "quantile-loss-target"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "ea2da9b8c24943833e94b4e2",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q14-define-and-compare-parametric-and-non-parametric-models-and-give-two-examples-for-each-of-them",
+      "title": "Define and compare parametric and non-parametric models and give two examples for each of them?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "766c2edab734f4edd4652323d5e808a8c5f811676ee8b13c3f0300946adf7d2e",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "parametric-capacity-sample-size"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Nonparametric does not mean no parameters; distinguish from linear/nonlinear."
+      }
+    },
+    {
+      "id": "3113ed80c98d2f83688eccc9",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q15-explain-the-kernel-trick-in-svm-why-do-we-use-it-and-how-to-choose-what-kernel-to-use",
+      "title": "Explain the kernel trick in SVM. Why do we use it and how to choose what kernel to use?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "714ef5cc37769d27e8b08b40d0ddac13ddf293c1e0b21962d2feecf16d495bcf",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "kernel-positive-semidefinite",
+          "svm-c-gamma"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "b6ea1e0bf87b3f783026eff6",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q16-define-the-cross-validation-process-and-the-motivation-behind-using-it",
+      "title": "Define the cross-validation process and the motivation behind using it.",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "28ee8ea1e45f5eb7598401154614bd9218bb80ce7fc304595318de689d96b840",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "train-validation-test",
+          "nested-cross-validation",
+          "cross-validation-fold-dependence"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "a9e34f5465f8d7d48b34edde",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q17-you-are-building-a-binary-classifier-and-you-found-that-the-data-is-imbalanced-what-should-you-do-to-handle-this-situation",
+      "title": "You are building a binary classifier and you found that the data is imbalanced, what should you do to handle this situation?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "e82068ade3c57e5a6aaa9ec403e8258eb469eb78754e4755412afef5f732a9bd",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "resampling-class-imbalance"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Existing score/threshold questions cover evaluation but not resampling leakage and prior correction."
+      }
+    },
+    {
+      "id": "03a80dcbf45be3de732cab4a",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q18-you-are-working-on-a-clustering-problem-what-are-different-evaluation-metrics-that-can-be-used-and-how-to-choose-between-them",
+      "title": "You are working on a clustering problem, what are different evaluation metrics that can be used, and how to choose between them?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "35ccacb27d12883e5d221194ce3e6571411929b8e43fadc605a0ba1b0eade113",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "silhouette-interpretation",
+          "choosing-cluster-count"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "2f0ad14836a001204efcebff",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q19-what-is-the-roc-curve-and-when-should-you-use-it",
+      "title": "What is the ROC curve and when should you use it?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "8ac7a8f6d50121a7c5aa6305e21ae38c606be6fb1db33e761d9e283a2b16adf7",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "roc-auc-ranking"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "e0094041e3f8da0cd80532a1",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q20-what-is-the-difference-between-hard-and-soft-voting-classifiers-in-the-context-of-ensemble-learners",
+      "title": "What is the difference between hard and soft voting classifiers in the context of ensemble learners?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "c4b736beb11b672e7612c0e383600fee034cc4f3f4a74e158ec27815aaba678b",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "soft-vote-probabilities"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "6c1bc7e3e59007537afeb8bb",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q21-what-is-boosting-in-the-context-of-ensemble-learners-discuss-two-famous-boosting-methods",
+      "title": "What is boosting in the context of ensemble learners discuss two famous boosting methods",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "dd1c3c12b3492a8ca88b5994e6c69100644288e30af56f986df46054ccfb8613",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "gradient-boosting-residuals",
+          "adaboost-observation-weights"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "db52d7ac1491318c5a844903",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q22-how-can-you-evaluate-the-performance-of-a-dimensionality-reduction-algorithm-on-your-dataset",
+      "title": "How can you evaluate the performance of a dimensionality reduction algorithm on your dataset?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "62117fc281d4f468448075a4e7a443c93612066376b3c10bfa0842913ad84bae",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "pca-objective-and-limits",
+          "autoencoder-reconstruction-representation"
+        ],
+        "note": "Existing original questions cover reconstruction, retained variance and held-out downstream evaluation. A new generic evaluation item would repeat these concepts."
+      }
+    },
+    {
+      "id": "448fc9c855e00f01b5ab92c3",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q23-define-the-curse-of-dimensionality-and-how-to-solve-it",
+      "title": "Define the curse of dimensionality and how to solve it.",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "48bb383e9d2ac9dfad11e913aa23fc3cc04242460db55612701f4c618180e081",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "high-dimensional-distances"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "7c2f564b1f4d39f31679e1ea",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q24-in-what-cases-would-you-use-vanilla-pca-incremental-pca-randomized-pca-or-kernel-pca",
+      "title": "In what cases would you use vanilla PCA, Incremental PCA, Randomized PCA, or Kernel PCA?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "1fbe9c0bcdac2d720f9fd904f933e784f191b47e382a8ff796efff1274841a49",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "pca-computation-variants"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Do not repeat variance maximisation; distinguish solver approximation from nonlinear kernel objective."
+      }
+    },
+    {
+      "id": "868f124f4fd0c3d9a87b15fe",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q25-discuss-two-clustering-algorithms-that-can-scale-to-large-datasets",
+      "title": "Discuss two clustering algorithms that can scale to large datasets",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "b039a75db520257762701b343739499a3c4fa0193748e878f526220a395b8684",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "large-scale-clustering-tradeoffs"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Distinguish computational approximation from ordinary kmeans initialisation."
+      }
+    },
+    {
+      "id": "108ad85c502e9b720f4c594e",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q26-do-you-need-to-scale-your-data-if-you-will-be-using-the-svm-classifier-and-discus-your-answer",
+      "title": "Do you need to scale your data if you will be using the SVM classifier and discus your answer",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "d10297648b5e0bf0d1dadb8ee56f708ec4cc3c36ad73a9dad4e336c68ee48ff3",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "standardisation-distance-models",
+          "svm-c-gamma"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "3e1a7da76ece2673e0070409",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q27-what-are-loss-functions-and-cost-functions-explain-the-key-difference-between-them",
+      "title": "What are Loss Functions and Cost Functions? Explain the key Difference Between them.",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "ae81ffdce482db879ca4864cece0e6ca78ea4135a599f67e481d700f482778f6",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "empirical-risk-loss-objective"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Concrete sum versus mean objective and penalty scaling rather than terminology only."
+      }
+    },
+    {
+      "id": "e07c1f153ccb903280ad42b1",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q28-what-is-the-importance-of-batch-in-machine-learning-and-explain-some-batch-dependent-gradient-descent-algorithms",
+      "title": "What is the importance of batch in machine learning and explain some batch-dependent gradient descent algorithms?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "e5387741f00207212646be6f09303319a595c94e895e59f7a255d7e062c75ddf",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "mini-batch-gradient-noise"
+        ],
+        "note": "Covered by the same extended batch/SGD/mini-batch question as ML8; no extra question."
+      }
+    },
+    {
+      "id": "89648be1eb0b9923721d0edb",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q29-what-are-the-different-methods-to-split-a-tree-in-a-decision-tree-algorithm",
+      "title": "What are the different methods to split a tree in a decision tree algorithm?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "bfadf3428908816514efe5d469d03c31a3c5e8ec128c20b9e95f7f8b810c1df7",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "gini-entropy-splits",
+          "regression-tree-leaf-value"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "efa2bacb3a4a9b918dfe500c",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q30-why-boosting-is-a-more-stable-algorithm-as-compared-to-other-ensemble-algorithms",
+      "title": "Why boosting is a more stable algorithm as compared to other ensemble algorithms?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "dd92e2c879c9bd4813509e08b18b182b80db5e2b2111f27f47462e094118afba",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "boosting-shrinkage-depth",
+          "bagging-correlated-errors"
+        ],
+        "note": "Explicitly reject the upstream premise that boosting is universally more stable than other ensembles; retain existing question and validation guidance."
+      }
+    },
+    {
+      "id": "7c94a538277ad6b0f8e5f08f",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q32-what-are-the-different-approaches-to-implementing-recommendation-systems",
+      "title": "What are the different approaches to implementing recommendation systems?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "9b85fcb367bbf8bde002be85a94ce16f5fafa32ebe2eab5efeabb2ea8adfaf51",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "recommendation-cold-start"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Independent recommendation scenario, no company provenance."
+      }
+    },
+    {
+      "id": "aadb34e9611b45f39edb91b8",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q33-what-are-the-evaluation-metrics-that-can-be-used-for-multi-label-classification",
+      "title": "What are the evaluation metrics that can be used for multi-label classification?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "f17384d4939879365247524c119cf9d947cde125e014d18a0f093f1dcffd88a2",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "multilabel-subset-hamming"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Distinct from multiclass macro/micro averaging."
+      }
+    },
+    {
+      "id": "36119ea5685f4d505fe967ab",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q34-what-is-the-difference-between-concept-and-data-drift-and-how-to-overcome-each-of-them",
+      "title": "What is the difference between concept and data drift and how to overcome each of them?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "162e5049f92c5c3a58b0f342ab459bf8a3f3dddf2ff63ab46f21b6e8b83d217b",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "concept-drift-monitoring"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Existing covariate-shift weighting is narrower; prefer drift survey for source."
+      }
+    },
+    {
+      "id": "98d7f2cfb182c341ed1163d4",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q35-can-you-explain-the-arima-model-and-its-components",
+      "title": "Can you explain the ARIMA model and its components?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "09c4ad68c2fb44702efc1ec85a5429844208af46bc1b73bf33988b82c75310eb",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "arima-differencing-residuals"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Cover Q35 and Q36 once; stationarity needed after differencing, normality not essential for point forecasts."
+      }
+    },
+    {
+      "id": "b43a83c8968f87bb8b5f82ef",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q36-what-are-the-assumptions-made-by-the-arima-model",
+      "title": "What are the assumptions made by the ARIMA model?",
+      "sourceId": "youssef-hosni-ml",
+      "retrievedAt": "2026-10-15T10:29:37.369Z",
+      "sourceQuestion": {
+        "fingerprint": "2742ae227d69be17c9e3c1b886930dd4c63b2eab5645757548cc124aa5d15832",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Machine%20Learning%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "arima-differencing-residuals"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Same proposed question as ML35; no second question needed."
+      }
+    },
+    {
+      "id": "daba81532d5762218da846e4",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q4-why-should-we-use-batch-normalization",
+      "title": "Why should we use Batch Normalization?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "ad72334095b0ef0d9763b92906012a7515e7215e5f2933104536203198e6afb9",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "batch-normalisation-running-stats"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "4c14f89b20bcc8a6f8a75b57",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q5-how-to-know-whether-your-model-is-suffering-from-the-problem-of-exploding-gradients",
+      "title": "How to know whether your model is suffering from the problem of Exploding Gradients?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "b8257d7e734692c385ec43878c50ad6829d5f061eb156ec688a546ea9d3c157e",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "vanishing-exploding-gradients"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "d22e2977c880f44cf23d6dee",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q6-can-you-name-and-explain-a-few-hyperparameters-used-for-training-a-neural-network",
+      "title": "Can you name and explain a few hyperparameters used for training a neural network?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "6c21052aa39f061abbfcaeac2f8bdb8ef98ded354983984e85479036274ab889",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "momentum-optimisation",
+          "mini-batch-gradient-noise",
+          "early-stopping-validation",
+          "regularisation-purpose"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "1917fceda2bc15c4435a2d4f",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q7-can-you-explain-the-parameter-sharing-concept-in-deep-learning",
+      "title": "Can you explain the parameter sharing concept in deep learning?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "b08898af133969bf8fce95ce83df62dd0fc343bb478f5d5e739d66bd4d193cb2",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "convolution-parameter-sharing"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "6654f1777904021345ba56a7",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q8-describe-the-architecture-of-a-typical-convolutional-neural-network-cnn",
+      "title": "Describe the architecture of a typical Convolutional Neural Network (CNN)?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "75a82c08c1aa6dc9e4ef1183d409b6c63174c5519b13be3c3bd33bc77b50f6c6",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "cnn-pooling-receptive-field"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Cover CNN architecture through a concrete stride/pooling design trade-off."
+      }
+    },
+    {
+      "id": "f466cf0b264b22a71a499230",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q9-what-is-the-vanishing-gradient-problem-in-artificial-neural-networks-and-how-to-fix-it",
+      "title": "What is the Vanishing Gradient Problem in Artificial Neural Networks and How to fix it?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "32ecfd5412717ab54998f03bb2ce89df9c118f7eb01a21e51b9203659477295d",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "vanishing-exploding-gradients"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "4afd5639fb0a4c83ae1a3c0a",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q10--when-it-comes-to-training-an-artificial-neural-network-what-could-be-the-reason-why-the-loss-doesnt-decrease-in-a-few-epochs",
+      "title": "When it comes to training an artificial neural network, what could be the reason why the loss doesn't decrease in a few epochs?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "aa201d5645abb7d9c97438efc99cffb1f0da172b7bec44b2e07e1fc7796d5dc5",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "neural-loss-debugging"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Different from explaining vanishing gradients; diagnostic sequence and distinguish training/validation loss."
+      }
+    },
+    {
+      "id": "d88f8d69524813fb77316160",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q11-why-sigmoid-or-tanh-is-not-preferred-to-be-used-as-the-activation-function-in-the-hidden-layer-of-the-neural-network",
+      "title": "Why Sigmoid or Tanh is not preferred to be used as the activation function in the hidden layer of the neural network?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "b6c6c61115133bc0458cd6bfb44dbf6f498b912bbc5f1314beeb7fcb0c8171f7",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "nonlinear-activation",
+          "vanishing-exploding-gradients"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "d79088654c226d2d206e2782",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q12-discuss-in-what-context-it-is-recommended-to-use-transfer-learning-and-when-it-is-not",
+      "title": "Discuss in what context it is recommended to use transfer learning and when it is not.",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "26c32ee63cc3e212354e8338b3c0cc701bc2c3bda93fa6746a112907030fad07",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "transfer-learning-domain-gap"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Distinct from LLM instruction tuning and catastrophic forgetting."
+      }
+    },
+    {
+      "id": "c56f99d02b6a876b9a1bc61a",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q13-discuss-the-vanishing-gradient-in-rnn-and-how-they-can-be-solved",
+      "title": "Discuss the vanishing gradient in RNN and How they can be solved.",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "0ca8dcb4a1a81283fb267263a3bf8ac64a0dc68c8f91871eb88d50d7c48d9e09",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "recurrent-hidden-state",
+          "vanishing-exploding-gradients",
+          "lstm-cell-gates"
+        ],
+        "note": "Existing recurrence and gradient propagation plus the new gate equation cover recurrent long-range credit assignment and mitigation; gates do not guarantee no vanishing gradient."
+      }
+    },
+    {
+      "id": "45541607f70cc8f9cd975f08",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q14-what-are-the-main-gates-in-lstm-and-what-are-their-tasks",
+      "title": "What are the main gates in LSTM and what are their tasks?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "46b9edb4f8ce9487c0c36da444b55557da61999552060f4b29f0f181ffbfa3fd",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "lstm-cell-gates"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Forget gate source use https://doi.org/10.1162/089976600300015015 if needed; avoid guarantee of no vanishing gradients."
+      }
+    },
+    {
+      "id": "55ab343c3505d0241c57682c",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q15-is-it-a-good-idea-to-use-cnn-to-classify 1d signal",
+      "title": "Is it a good idea to use CNN to classify 1D signal?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "641557c9b8962ea23b2c42504a6b16097d9714bbca7e87ede292842ad7d953c0",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "temporal-convolution-causality"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Temporal leakage distinguishes this from generic convolution sharing."
+      }
+    },
+    {
+      "id": "5c770a0d6443a25856b7e5a4",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q16-how-does-l1l2-regularization-affect-a-neural-network",
+      "title": "How does L1/L2 regularization affect a neural network?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "dd36f01c11b066dba7e66012cd8fda6fb8b1a2dcf0b4fe07f298b5cf9968d771",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "regularisation-purpose",
+          "adamw-decoupled-decay"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "ed472b5a35603ed3f1255a95",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q17-𝐇𝐨𝐰-𝐰𝐨𝐮𝐥𝐝-𝐲𝐨𝐮-𝐜𝐡𝐚𝐧𝐠𝐞-𝐚-𝐩𝐫𝐞-𝐭𝐫𝐚𝐢𝐧𝐞𝐝-𝐧𝐞𝐮𝐫𝐚𝐥-𝐧𝐞𝐭𝐰𝐨𝐫𝐤-𝐟𝐫𝐨𝐦-𝐜𝐥𝐚𝐬𝐬𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧-𝐭𝐨-𝐫𝐞𝐠𝐫𝐞𝐬𝐬𝐢𝐨𝐧",
+      "title": "𝐇𝐨𝐰 𝐰𝐨𝐮𝐥𝐝 𝐲𝐨𝐮 𝐜𝐡𝐚𝐧𝐠𝐞 𝐚 𝐩𝐫𝐞-𝐭𝐫𝐚𝐢𝐧𝐞𝐝 𝐧𝐞𝐮𝐫𝐚𝐥 𝐧𝐞𝐭𝐰𝐨𝐫𝐤 𝐟𝐫𝐨𝐦 𝐜𝐥𝐚𝐬𝐬𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧 𝐭𝐨 𝐫𝐞𝐠𝐫𝐞𝐬𝐬𝐢𝐨𝐧?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "fe501fb70fc4e11435957f2da433ea6e6cc309307c695a02a78624804b4bab2f",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "classification-to-regression-head"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Source uses mathematical bold Unicode; derive original scenario."
+      }
+    },
+    {
+      "id": "82faf80c3c2167e1a7ab7f3f",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q18-what-might-happen-if-you-set-the-momentum-hyperparameter-too-close-to-1-eg-09999-when-using-an-sgd-optimizer",
+      "title": "What might happen if you set the momentum hyperparameter too close to 1 (e.g., 0.9999) when using an SGD optimizer?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "b973aebcb409bb18f864cdca455efedef84b417148f71fabb7d2509acb4c2608",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "momentum-optimisation"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "07dbd897921c108ccdf4318f",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q19-what-are-the-hyperparameters-that-can-be-optimized-for-the-batch-normalization-layer",
+      "title": "What are the hyperparameters that can be optimized for the batch normalization layer?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "6d2055e7524dd6259292ab78397a24783385eba4ed4f73710bbec8d2e1f20473",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "batchnorm-epsilon-momentum"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Avoid confusing BN update momentum convention with optimiser momentum."
+      }
+    },
+    {
+      "id": "b846b8a53203603bb2e41fa5",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q20-what-is-the-effect-of-dropout-on-the-training-and-prediction-speed-of-your-deep-learning-model",
+      "title": "What is the effect of dropout on the training and prediction speed of your deep learning model?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "9b21c7d053c09809d23d95dbc3c58a7c62a70a6a482bd62cabb4681cd37891b3",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "dropout-compute-cost"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Existing dropout question explains training/evaluation scaling, but not compute or wall-clock cost."
+      }
+    },
+    {
+      "id": "46e31e1dd0b4c1fe53b6f3ff",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q21-what-is-the-advantage-of-deep-learning-over-traditional-machine-learning",
+      "title": "What is the advantage of deep learning over traditional machine learning?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "b808c7e89c09ac6e257cfb75165b8cb892aff8438733aff4ef701792f9a50c23",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "learned-features-data-regime"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. No universal claim deep learning is superior; assess inductive bias and sample constraints."
+      }
+    },
+    {
+      "id": "8c78b1731d1c2c55acd5a53d",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q23-what-is-transformer-architecture-and-why-is-it-widely-used-in-natural-language-processing-tasks",
+      "title": "What is transformer architecture, and why is it widely used in natural language processing tasks?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "bfeb04dbabfdb0ded2a1e9fcfb7c70df5fcbb92298b7424f6a8628803b61097f",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "scaled-dot-product-attention",
+          "multiple-attention-heads",
+          "position-information",
+          "encoder-decoder-cross-attention"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "659cc3fe19c313cce90d0774",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q24-explain-the-key-components-of-a-transformer-model",
+      "title": "Explain the key components of a transformer model.",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "f85c812d79e68cd2e74e23442979d44d47c3e250cdb14c198d0c99738f97bae9",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "scaled-dot-product-attention",
+          "multiple-attention-heads",
+          "position-information",
+          "encoder-decoder-cross-attention"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "466165f8a04611fe6af70ffd",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q25-what-is-self-attention-and-how-does-it-work-in-transformers",
+      "title": "What is self-attention, and how does it work in transformers?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "ab258e55235cf7f38b7b01927bbb8580fdb10c8cdf213a7b8c2c82799f8ef133",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "scaled-dot-product-attention"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "36258e297aa0bfb24d42d4d5",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q26-what-are-the-advantages-of-transformers-over-traditional-sequence-to-sequence-models",
+      "title": "What are the advantages of transformers over traditional sequence-to-sequence models?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "e538613d1400a076510bac07d9f4b6a221c03643869e03744c4bae005f5b63b7",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "attention-recurrence-parallelism"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Distinguish from cache/prefill question by training critical path and quadratic cost."
+      }
+    },
+    {
+      "id": "a437d0f737f07b038be1678b",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q27-how-does-the-attention-mechanism-help-transformers-capture-long-range-dependencies-in-sequences",
+      "title": "How does the attention mechanism help transformers capture long-range dependencies in sequences?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "14fee45e61da3073c7ab18086134914e80bf1c71c12c824043fc4b78f4d66f05",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "scaled-dot-product-attention",
+          "long-context-position-sensitivity"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "abe0310f0216ce6fae3e4fb3",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q28-what-are-the-limitations-of-transformers-and-what-are-some-potential-solutions",
+      "title": "What are the limitations of transformers, and what are some potential solutions?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "59a1b1ce81410ec4016a896f08931e656ba59c79681c4cde426f41d266ce5a4f",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "flashattention-exactness",
+          "long-context-position-sensitivity",
+          "indirect-prompt-injection"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "f99eac93ef1131737ec97fce",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q29-how-are-transformers-trained-and-what-is-the-role-of-pre-training-and-fine-tuning",
+      "title": "How are transformers trained, and what is the role of pre-training and fine-tuning?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "85d5da9036bc0a792a7d6e84f0057799ca88b1d31be287d7f6c1e0d26ccefc58",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "next-token-prediction",
+          "instruction-supervised-finetuning"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "3ba4738ca24a1af7c299d8f7",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q30-what-is-bert-bidirectional-encoder-representations-from-transformers-and-how-does-it-improve-language-understanding-tasks",
+      "title": "What is BERT (Bidirectional Encoder Representations from Transformers), and how does it improve language understanding tasks?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "69e0915c7e794e8799eae54010bf3ae34a5f7d715c0e992e2b36b32ae9d412f4",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "masked-versus-causal-objectives"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "f1e590183ddd028bad9f6221",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q31-describe-the-process-of-generating-text-using-a-transformer-based-language-model",
+      "title": "Describe the process of generating text using a transformer-based language model.",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "3b3285c0e17d9be6556b8a839785f69a4db2ce6f8971d951523d946d6528ab33",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "next-token-prediction",
+          "sampling-temperature",
+          "nucleus-sampling",
+          "generation-stop-rules"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "8e82e4a74bcf2492fc8a824e",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q32-what-are-some-challenges-or-ethical-considerations-associated-with-large-language-models",
+      "title": "What are some challenges or ethical considerations associated with large language models?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "336502478294d4fa977fc36bca95a8528b8a605dd2988bca199212c71d4ade15",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "language-model-subgroup-harm"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Concrete subgroup harm audit with limitations; do not duplicate prompt-injection question."
+      }
+    },
+    {
+      "id": "b9cc6f70a03d84bd6c9c230c",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q33-explain-the-concept-of-transfer-learning-and-how-it-can-be-applied-to-transformers",
+      "title": "Explain the concept of transfer learning and how it can be applied to transformers.",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "319edf693c9f1098b33216b799c5fab544eb74bfed94655eaf18ea7a6a368385",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "instruction-supervised-finetuning",
+          "fine-tuning-forgetting"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "459de988c2b4deeb07a2c06e",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q34-how-can-transformers-be-used-for-tasks-other-than-natural-language-processing-such-as-computer-vision",
+      "title": "How can transformers be used for tasks other than natural language processing, such as computer vision?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "5122668efc57d07d623ea438d65397bf9e15b1dce7ec6d1e66d599a8ee56408d",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "vision-transformer-patches"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Explain patch sequence length and attention cost distinct from text tokenisation."
+      }
+    },
+    {
+      "id": "def91b013aab4c75957b4a8e",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q35-what-is-computer-vision-and-why-is-it-important",
+      "title": "What is computer vision, and why is it important?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "d5948973848eebfcc23558f4c5bf8e7bc8761e6ba8022011c3a354de0ce4d45f",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "vision-task-output-choice"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. One task-choice question covers generic computer vision importance without vague definition trivia."
+      }
+    },
+    {
+      "id": "5c03d309f835ff6b1930a558",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q36-explain-the-concept-of-image-segmentation-and-its-applications",
+      "title": "Explain the concept of image segmentation and its applications.",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "0156276fcb746ccaa9350c52fd02452da004bd9424b4b4916889bb8da7a10913",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "segmentation-iou-background"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Distinct from task output choice, focuses evaluation and imbalance."
+      }
+    },
+    {
+      "id": "50537d3e2c389ce9bd1e29e1",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q37-what-is-object-detection-and-how-does-it-differ-from-image-classification",
+      "title": "What is object detection, and how does it differ from image classification?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "2458030620f9d0140d59f9f0ebe67bb206ef002dfa33386b90f35d27a7b4372b",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "object-detection-localisation"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Distinct from segmentation metrics, includes detection matching."
+      }
+    },
+    {
+      "id": "b047d913aa5483aa4cf498d3",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q38-describe-the-steps-involved-in-building-an-image-recognition-system",
+      "title": "Describe the steps involved in building an image recognition system.",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "94240e039b1bb2fe3f7a7a264468e1084bbeacb2a4f4777f4150782e20cc1c5c",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "train-validation-test",
+          "preprocessing-data-leakage",
+          "augmentation-label-preservation"
+        ],
+        "note": "Training boundaries plus the expanded augmentation item cover task/labels, data collection, image preprocessing, baseline architecture, validation and held-out evaluation. Dependent on the author completing that expansion."
+      }
+    },
+    {
+      "id": "18ca5a86a24df5aa885c1018",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q39-what-are-the-challenges-in-implementing-real-time-object-tracking",
+      "title": "What are the challenges in implementing real-time object tracking?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "2e822dc3a98459b7aa390f201d78262eec496c8ca160296c118d5c445a8f7ecd",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "tracking-identity-occlusion"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Tracking association and latency scenario."
+      }
+    },
+    {
+      "id": "67518fb9317f4bdfd229fd95",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q40-can-you-explain-the-concept-of-feature-extraction-in-computer-vision",
+      "title": "Can you explain the concept of feature extraction in computer vision?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "0408957d581685ebc2dcc9b72f52214600163e6414d9304492ba842dc00fc472",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "convolution-parameter-sharing",
+          "autoencoder-reconstruction-representation"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "eae0deaa282bb8d420f4bbc7",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q41-what-is-optical-character-recognition-ocr-and-what-are-its-main-applications",
+      "title": "What is optical character recognition (OCR), and what are its main applications?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "16827febcd49d90b23ae530613e760f2335a7d491e6812ed5ec40940c81eecf9",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "ocr-error-propagation"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Concrete document extraction and error measure, not library list."
+      }
+    },
+    {
+      "id": "b32786fabf8709f82bdb6ad5",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q42-how-does-a-convolutional-neural-network-cnn-differ-from-a-traditional-neural-network-in-the-context-of-computer-vision",
+      "title": "How does a convolutional neural network (CNN) differ from a traditional neural network in the context of computer vision?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "5fc6ba2689aacb2ceae4e0880a6729f04427801a8543ec5a09cc3e9321de41f4",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "convolution-parameter-sharing"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "3afe9096505276ee9d128fad",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q43--what-is-the-purpose-of-data-augmentation-in-computer-vision-and-what-techniques-can-be-used",
+      "title": "What is the purpose of data augmentation in computer vision, and what techniques can be used?",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "8c2e516ca3f1ea5a6db25477e25f47d707a39c834622bd93875f0af516ed308a",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "augmentation-label-preservation"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Include digit orientation counterexample and train-only augmentation."
+      }
+    },
+    {
+      "id": "2965a91081e0ba72e88de792",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q44-discuss-some-popular-deep-learning-frameworks-or-libraries-used-for-computer-vision-tasks",
+      "title": "Discuss some popular deep learning frameworks or libraries used for computer vision tasks.",
+      "sourceId": "youssef-hosni-deep-learning",
+      "retrievedAt": "2026-10-15T10:29:37.400Z",
+      "sourceQuestion": {
+        "fingerprint": "2b56c723328d6ae6eb0f1c94dd7685b4d2e7749d17fb9be5ad8f8fd381d37290",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Deep%20Learning%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "python-autodiff-framework-choice"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Expanded Python scope supports framework selection through tensor operations, automatic differentiation and deployment constraints; no popularity claim."
+      }
+    },
+    {
+      "id": "c824c13e90ccbebd78effe16",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q3-describe-briefly-the-hypothesis-testing-and-p-value-in-laymans-term-and-give-a-practical-application-for-them-",
+      "title": "Describe briefly the hypothesis testing and p-value in layman’s term? And give a practical application for them ?",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:29:37.409Z",
+      "sourceQuestion": {
+        "fingerprint": "6afde49045ac9e5d9d2791c31f69c498187dbd8e51aedddac0dee146adf98448",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "p-value-meaning",
+          "type-errors-and-power"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "df451c87ceb9195d4b215ba4",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q4-given-a-left-skewed-distribution-that-has-a-median-of-60-what-conclusions-can-we-draw-about-the-mean-and-the-mode-of-the-data",
+      "title": "Given a left-skewed distribution that has a median of 60, what conclusions can we draw about the mean and the mode of the data?",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:29:37.409Z",
+      "sourceQuestion": {
+        "fingerprint": "8adaf92a926d5441d718fcd18620a42c157fcf91e0b5937fcd415b4ffed0b008",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "skewness-tail-interpretation",
+          "mean-median-outliers"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "9239fb2059462683a611b7c6",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q5-what-is-the-meaning-of-selection-bias-and-how-to-avoid-it",
+      "title": "What is the meaning of selection bias and how to avoid it?",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:29:37.409Z",
+      "sourceQuestion": {
+        "fingerprint": "e802074645cee08de1eb0d801fa871a9d7e58b46af074711c87cbc400c1af580",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "sampling-frame-coverage",
+          "selection-on-outcome"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "f76fb1fe063ebe48e9fa621b",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q6-explain-the-long-tailed-distribution-and-provide-three-examples-of-relevant-phenomena-that-have-long-tails-why-are-they-important-in-classification-and-regression-problems",
+      "title": "Explain the long-tailed distribution and provide three examples of relevant phenomena that have long tails. Why are they important in classification and regression problems?",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:29:37.409Z",
+      "sourceQuestion": {
+        "fingerprint": "faa261870291d7f8fd90e798b45aa8adecc2f0d92d17c4b6a4d128ec91c1dc81",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "heavy-tail-moment-failure"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Cauchy or Pareto example, not conflating long-tailed class frequency with heavy distributional tail."
+      }
+    },
+    {
+      "id": "645f0db0ff811e2cf95cd9fb",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q7-what-is-the-meaning-of-kpi-in-statistics",
+      "title": "What is the meaning of KPI in statistics",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:29:37.409Z",
+      "sourceQuestion": {
+        "fingerprint": "07ab197d31564cbfd46b5fac994d08611056f2418cede6387dec18e85a18204c",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "primary-and-guardrail-metrics"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "d734204cefe8537546068214",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q8-say-you-flip-a-coin-10-times-and-observe-only-one-head-what-would-be-the-null-hypothesis-and-p-value-for-testing-whether-the-coin-is-fair-or-not",
+      "title": "Say you flip a coin 10 times and observe only one head. What would be the null hypothesis and p-value for testing whether the coin is fair or not?",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:29:37.409Z",
+      "sourceQuestion": {
+        "fingerprint": "462a3abf74079eac198cb0dc5a970dd1cdac3cdaebbc38e5ef531f64abcb132f",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "exact-binomial-test"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "229222902e749d258ddfc071",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q9-you-are-testing-hundreds-of-hypotheses-each-with-a-t-test-what-considerations-would-you-take-into-account-when-doing-this",
+      "title": "You are testing hundreds of hypotheses, each with a t-test. What considerations would you take into account when doing this?",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:29:37.409Z",
+      "sourceQuestion": {
+        "fingerprint": "c7cc8bd972f1cea66c5368db0b16d273be380325f3f0c3e0209aaec144e5f1dc",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "multiple-testing-bonferroni",
+          "false-discovery-rate"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "307299635fb0f6536d3234d9",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q10-what-general-conditions-must-be-satisfied-for-the-central-limit-theorem-to-hold",
+      "title": "What general conditions must be satisfied for the central limit theorem to hold?",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:29:37.410Z",
+      "sourceQuestion": {
+        "fingerprint": "3a809557a4e6cff595ae898cba0c12bddcd64e52907413825173cad1012a3dfa",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "central-limit-theorem"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "4d96d443cdfc43f3a04352b8",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q11-what-is-skewness-discuss-two-methods-to-measure-it",
+      "title": "What is skewness discuss two methods to measure it?",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:29:37.410Z",
+      "sourceQuestion": {
+        "fingerprint": "1234e25164f13fe6bdca111d1b143a9ab4a221e59a4cc38c87ebbfa20e62cf13",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "quantile-versus-moment-skewness"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Existing skewness question only gives third standardised moment; Bowley quartile skewness is a distinct robust alternative."
+      }
+    },
+    {
+      "id": "cd5352018494d3ad29f905c7",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q13-discuss-the-chi-square-anova-and-t-test",
+      "title": "Discuss the Chi-square, ANOVA, and t-test",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:29:37.410Z",
+      "sourceQuestion": {
+        "fingerprint": "a8dd9cb0ab52a1480eb971b9f5c1a5338649b380e3694ed246346b3d48b35076",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "chi-square-table-expectations",
+          "anova-global-null",
+          "welch-versus-pooled-test",
+          "paired-t-test-differences"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "dde35d25325234b72575fd82",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q14-say-you-have-two-subsets-of-a-dataset-for-which-you-know-their-means-and-standard-deviations-how-do-you-calculate-the-blended-mean-and-standard-deviation-of-the-total-dataset-can-you-extend-it-to-k-subsets",
+      "title": "Say you have two subsets of a dataset for which you know their means and standard deviations. How do you calculate the blended mean and standard deviation of the total dataset? Can you extend it to K subsets?",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:29:37.410Z",
+      "sourceQuestion": {
+        "fingerprint": "e4316c042f74230f5d13aeaaf1a8c470c79ae3515667690cbe42be51eccb76f6",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "combine-group-sample-variance"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Finite-sample pooling formula differs from population law of total variance; specify group sizes."
+      }
+    },
+    {
+      "id": "5eaf2665ba5b38355b64cc68",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q15-what-is-the-relationship-between-the-significance-level-and-the-confidence-level-in-statistics",
+      "title": "What is the relationship between the significance level and the confidence level in Statistics?###",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:29:37.410Z",
+      "sourceQuestion": {
+        "fingerprint": "b4341bf1d667134c1818af314fce43925555754d5f73b4b91c3ee91d5d5f6426",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "test-confidence-interval-duality"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Need same method, estimand, alpha and sidedness; not unconditional CI=1-alpha slogan."
+      }
+    },
+    {
+      "id": "3215acc0e000d5aa0f4285c2",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q16-what-is-the-law-of-large-numbers-in-statistics-and-how-it-can-be-used-in-data-science-",
+      "title": "What is the Law of Large Numbers in statistics and how it can be used in data science ?",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:29:37.410Z",
+      "sourceQuestion": {
+        "fingerprint": "f0fb555a326577d646246c3a1b99adef26bd105c648b4965d87c9cbc8ff8708a",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "law-large-numbers-meaning"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "c3938621078dc8c1256cf287",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q17-what-is-the-difference-between-a-confidence-interval-and-a-prediction-interval-and-how-do-you-calculate-them",
+      "title": "What is the difference between a confidence interval and a prediction interval, and how do you calculate them?",
+      "sourceId": "youssef-hosni-statistics",
+      "retrievedAt": "2026-10-15T10:29:37.410Z",
+      "sourceQuestion": {
+        "fingerprint": "30996563daa6eed4556277fd9236f727afb920f2fe5210277a0b1dafd01c9a0e",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Statistics%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "prediction-versus-mean-interval"
+        ],
+        "note": "Extend the existing answer with matched t-based simple-linear-regression mean and prediction interval formulae and assumptions."
+      }
+    },
+    {
+      "id": "4bcd0661476fcbf6d1523973",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q3-suppose-you-have-ten-fair-dice-if-you-randomly-throw-them-simultaneously-what-is-the-probability-that-the-sum-of-all-of-the-top-faces-is-divisible-by-six",
+      "title": "Suppose you have ten fair dice. If you randomly throw them simultaneously, what is the probability that the sum of all of the top faces is divisible by six?",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "4854c4e35c41fdf7062956824c0af1c18d80126253134380cf33f1d0b49d0f1a",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "uniform-modular-sum"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Modular symmetry proof; specify uniform residues and independence."
+      }
+    },
+    {
+      "id": "2bcd84966a1b3a476f27593f",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q4-if-you-have-three-draws-from-a-uniformly-distributed-random-variable-between-0-and-2-what-is-the-probability-that-the-median-of-three-numbers-is-greater-than-15",
+      "title": "If you have three draws from a uniformly distributed random variable between 0 and 2, what is the probability that the median of three numbers is greater than 1.5?",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "88b88a916fea9f1811401f40cb50beb84019d1e8a4b788413df6a522bf6f43de",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "order-statistic-binomial-tail"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Use different n/distribution threshold from source; independence assumption."
+      }
+    },
+    {
+      "id": "9129f639c21366a960be1a37",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q5-assume-you-have-a-deck-of-100-cards-with-values-ranging-from-1-to-100-and-you-draw-two-cards-randomly-without-replacement-what-is-the-probability-that-the-number-of-one-of-them-is-double-the-other",
+      "title": "Assume you have a deck of 100 cards with values ranging from 1 to 100 and you draw two cards randomly without replacement, what is the probability that the number of one of them is double the other?",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "5e8c1d83d74b198e273e9daa87aa0272474ac7e3d9f3c033d68edb37dd778c0a",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "unordered-pair-counting"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Can combine probability15 into same original categorical-grid pair-counting exercise, avoiding two near-repeat count puzzles."
+      }
+    },
+    {
+      "id": "3320a36cc6ac3f7f017acd34",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q6-what-is-the-difference-between-the-bernoulli-and-binomial-distribution",
+      "title": "What is the difference between the Bernoulli and Binomial distribution?",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "b90027780c7f538b95d268ab92d8f0ec7cc468d45f2f4663f091d33ef9209a21",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "bernoulli-variance",
+          "binomial-assumptions"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "19b3b1f95745759141c2f43b",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q7-if-there-are-30-people-in-a-room-what-is-the-probability-that-everyone-has-different-birthdays",
+      "title": "If there are 30 people in a room, what is the probability that everyone has different birthdays?",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "0c37958b3cf2d3aea7200a53dcec67ada669eaafcc29e35930483165294cde0f",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "birthday-collision-complement"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Hash bucket collision scenario; uniform iid assumption."
+      }
+    },
+    {
+      "id": "3143a86d4625bc812f8a25e3",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q8-assume-two-coins-one-fair-and-the-other-is-unfair-you-pick-one-at-random-flip-it-five-times-and-observe-that-it-comes-up-as-tails-all-five-times-what-is-the-probability-that-you-are-fliping-the-unfair-coin-assume-that-the-unfair-coin-always-results-in-tails",
+      "title": "Assume two coins, one fair and the other is unfair. You pick one at random, flip it five times, and observe that it comes up as tails all five times. What is the probability that you are fliping the unfair coin? Assume that the unfair coin always results in tails.",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "fadce211e46115756887489d9096a9a36ed3afe005bc796789482a349c9a46e7",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "rare-event-bayes"
+        ],
+        "note": "Discrete competing-hypothesis Bayes is covered. Beta-binomial updating concerns an unknown continuous probability and is not needed for this mapping."
+      }
+    },
+    {
+      "id": "879fd9a4702422bb10bd6332",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q9-assume-you-take-a-stick-of-length-1-and-you-break-it-uniformly-at-random-into-three-parts-what-is-the-probability-that-the-three-pieces-can-be-used-to-form-a-triangle",
+      "title": "Assume you take a stick of length 1 and you break it uniformly at random into three parts. What is the probability that the three pieces can be used to form a triangle?",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "71e08f73dd781979d9cd2938bee7ff34e1986bcbf60e2ef46c44210a95fb4173",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "random-spacing-triangle"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Original cable or interval scenario; distinguish two cut sampling from sequential segment breaking."
+      }
+    },
+    {
+      "id": "2960ba84c144c3258e674f7b",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q10-say-you-draw-a-circle-and-choose-two-chords-at-random-what-is-the-probability-that-those-chords-will-intersect",
+      "title": "Say you draw a circle and choose two chords at random. What is the probability that those chords will intersect?",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "55c13c521ae7ec20030b4191bc6822cea7db16798dce05ae5ee0ffd222d034df",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "random-chord-sampling-law"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Avoid endorsing ambiguous upstream random-chord answer; compare endpoint and midpoint sampling or intersecting endpoints."
+      }
+    },
+    {
+      "id": "80b7db6389d9794a7e21bd23",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q11-if-theres-a-15-probability-that-you-might-see-at-least-one-airplane-in-a-five-minute-interval-what-is-the-probability-that-you-might-see-at-least-one-airplane-in-a-period-of-half-an-hour",
+      "title": "If there’s a 15% probability that you might see at least one airplane in a five-minute interval, what is the probability that you might see at least one airplane in a period of half an hour?",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "35942dcf3e3d8a7f6b933d875981fcbd76a4072f5f014befb4ebf678d5b19d5f",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "poisson-rate-assumptions",
+          "exponential-memorylessness"
+        ],
+        "note": "Extend the existing answer with independent stationary interval aggregation 1-(1-p)^k and its assumptions."
+      }
+    },
+    {
+      "id": "d90880ec775dbec3039373e7",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q12-say-you-are-given-an-unfair-coin-with-an-unknown-bias-towards-heads-or-tails-how-can-you-generate-fair-odds-using-this-coin",
+      "title": "Say you are given an unfair coin, with an unknown bias towards heads or tails. How can you generate fair odds using this coin?",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "b14fbd54151c07de5a946c733bfde5c82a482f4c7a18cc9114958d7fa4a69d21",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "biased-coin-fair-extraction"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Derive acceptance rate and dependence limitation; different from Bayes coin identification."
+      }
+    },
+    {
+      "id": "5d7618a1159bbda9dafb9102",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q13-according-to-hospital-records-75-of-patients-suffering-from-a-disease-die-from-that-disease-find-out-the-probability-that-4-out-of-the-6-randomly-selected-patients-survive",
+      "title": "According to hospital records, 75% of patients suffering from a disease die from that disease. Find out the probability that 4 out of the 6 randomly selected patients survive.",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "b9bd431f09abd6cad40aba4122c7b0faecdf71f99850380a97583ed918c7b2eb",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "binomial-assumptions"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "d084eccd272c80a3eaf5d98c",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q14-discuss-some-methods-you-will-use-to-estimate-the-parameters-of-a-probability-distribution",
+      "title": "Discuss some methods you will use to estimate the Parameters of a Probability Distribution",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "15ceb80252050a2c8c988a313e588908a30c66954ac8391ca6dc6593d9dedc4f",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "method-of-moments-estimation"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Existing MLE/MAP questions do not cover method of moments; retain MLE/MAP IDs as related rather than duplicates."
+      }
+    },
+    {
+      "id": "ad01cbe7f92b6d4f0f90f488",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q15-you-have-40-cards-in-four-colors-10-reds-10-greens-10-blues-and-ten-yellows-each-color-has-a-number-from-1-to-10-when-you-pick-two-cards-without-replacement-what-is-the-probability-that-the-two-cards-are-not-in-the-same-color-and-not-in-the-same-number",
+      "title": "You have 40 cards in four colors, 10 reds, 10 greens, 10 blues, and ten yellows. Each color has a number from 1 to 10. When you pick two cards without replacement, what is the probability that the two cards are not in the same color and not in the same number?",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "ad36825e3a07b913ab09458efa27b8d4a9d27e8242dd6e42c41f74740feb8f87",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "unordered-pair-counting"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Reuse one general pair-counting question with both attribute constraints; no second counting-only duplicate."
+      }
+    },
+    {
+      "id": "4ee208c86929e789692fcad1",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q16-can-you-explain-the-difference-between-frequentist-and-bayesian-probability-approaches",
+      "title": "Can you explain the difference between frequentist and Bayesian probability approaches?",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "ff4f1dd37710301b768c1fcdf91ad94f0023efaa6c76487d2ce406a960d68af2",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "confidence-interval-meaning",
+          "credible-interval-meaning"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "8ea69ca72326166b9d48d30d",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q17-explain-the-difference-between-probability-and-likelihood",
+      "title": "Explain the Difference Between Probability and Likelihood",
+      "sourceId": "youssef-hosni-probability",
+      "retrievedAt": "2026-10-15T10:29:37.420Z",
+      "sourceQuestion": {
+        "fingerprint": "9c0f66ada90e2ac47e39ccb23fecc262f38847947a1bd67b2f9594933dded54e",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Probability%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "review": {
+        "status": "covered",
+        "questionIds": [
+          "likelihood-versus-probability"
+        ],
+        "note": "Existing original questions cover the core concept; do not add a wording variant."
+      }
+    },
+    {
+      "id": "03c46f1762980c79530bc679",
+      "title": "Given two arrays, write a python function to return the intersection of the two? For example, X = [1,5,9,0] and Y = [3,0,2,9] it should return [9,0]",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q1-given-two-arrays-write-a-python-function-to-return-the-intersection-of-the-two-for-example-x--1590-and-y--3029-it-should-return-90",
+      "sourceQuestion": {
+        "fingerprint": "e1cd56ea970cfbd5d018ae132ba21b0de636e9f4d7c7b684301c600bce2d67d8",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.003Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "python-intersection-order"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Use original lists and hashable values; no reliance on set iteration order. Distinct from streaming duplicate detection."
+      }
+    },
+    {
+      "id": "e9117177be382275e2c9c99b",
+      "title": "Given an array, find all the duplicates in this array? For example: input: [1,2,3,1,3,6,5] output: [1,3]",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q2-given-an-array-find-all-the-duplicates-in-this-array-for-example-input-1231365-output-13",
+      "sourceQuestion": {
+        "fingerprint": "f9073511f7f78900ea8265490cb761df806572e5b6c33c18affb5d023abe2f89",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "python-repeated-value-scan"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Clarify first second-occurrence versus first-position value that repeats later. One exercise covers source Q2 and Q10 without separate wording variants. Expected hash lookup cost, not universal worst-case constant."
+      }
+    },
+    {
+      "id": "1913f3ac2dfd941f8f560815",
+      "title": "Given an integer array, return the maximum product of any three numbers in the array?",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q3-given-an-integer-array-return-the-maximum-product-of-any-three-numbers-in-the-array",
+      "sourceQuestion": {
+        "fingerprint": "326696e781913954ee4fd89a50f9f3fa27f3365ebe6d1f83c24390e90aa4fb71",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "python-extreme-product"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Require at least3integers, different numeric example, account for negative products and zero; use proof via sorted order."
+      }
+    },
+    {
+      "id": "363a93af87f268775c1fa5c1",
+      "title": "Given an integer array, find the sum of the largest contiguous subarray within the array. For example, given the array A = [0,-1,-5,-2,3,14] it should return 17 because of [3,14]. Note that if all the elements are negative it should return zero.",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q4-given-an-integer-array-find-the-sum-of-the-largest-contiguous-subarray-within-the-array-for-example-given-the-array-a--0-1-5-2314-it-should-return-17-because-of-314-note-that-if-all-the-elements-are-negative-it-should-return-zero",
+      "sourceQuestion": {
+        "fingerprint": "4d178c1b3d53656c5373bce68d995c80421c512c794cc363b5f868567615d76d",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "python-contiguous-sum-contract"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Original sequence, recurrence, nonempty all-negative result versus optional-empty zero. Source code violates its own all-negative rule; do not copy."
+      }
+    },
+    {
+      "id": "bd2f70746a761d58bd3c94a2",
+      "title": "Define tuples and lists in Python What are the major differences between them?",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q5-define-tuples-and-lists-in-python-what-are-the-major-differences-between-them",
+      "sourceQuestion": {
+        "fingerprint": "d3ec7c602e76670e839013e0d97c35a00005e6ebb336ae136db001fea09fc8a5",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "python-container-semantics"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. One scenario covers overlapping Q5/Q14. Tuples can contain mutable objects and only hash when contents hashable. Arrays are not tuples; avoid absolute speed/memory claims."
+      }
+    },
+    {
+      "id": "29d0c81544739ca7d5d48256",
+      "title": "Compute the Euclidean Distance Between Two Series?",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q6-compute-the-euclidean-distance-between-two-series",
+      "sourceQuestion": {
+        "fingerprint": "979ecaa9790ebff75d15af418b6845de3dba9c2d633b60c7f860f0a231bfbd37",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "python-series-distance-alignment"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Require matching coordinates, shape, numeric dtype and missing-value policy. Different objective from ML feature scaling question."
+      }
+    },
+    {
+      "id": "0a52478052772861c2b50974",
+      "title": "Given an integer n and an integer K, output a list of all of the combination of k numbers chosen from 1 to n. For example, if n=3 and k=2, return [1,2],[1,3],[2,3]",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q7-given-an-integer-n-and-an-integer-k-output-a-list-of-all-of-the-combination-of-k-numbers-chosen-from-1-to-n-for-example-if-n3-and-k2-return-121323",
+      "sourceQuestion": {
+        "fingerprint": "14ca91a358e104ff3aacf035f2917b577efd0d1808eb2be3188aef4e7dd3166a",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "python-combinations-laziness"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Separate index-distinct combinations from value deduplication; handle r=0,r>n and repeated input values."
+      }
+    },
+    {
+      "id": "dd8db05390dc3c01919eeb93",
+      "title": "Write a function to generate N samples from a normal distribution and plot them on the histogram",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q8-write-a-function-to-generate-n-samples-from-a-normal-distribution-and-plot-them-on-the-histogram",
+      "sourceQuestion": {
+        "fingerprint": "52d39c9512242cf2645ddfe82dbfea2ef964ea5334c30010b37a92523741df89",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "python-random-generator-state"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Use default_rng and correct size argument, distinguish bins/density and finite sample histogram noise. Reproducibility depends on implementation/version, not seed alone."
+      }
+    },
+    {
+      "id": "1b8f92d8834dd66a90178ceb",
+      "title": "What is the difference between apply and applymap function in pandas?",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q9-what-is-the-difference-between-apply-and-applymap-function-in-pandas",
+      "sourceQuestion": {
+        "fingerprint": "dd1f2fb790d5c6d331ad8486bd5f55357a825ac902404a7bcccb6e49f9013b18",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "pandas-map-apply-axis"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Current pandas uses map; source applymap is obsolete/deprecated. Prefer vectorised operations when possible and specify axis."
+      }
+    },
+    {
+      "id": "e9a5e29ae5adcd5d45dc0928",
+      "title": "Given a string, return the first recurring character in it, or “None” if there is no recurring character. Example: input = \"pythoninterviewquestion\" , output = \"n\"",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q10-given-a-string-return-the-first-recurring-character-in-it-or-none-if-there-is-no-recurring-character-example-input--pythoninterviewquestion--output--n",
+      "sourceQuestion": {
+        "fingerprint": "103d7a931994cb70541ccf6909fa0c4ac5e4219045daea69a29bf3f4dce7dcf5",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "python-repeated-value-scan"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Clarify first second-occurrence versus first-position value that repeats later. One exercise covers source Q2 and Q10 without separate wording variants. Expected hash lookup cost, not universal worst-case constant."
+      }
+    },
+    {
+      "id": "4744fa6c7f8e3e8be5ea3107",
+      "title": "Given a positive integer X return an integer that is a factorial of X. If a negative integer is provided, return -1. Implement the solution by using a recursive function.",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q11-given-a-positive-integer x-return-an-integer-that-is-a-factorial-of x-if-a-negative-integer-is-provided-return--1-implement-the-solution-by-using-a-recursive-function",
+      "sourceQuestion": {
+        "fingerprint": "1520372a9ad0ea4e751b1d6c9413fbf7853fe44d49d15d61a52f17fe69b92f29",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "python-recursion-contract"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Original input validation scenario; zero factorial1, reject negatives rather than ambiguous sentinel, boolean-as-int caveat optional."
+      }
+    },
+    {
+      "id": "0a7ad219398f1c1adf4ff816",
+      "title": "Given an m-by-n matrix with positive integers, determine the length of the longest path of increasing within the matrix. For example, consider the input matrix:",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q12-given-an-m-by-n-matrix-with-positive-integers-determine-the-length-of-the-longest-path-of-increasing-within-the-matrix-for-example-consider-the-input-matrix",
+      "sourceQuestion": {
+        "fingerprint": "69dc070970702e2a96a6210e9e1fd4284ed9a225ec5a8749efce775587e58de2",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "python-increasing-path-memoisation"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Explicit four-neighbour movement, start anywhere; source answers constrain moves inconsistently. O(rows*cols) states with constant degree; Python recursion depth risk."
+      }
+    },
+    {
+      "id": "fa0e4ac27049d18c5927a598",
+      "title": "𝐄𝐱𝐩𝐥𝐚𝐢𝐧 𝐰𝐡𝐚𝐭 𝐅𝐥𝐚𝐬𝐤 𝐢𝐬 𝐚𝐧𝐝 𝐢𝐭𝐬 𝐛𝐞𝐧𝐞𝐟𝐢𝐭𝐬",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q13-𝐄𝐱𝐩𝐥𝐚𝐢𝐧-𝐰𝐡𝐚𝐭-𝐅𝐥𝐚𝐬𝐤-𝐢𝐬-𝐚𝐧𝐝-𝐢𝐭𝐬-𝐛𝐞𝐧𝐞𝐟𝐢𝐭𝐬",
+      "sourceQuestion": {
+        "fingerprint": "3a86647a0f81ae5a8b14d7a6df3d7eeefcdb94560e19fae19ac17c942b9982d2",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "flask-request-boundary"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Concrete inference endpoint, no claim microframework automatically scalable or production dev-server safe."
+      }
+    },
+    {
+      "id": "ff6b099e39e331d8087a7e88",
+      "title": "𝐖𝐡𝐚𝐭 𝐢𝐬 𝐭𝐡𝐞 𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐜𝐞 𝐛𝐞𝐭𝐰𝐞𝐞𝐧 𝐥𝐢𝐬𝐭𝐬, 𝐚𝐫𝐫𝐚𝐲𝐬, 𝐚𝐧𝐝 𝐬𝐞𝐭𝐬 𝐢𝐧 𝐏𝐲𝐭𝐡𝐨𝐧, 𝐚𝐧𝐝 𝐰𝐡𝐞𝐧 𝐲𝐨𝐮 𝐬𝐡𝐨𝐮𝐥𝐝 𝐮𝐬𝐞 𝐞𝐚𝐜𝐡 𝐨𝐟 𝐭𝐡𝐞𝐦?",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q14-𝐖𝐡𝐚𝐭-𝐢𝐬-𝐭𝐡𝐞-𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐜𝐞-𝐛𝐞𝐭𝐰𝐞𝐞𝐧-𝐥𝐢𝐬𝐭𝐬-𝐚𝐫𝐫𝐚𝐲𝐬-𝐚𝐧𝐝-𝐬𝐞𝐭𝐬-𝐢𝐧-𝐏𝐲𝐭𝐡𝐨𝐧-𝐚𝐧𝐝-𝐰𝐡𝐞𝐧-𝐲𝐨𝐮-𝐬𝐡𝐨𝐮𝐥𝐝-𝐮𝐬𝐞-𝐞𝐚𝐜𝐡-𝐨𝐟-𝐭𝐡𝐞𝐦",
+      "sourceQuestion": {
+        "fingerprint": "1df517ba499d7092e3047c00206df38d38e71d48f44ed773f7af98bae30e3fc1",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "python-container-semantics"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. One scenario covers overlapping Q5/Q14. Tuples can contain mutable objects and only hash when contents hashable. Arrays are not tuples; avoid absolute speed/memory claims."
+      }
+    },
+    {
+      "id": "30adc217a15c4ad6c8ff3802",
+      "title": "What are joins in SQL and discuss its types?",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q1-what-are-joins-in-sql-and-discuss-its-types",
+      "sourceQuestion": {
+        "fingerprint": "aa285821e13f3411c6d1b0cf42cdafdcab7ee5a5c2c458bee8bb5bf2ef204435",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "sql-outer-join-preservation"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Original customers/orders example, ON versus WHERE filter, no extra rightjoin performance power claim. Explicit projection for equivalent column order."
+      }
+    },
+    {
+      "id": "901a317bddcd4bf67b85cfca",
+      "title": "Define the primary, foreign, and unique keys and the differences between them?",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q2-define-the-primary-foreign-and-unique-keys-and-the-differences-between-them",
+      "sourceQuestion": {
+        "fingerprint": "679671b8433441eb0d27765f979d0863fce1b662b7708d43f5c3533f45d701de",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "sql-key-null-semantics"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. PostgreSQL-specific UNIQUE permits multiple NULLs by default, NULLS NOT DISTINCT option; foreign key may reference unique keys, not only PK."
+      }
+    },
+    {
+      "id": "60d369ae12fb0cc1975cb034",
+      "title": "What is the difference between BETWEEN and IN operators in SQL?",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q3-what-is-the-difference-between-between-and-in-operators-in-sql",
+      "sourceQuestion": {
+        "fingerprint": "f631dad607bfb0fa0932bbdba1779548b4ff90a45a20650904bdbddfbd9458c4",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "sql-range-membership-nulls"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Half-open time range example avoids midnight precision errors. BETWEEN works with ordered types, not only numbers."
+      }
+    },
+    {
+      "id": "cecc9769af5b3f4a300fd1b5",
+      "title": "Assume you have the given table below which contains information on user logins. Write a query to obtain the number of reactivated users (Users who did not log in the previous month and then logged in the current month)",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q4-assume-you-have-the-given-table-below-which-contains-information-on-user-logins-write-a-query-to-obtain-the-number-of-reactivated-users-users-who-did-not-log-in-the-previous-month-and-then-logged-in-the-current-month",
+      "sourceQuestion": {
+        "fingerprint": "d295dab75ee0f100a7cd311921112a0576ccb7cf6cb1294b8ae0a187d7340f5d",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "sql-reactivation-months"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Original schema, explicit business definition excludes new users; correlated NOT EXISTS with correct bounds and distinct user counting. Source query uncorrelated and reversed range."
+      }
+    },
+    {
+      "id": "78dcf4f745df88d33ab9c48c",
+      "title": "Describe the advantages and disadvantages of relational database vs NoSQL databases",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q5-describe-the-advantages-and-disadvantages-of-relational-database-vs-nosql-databases",
+      "sourceQuestion": {
+        "fingerprint": "f43f1b6f19ad0b9a8f6371acff980748d2df8a982a2e6b939cd295287c145215",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "database-model-workload"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Avoid SQL=vertical-only,NoSQL=no-transactions myths; PostgreSQL JSON and document multi-record transactions illustrate no absolute split."
+      }
+    },
+    {
+      "id": "6a6a83bcbf1b637986ec1331",
+      "title": "Assume you are given the table below on user transactions. Write a query to obtain the third transaction of every user",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q6-assume-you-are-given-the-table-below-on-user-transactions-write-a-query-to-obtain-the-third-transaction-of-every-user",
+      "sourceQuestion": {
+        "fingerprint": "6a6c999ee50439bb1b20b5a77491dfa10225ef6bcdfa6d9ee0af29d086814bb0",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "sql-deterministic-row-number"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Original event schema/order; filter window result in subquery, fewer than n produce no row; distinguish event row from nth distinct value."
+      }
+    },
+    {
+      "id": "27a533193150b3ef2b1d1d22",
+      "title": "What do you understand by Self Join? Explain using an example",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q7-what-do-you-understand-by-self-join-explain-using-an-example",
+      "sourceQuestion": {
+        "fingerprint": "df3901b6c1ef6397c7078d8c4dcfea39539708e835149dc0b3bc1a209083547c",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "sql-self-join-pairs"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Original shared-device pair matching rather than same employee-manager example; enforce a.id<b.id and discuss unmatched NULL relationships."
+      }
+    },
+    {
+      "id": "ea51a088f5d9c1d63bf7e00b",
+      "title": "Write an SQL query to join 3 tables",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q8-write-an-sql-query-to-join-3-tables",
+      "sourceQuestion": {
+        "fingerprint": "d4d81f4c68ec0474bb89b7d20c112c3ce0d9f8b434dc3482399d7c8eac6113a1",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "sql-multi-join-multiplication"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Three-table order/payment/line-items example with original schema; do not use DISTINCT as a universal sum correction."
+      }
+    },
+    {
+      "id": "e7fc60d4b97095c16ca1d6bb",
+      "title": "Write a SQL query to get the third-highest salary of an employee from employee_table and arrange them in descending order.",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q9-write-a-sql-query-to-get-the-third-highest-salary-of-an-employee-from-employee_table-and-arrange-them-in-descending-order",
+      "sourceQuestion": {
+        "fingerprint": "f3fb50064c054fbec89ced6668365a26f61f80032d6b58286f903bb6d867279c",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "sql-ranking-ties"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. One combined original leaderboard scenario covers both sources. Specify NULL handling and deterministic final ORDER BY; ROW_NUMBER is different selection goal."
+      }
+    },
+    {
+      "id": "e12e31b1549ea203a4570222",
+      "title": "What is the difference between temporary tables and common table expressions?",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q10-what-is-the-difference-between-temporary-tables-and-common-table-expressions",
+      "sourceQuestion": {
+        "fingerprint": "6c71156961ac158fc7fd72fb63a201e8224ce523e9612ca51551843f1f21c961",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "sql-cte-temp-scope"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. PostgreSQL CTE folding/materialisation depends on version/options/use; not guaranteed memory-only. Temporary tables session-local, not available to all sessions."
+      }
+    },
+    {
+      "id": "adc64eca2736b816cf513d8f",
+      "title": "Why use Right Join When Left Join can suffice the requirement?",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q11-why-use-right-join-when-left-join-can-suffice-the-requirement",
+      "sourceQuestion": {
+        "fingerprint": "68a4f8baecd3b909b45e35eb6e740e5eb4db5b4a3189bcdc68078e622be6e5b3",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "sql-outer-join-preservation"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. Original customers/orders example, ON versus WHERE filter, no extra rightjoin performance power claim. Explicit projection for equivalent column order."
+      }
+    },
+    {
+      "id": "fd54d75357377bd9aae253c8",
+      "title": "Why Rank skips sequence?",
+      "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q12-why-rank-skips-sequence",
+      "sourceQuestion": {
+        "fingerprint": "68aced18491f8fa2b60ab99740b44a9f3e870e9edd0894546c2e0c776f900747",
+        "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
+      },
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
+      "review": {
+        "status": "drafted",
+        "questionIds": [
+          "sql-ranking-ties"
+        ],
+        "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. One combined original leaderboard scenario covers both sources. Specify NULL handling and deterministic final ORDER BY; ROW_NUMBER is different selection goal."
       }
     }
   ]

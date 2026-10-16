@@ -59,13 +59,16 @@ describe("individual GitHub question collection", () => {
     for (const review of [
       { status: "drafted", note: "Reviewed" },
       { status: "drafted", questionIds: ["same", "same"], note: "Reviewed" },
+      { status: "covered", note: "Already covered" },
+      { status: "covered", questionIds: [], note: "Already covered" },
+      { status: "covered", questionIds: ["same", "same"], note: "Already covered" },
       { status: "dismissed", questionIds: ["unexpected"], note: "Covered" },
       { status: "dismissed", note: " " },
     ]) expect(candidatesSchema.safeParse({ schemaVersion: 1, candidates: [{ ...candidate, review }] }).success).toBe(false);
   });
-  it("requires drafted review links to resolve to an existing question, including retired questions", async () => {
+  it.each(["drafted", "covered"])("requires %s review links to resolve to an existing question, including retired questions", async status => {
     const result = await collectCandidates({ registry: questionRegistry, candidates: empty, canonicalUrls: [], fetchSource: async () => questions(1) });
-    const reviewed = { ...result.document, candidates: result.document.candidates.map(candidate => ({ ...candidate, review: { status: "drafted", questionIds: ["retired-original"], note: "Reviewed original answer" } })) };
+    const reviewed = { ...result.document, candidates: result.document.candidates.map(candidate => ({ ...candidate, review: { status, questionIds: ["retired-original"], note: "Reviewed original answer" } })) };
     expect(() => validateCandidateReviewLinks(reviewed, ["different-question"])).toThrow(/missing question retired-original/);
     expect(validateCandidateReviewLinks(reviewed, ["retired-original"])).toEqual(reviewed);
   });
@@ -94,9 +97,14 @@ describe("individual GitHub question collection", () => {
     expect(result.document.candidates[0].title).toBe("Explain concept 2?");
   });
   it("retains review decisions and deduplicates reviewed records", async () => {
-    const first = await collectCandidates({ registry: questionRegistry, candidates: empty, canonicalUrls: [], fetchSource: async () => questions(2) });
-    const reviewed = { ...first.document, candidates: first.document.candidates.map((candidate, i) => ({ ...candidate, review: i ? { status: "dismissed", note: "Already covered" } : { status: "drafted", questionIds: ["original-concept"], note: "Independent author and critic review" } })) };
-    const result = await collectCandidates({ registry: questionRegistry, candidates: reviewed, canonicalUrls: [], fetchSource: async () => questions(2) });
+    const first = await collectCandidates({ registry: questionRegistry, candidates: empty, canonicalUrls: [], fetchSource: async () => questions(3) });
+    const reviews = [
+      { status: "drafted", questionIds: ["original-concept"], note: "Independent author and critic review" },
+      { status: "covered", questionIds: ["existing-concept"], note: "Existing question covers the same learning objective" },
+      { status: "dismissed", note: "Outside the supported topics" },
+    ];
+    const reviewed = { ...first.document, candidates: first.document.candidates.map((candidate, i) => ({ ...candidate, review: reviews[i] })) };
+    const result = await collectCandidates({ registry: questionRegistry, candidates: reviewed, canonicalUrls: [], fetchSource: async () => questions(3) });
     expect(result.added).toBe(0);
     expect(result.document).toEqual(reviewed);
   });

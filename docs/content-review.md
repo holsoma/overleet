@@ -1,5 +1,17 @@
 # Question-bank reviews
 
+## Full repository coverage: 16 October 2026
+
+This revision contains 320 questions: 114 ML Theory, 96 Statistics, 45 A/B Testing, 42 LLMs, 13 Python and 10 SQL/database questions. CV/resume prompts are excluded as requested. Computer-vision theory is included. The [coverage table](repository-coverage.md) accounts for every collected heading, combines repeated prompts and records exclusions.
+
+Following the earlier five additions in this PR, the author added 65 original questions and expanded six existing answers: `nonlinear-activation`, `autoencoder-reconstruction-representation`, `mini-batch-gradient-noise`, `boosting-shrinkage-depth`, `exponential-memorylessness` and `prediction-versus-mean-interval`. The other 249 records from the 255-question revision are unchanged. No IDs were removed. Several source prompts share one original question where they test the same concept.
+
+An independent critic accepted all additions and revisions after mathematical, source, code and duplication checks. Corrections included the chord-sampling law, full CNN pipeline, gradient-descent variants, code edge cases and more precise primary references. Eight standard-library Python examples ran successfully; the maximum-product algorithm was also compared exhaustively with brute force over small inputs. Pandas examples and NumPy sampling checks passed. All nine SQL examples ran against temporary PostgreSQL tables with rolled-back transactions. Matplotlib rendering was not executed because the local runtime lacks the package; its documented API usage was checked.
+
+The additive migration enables Python and SQL/database categories. Local synchronisation created 65 records across the two accepted batches, updated the six reviewed answers and left 249 unchanged. Repeated synchronisation changed nothing. Both existing Daily Question assignments were preserved. The local database has no account records; preservation of populated progress and votes was verified by disposable PostgreSQL integration tests. Production remains at 250 until maintainer review and an authorised release.
+
+The candidate ledger records 76 drafted, 64 covered and no dismissed entry. This includes the earlier five drafted additions. A fresh live collection across the six reviewed documents must skip these recorded entries. Agent acceptance and passing checks do not replace the maintainer's review before merging.
+
 ## Repository collector batch: 15 October 2026
 
 Five original additions bring this revision to 255 questions. All 250 previously published records are unchanged. Production remains at 250 until human review, merge and a separate production synchronisation.
