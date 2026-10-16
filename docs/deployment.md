@@ -10,7 +10,9 @@ The public app is [overleet.vercel.app](https://overleet.vercel.app/), hosted in
 
 The database contains all 250 accepted questions. Committed migrations and an unchanged second content sync succeeded. Database credentials, GitHub OAuth credentials and the session secret are scoped to production. Neon Auth is disabled because this application uses NextAuth. GitHub sign-in reaches the authorisation screen with read-only profile access; guest study also works.
 
-The initial release was deployed from `expand-question-bank-and-deploy`. [Content PR #2](https://github.com/holsoma/overleet/pull/2) remains open for human review. Vercel's automatic production branch is `main`: review and merge the release PR before other changes to `main`, because any push there can replace the manually deployed release with that branch's application code. Do not bypass the repository's review rules.
+The initial release was deployed from `expand-question-bank-and-deploy`. [Content PR #2](https://github.com/holsoma/overleet/pull/2) was merged on 15 October 2026 after the maintainer authorised a one-off administrator exception. Branch protection was restored and verified. Vercel's automatic production branch is `main`. Future content PRs still require human review; that one-off exception does not authorise further bypasses.
+
+On 15 October 2026 the maintainer requested self-review and merging. Required approving reviews were set to zero and mandatory code-owner approval was disabled. The maintainer now reviews the diff and merges directly after checks pass; GitHub cannot record an author approving their own PR. Required PRs, up-to-date CI, resolved conversations, administrator enforcement and the ban on force pushes remain enabled. This setting does not authorise an agent to merge unreviewed content.
 
 ## Create the database
 

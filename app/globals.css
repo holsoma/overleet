@@ -228,6 +228,7 @@ input::placeholder, textarea::placeholder { color: oklch(0.58 0.01 130); }
 .reveal-control p { color: var(--muted); font-size: 0.8125rem; max-width: 26ch; }
 .model-answer { margin-top: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
 .answer-columns { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; }
+.answer-columns > * { min-width: 0; }
 .short-answer { padding-bottom: 24px; border-bottom: 1px solid var(--border-subtle); margin-bottom: 24px; }
 .short-answer .eyebrow { display: block; color: var(--accent); margin-bottom: 14px; }
 .reasoning-title { font-size: 1.062rem; font-weight: 600; margin: 0 0 16px; }

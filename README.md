@@ -4,7 +4,7 @@ Think it through. A sourced question bank for Data Science, Machine Learning, St
 
 Try [OVERLEET online](https://overleet.vercel.app/). The public installation supports guest study and GitHub sign-in.
 
-Browse 250 original questions, write your answer, reveal the explanation and check it against a short rubric. Guests keep progress in their browser. GitHub sign-in synchronises completion status through PostgreSQL. Draft answers and rubric selections stay in the current browser.
+Browse 320 original questions in this revision, write your answer, reveal the explanation and check it against a short rubric. Guests keep progress in their browser. GitHub sign-in synchronises completion status through PostgreSQL. Draft answers and rubric selections stay in the current browser.
 
 Run locally with PostgreSQL, or use the [free public deployment guide](docs/deployment.md) for Vercel Hobby and Neon Free. No paid model, scraping service or hosted database plan is required.
 
@@ -62,7 +62,7 @@ The Daily Question resets at 00:00 UTC. Its selection is stored once per date, s
 
 ## Content and updates
 
-The bank contains 85 ML Theory, 80 Statistics, 45 A/B Testing and 40 LLM questions. Each category includes easy, medium and hard questions. The table shows 25 questions per page; filters, sorting and the page number remain in the URL. See [the source policy](ATTRIBUTION.md) for the distinction between topic discovery and independently written explanations.
+The bank in this revision contains 114 ML Theory, 96 Statistics, 45 A/B Testing, 42 LLM, 13 Python and 10 SQL/database questions. Each category includes easy, medium and hard questions. The table shows 25 questions per page; filters, sorting and the page number remain in the URL. See [the source policy](ATTRIBUTION.md) for the distinction between topic discovery and independently written explanations. Production only receives new questions after human review and an authorised database sync.
 
 `data/questions/questions.json` is the canonical, version-controlled content. It contains no user data. `lib/question-schema.ts` is the shared validation contract. IDs remain stable when titles change. Retire a question with `active: false`; do not remove its ID.
 
@@ -84,7 +84,13 @@ npm run db:sync
 
 ### Weekly source collection
 
-The collector reads `data/sources.json` and writes metadata to `data/candidates.json`. It collects at most ten new links from reviewed public RSS/Atom feeds and GitHub documents. It does not write answers, call a model or synchronise PostgreSQL.
+The collector reads `data/sources.json` and writes metadata to `data/candidates.json`. It collects at most ten new candidates per run from reviewed RSS/Atom feeds, GitHub document links and individual question headings in approved Markdown files. It does not write answers, call a model or synchronise PostgreSQL.
+
+For Youssef Hosni's repository it reads the machine-learning, deep-learning, statistics and probability documents. It records question headings, section links and fingerprints, not source answers. It also reads the Python and SQL/database documents. CV/resume questions and external article links are outside this registry. Numbering, punctuation and formatting changes do not create new candidates. A substantive change to a heading can create a new candidate and must be checked for overlap during review. Answer-only edits are not tracked.
+
+The first run starts a backlog of existing questions; it cannot tell which entries were added before tracking began. Later runs skip recorded questions, including covered, dismissed or drafted candidates. The ten-candidate limit leaves the rest eligible for later runs. Question documents are checked before generic feeds so a busy feed cannot prevent question discovery. Keep reviewed records in `data/candidates.json`; deleting them loses the deduplication history.
+
+The full repository audit is recorded in [the coverage table](docs/repository-coverage.md). It maps each supported source heading to an original OVERLEET question or an exclusion reason. This one-off audit imports the whole existing backlog; weekly collection still adds at most ten new candidates per run. Several source prompts can map to one question where their learning objectives overlap.
 
 ```sh
 npm run collect:questions
@@ -100,7 +106,9 @@ Open this repository in Codex and ask to use `$update-questions`, for example:
 
 > Use $update-questions to turn the relevant collected candidates into three original statistics questions.
 
-The main agent runs source scouting, authoring and mathematical review sequentially. Only the author writes canonical content. After review and validation, the main agent synchronises the configured local development database. The workflow uses the current Codex allowance and introduces no separate model API bill. Content PRs need human review before merging.
+The main agent runs source scouting, authoring and mathematical review sequentially. Only the author writes canonical content. It uses candidates as topic suggestions, checks the existing bank for overlap, writes original scenarios and answers with primary references, and records each candidate as drafted (with resulting question IDs), covered (with existing question IDs), or dismissed (with a reason). A drafted status means the content is ready for human review, not approved for publication. Only mark a draft after the critic's findings are resolved and validation passes. After review and validation, the main agent synchronises the configured local development database. The workflow uses the current Codex allowance and introduces no separate model API bill. The scheduled Action cannot use an interactive Codex allowance to write answers by itself. Content PRs need human review before merging.
+
+To use the collected entries, ask: `Use $update-questions to review pending repository candidates, write up to five distinct original questions and answers, and open a content PR. Do not publish yet.` Once you approve that PR, a separate authorised release must synchronise the approved revision into the production Neon database. Vercel deployment alone does not update database content.
 
 Five agent definitions live in `.codex/agents/`. `AGENTS.md` defines ownership, and project configuration limits concurrent workers to three. `PRODUCT.md` and `DESIGN.md` record the interface requirements.
 

@@ -5,6 +5,7 @@ import { syncQuestions } from "../lib/sync";
 import { saveProgress, saveVote, importGuestProgress } from "../lib/progress";
 import { getDailyQuestion } from "../lib/daily";
 import { bank, question } from "./fixtures";
+import { questionFiltersSchema } from "../lib/contracts";
 
 const connectionString = process.env.TEST_DATABASE_URL;
 const integration = connectionString ? describe : describe.skip;
@@ -54,6 +55,28 @@ integration("PostgreSQL integration", () => {
     await expect(saveProgress(db, firstUser, "first", "invalid")).rejects.toThrow();
     await expect(importGuestProgress(db, firstUser, [{ questionId: "first", status: "invalid" }])).rejects.toThrow();
     expect(await db.userProgress.count()).toBe(3);
+  });
+  it("adds Python and SQL categories while preserving existing progress, votes and daily selections", async () => {
+    await saveProgress(db, firstUser, "first", "completed");
+    await saveVote(db, firstUser, "first", true);
+    const now = new Date("2026-10-15T12:00:00Z");
+    const daily = await getDailyQuestion(db, now);
+    const original = await db.question.findUniqueOrThrow({ where: { id: "first" } });
+    const python = { ...question("python-iterator"), category: "python" as const };
+    const sql = { ...question("sql-join"), category: "sql_databases" as const };
+    const expanded = bank(question("first"), question("second"), python, sql);
+    expect(await syncQuestions(db, expanded)).toEqual({ created: 2, updated: 0, unchanged: 2 });
+    for (const added of [python, sql]) {
+      const filter = questionFiltersSchema.parse({ category: added.category });
+      expect((await db.question.findMany({ where: { category: filter.category } })).map(row => row.id)).toEqual([added.id]);
+      await saveProgress(db, firstUser, added.id, "review_later");
+      expect((await db.userProgress.findUniqueOrThrow({ where: { userId_questionId: { userId: firstUser, questionId: added.id } } })).status).toBe("review_later");
+    }
+    expect(await syncQuestions(db, expanded)).toEqual({ created: 0, updated: 0, unchanged: 4 });
+    expect(await db.question.findUniqueOrThrow({ where: { id: "first" } })).toEqual(original);
+    expect(await db.questionVote.count()).toBe(1);
+    expect((await db.userProgress.findUniqueOrThrow({ where: { userId_questionId: { userId: firstUser, questionId: "first" } } })).status).toBe("completed");
+    expect(await getDailyQuestion(db, now)).toBe(daily);
   });
   it("mixes 225 additions with changed and unchanged rows, preserving JSON and arrays", async () => {
     const unchanged = await db.question.findUniqueOrThrow({ where: { id: "second" } });

@@ -15,6 +15,8 @@ enum Category {
   statistics
   ab_testing
   llms
+  python
+  sql_databases
 }
 enum ProgressStatus {
   unseen
