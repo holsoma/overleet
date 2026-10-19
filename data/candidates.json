@@ -2114,14 +2114,14 @@
     },
     {
       "id": "03c46f1762980c79530bc679",
-      "title": "Given two arrays, write a python function to return the intersection of the two? For example, X = [1,5,9,0] and Y = [3,0,2,9] it should return [9,0]",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q1-given-two-arrays-write-a-python-function-to-return-the-intersection-of-the-two-for-example-x--1590-and-y--3029-it-should-return-90",
+      "title": "Given two arrays, write a python function to return the intersection of the two? For example, X = [1,5,9,0] and Y = [3,0,2,9] it should return [9,0]",
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.003Z",
       "sourceQuestion": {
         "fingerprint": "e1cd56ea970cfbd5d018ae132ba21b0de636e9f4d7c7b684301c600bce2d67d8",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-python",
-      "retrievedAt": "2026-10-16T04:42:24.003Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2132,14 +2132,14 @@
     },
     {
       "id": "e9117177be382275e2c9c99b",
-      "title": "Given an array, find all the duplicates in this array? For example: input: [1,2,3,1,3,6,5] output: [1,3]",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q2-given-an-array-find-all-the-duplicates-in-this-array-for-example-input-1231365-output-13",
+      "title": "Given an array, find all the duplicates in this array? For example: input: [1,2,3,1,3,6,5] output: [1,3]",
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "sourceQuestion": {
         "fingerprint": "f9073511f7f78900ea8265490cb761df806572e5b6c33c18affb5d023abe2f89",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-python",
-      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2150,14 +2150,14 @@
     },
     {
       "id": "1913f3ac2dfd941f8f560815",
-      "title": "Given an integer array, return the maximum product of any three numbers in the array?",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q3-given-an-integer-array-return-the-maximum-product-of-any-three-numbers-in-the-array",
+      "title": "Given an integer array, return the maximum product of any three numbers in the array?",
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "sourceQuestion": {
         "fingerprint": "326696e781913954ee4fd89a50f9f3fa27f3365ebe6d1f83c24390e90aa4fb71",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-python",
-      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2168,14 +2168,14 @@
     },
     {
       "id": "363a93af87f268775c1fa5c1",
-      "title": "Given an integer array, find the sum of the largest contiguous subarray within the array. For example, given the array A = [0,-1,-5,-2,3,14] it should return 17 because of [3,14]. Note that if all the elements are negative it should return zero.",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q4-given-an-integer-array-find-the-sum-of-the-largest-contiguous-subarray-within-the-array-for-example-given-the-array-a--0-1-5-2314-it-should-return-17-because-of-314-note-that-if-all-the-elements-are-negative-it-should-return-zero",
+      "title": "Given an integer array, find the sum of the largest contiguous subarray within the array. For example, given the array A = [0,-1,-5,-2,3,14] it should return 17 because of [3,14]. Note that if all the elements are negative it should return zero.",
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "sourceQuestion": {
         "fingerprint": "4d178c1b3d53656c5373bce68d995c80421c512c794cc363b5f868567615d76d",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-python",
-      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2186,14 +2186,14 @@
     },
     {
       "id": "bd2f70746a761d58bd3c94a2",
-      "title": "Define tuples and lists in Python What are the major differences between them?",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q5-define-tuples-and-lists-in-python-what-are-the-major-differences-between-them",
+      "title": "Define tuples and lists in Python What are the major differences between them?",
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "sourceQuestion": {
         "fingerprint": "d3ec7c602e76670e839013e0d97c35a00005e6ebb336ae136db001fea09fc8a5",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-python",
-      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2204,14 +2204,14 @@
     },
     {
       "id": "29d0c81544739ca7d5d48256",
-      "title": "Compute the Euclidean Distance Between Two Series?",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q6-compute-the-euclidean-distance-between-two-series",
+      "title": "Compute the Euclidean Distance Between Two Series?",
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "sourceQuestion": {
         "fingerprint": "979ecaa9790ebff75d15af418b6845de3dba9c2d633b60c7f860f0a231bfbd37",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-python",
-      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2222,14 +2222,14 @@
     },
     {
       "id": "0a52478052772861c2b50974",
-      "title": "Given an integer n and an integer K, output a list of all of the combination of k numbers chosen from 1 to n. For example, if n=3 and k=2, return [1,2],[1,3],[2,3]",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q7-given-an-integer-n-and-an-integer-k-output-a-list-of-all-of-the-combination-of-k-numbers-chosen-from-1-to-n-for-example-if-n3-and-k2-return-121323",
+      "title": "Given an integer n and an integer K, output a list of all of the combination of k numbers chosen from 1 to n. For example, if n=3 and k=2, return [1,2],[1,3],[2,3]",
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "sourceQuestion": {
         "fingerprint": "14ca91a358e104ff3aacf035f2917b577efd0d1808eb2be3188aef4e7dd3166a",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-python",
-      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2240,14 +2240,14 @@
     },
     {
       "id": "dd8db05390dc3c01919eeb93",
-      "title": "Write a function to generate N samples from a normal distribution and plot them on the histogram",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q8-write-a-function-to-generate-n-samples-from-a-normal-distribution-and-plot-them-on-the-histogram",
+      "title": "Write a function to generate N samples from a normal distribution and plot them on the histogram",
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "sourceQuestion": {
         "fingerprint": "52d39c9512242cf2645ddfe82dbfea2ef964ea5334c30010b37a92523741df89",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-python",
-      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2258,14 +2258,14 @@
     },
     {
       "id": "1b8f92d8834dd66a90178ceb",
-      "title": "What is the difference between apply and applymap function in pandas?",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q9-what-is-the-difference-between-apply-and-applymap-function-in-pandas",
+      "title": "What is the difference between apply and applymap function in pandas?",
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "sourceQuestion": {
         "fingerprint": "dd1f2fb790d5c6d331ad8486bd5f55357a825ac902404a7bcccb6e49f9013b18",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-python",
-      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2276,14 +2276,14 @@
     },
     {
       "id": "e9a5e29ae5adcd5d45dc0928",
-      "title": "Given a string, return the first recurring character in it, or “None” if there is no recurring character. Example: input = \"pythoninterviewquestion\" , output = \"n\"",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q10-given-a-string-return-the-first-recurring-character-in-it-or-none-if-there-is-no-recurring-character-example-input--pythoninterviewquestion--output--n",
+      "title": "Given a string, return the first recurring character in it, or “None” if there is no recurring character. Example: input = \"pythoninterviewquestion\" , output = \"n\"",
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "sourceQuestion": {
         "fingerprint": "103d7a931994cb70541ccf6909fa0c4ac5e4219045daea69a29bf3f4dce7dcf5",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-python",
-      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2294,14 +2294,14 @@
     },
     {
       "id": "4744fa6c7f8e3e8be5ea3107",
-      "title": "Given a positive integer X return an integer that is a factorial of X. If a negative integer is provided, return -1. Implement the solution by using a recursive function.",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q11-given-a-positive-integer x-return-an-integer-that-is-a-factorial-of x-if-a-negative-integer-is-provided-return--1-implement-the-solution-by-using-a-recursive-function",
+      "title": "Given a positive integer X return an integer that is a factorial of X. If a negative integer is provided, return -1. Implement the solution by using a recursive function.",
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "sourceQuestion": {
         "fingerprint": "1520372a9ad0ea4e751b1d6c9413fbf7853fe44d49d15d61a52f17fe69b92f29",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-python",
-      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2312,14 +2312,14 @@
     },
     {
       "id": "0a7ad219398f1c1adf4ff816",
-      "title": "Given an m-by-n matrix with positive integers, determine the length of the longest path of increasing within the matrix. For example, consider the input matrix:",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q12-given-an-m-by-n-matrix-with-positive-integers-determine-the-length-of-the-longest-path-of-increasing-within-the-matrix-for-example-consider-the-input-matrix",
+      "title": "Given an m-by-n matrix with positive integers, determine the length of the longest path of increasing within the matrix. For example, consider the input matrix:",
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "sourceQuestion": {
         "fingerprint": "69dc070970702e2a96a6210e9e1fd4284ed9a225ec5a8749efce775587e58de2",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-python",
-      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2330,14 +2330,14 @@
     },
     {
       "id": "fa0e4ac27049d18c5927a598",
-      "title": "𝐄𝐱𝐩𝐥𝐚𝐢𝐧 𝐰𝐡𝐚𝐭 𝐅𝐥𝐚𝐬𝐤 𝐢𝐬 𝐚𝐧𝐝 𝐢𝐭𝐬 𝐛𝐞𝐧𝐞𝐟𝐢𝐭𝐬",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q13-𝐄𝐱𝐩𝐥𝐚𝐢𝐧-𝐰𝐡𝐚𝐭-𝐅𝐥𝐚𝐬𝐤-𝐢𝐬-𝐚𝐧𝐝-𝐢𝐭𝐬-𝐛𝐞𝐧𝐞𝐟𝐢𝐭𝐬",
+      "title": "𝐄𝐱𝐩𝐥𝐚𝐢𝐧 𝐰𝐡𝐚𝐭 𝐅𝐥𝐚𝐬𝐤 𝐢𝐬 𝐚𝐧𝐝 𝐢𝐭𝐬 𝐛𝐞𝐧𝐞𝐟𝐢𝐭𝐬",
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "sourceQuestion": {
         "fingerprint": "3a86647a0f81ae5a8b14d7a6df3d7eeefcdb94560e19fae19ac17c942b9982d2",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-python",
-      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2348,14 +2348,14 @@
     },
     {
       "id": "ff6b099e39e331d8087a7e88",
-      "title": "𝐖𝐡𝐚𝐭 𝐢𝐬 𝐭𝐡𝐞 𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐜𝐞 𝐛𝐞𝐭𝐰𝐞𝐞𝐧 𝐥𝐢𝐬𝐭𝐬, 𝐚𝐫𝐫𝐚𝐲𝐬, 𝐚𝐧𝐝 𝐬𝐞𝐭𝐬 𝐢𝐧 𝐏𝐲𝐭𝐡𝐨𝐧, 𝐚𝐧𝐝 𝐰𝐡𝐞𝐧 𝐲𝐨𝐮 𝐬𝐡𝐨𝐮𝐥𝐝 𝐮𝐬𝐞 𝐞𝐚𝐜𝐡 𝐨𝐟 𝐭𝐡𝐞𝐦?",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q14-𝐖𝐡𝐚𝐭-𝐢𝐬-𝐭𝐡𝐞-𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐜𝐞-𝐛𝐞𝐭𝐰𝐞𝐞𝐧-𝐥𝐢𝐬𝐭𝐬-𝐚𝐫𝐫𝐚𝐲𝐬-𝐚𝐧𝐝-𝐬𝐞𝐭𝐬-𝐢𝐧-𝐏𝐲𝐭𝐡𝐨𝐧-𝐚𝐧𝐝-𝐰𝐡𝐞𝐧-𝐲𝐨𝐮-𝐬𝐡𝐨𝐮𝐥𝐝-𝐮𝐬𝐞-𝐞𝐚𝐜𝐡-𝐨𝐟-𝐭𝐡𝐞𝐦",
+      "title": "𝐖𝐡𝐚𝐭 𝐢𝐬 𝐭𝐡𝐞 𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐜𝐞 𝐛𝐞𝐭𝐰𝐞𝐞𝐧 𝐥𝐢𝐬𝐭𝐬, 𝐚𝐫𝐫𝐚𝐲𝐬, 𝐚𝐧𝐝 𝐬𝐞𝐭𝐬 𝐢𝐧 𝐏𝐲𝐭𝐡𝐨𝐧, 𝐚𝐧𝐝 𝐰𝐡𝐞𝐧 𝐲𝐨𝐮 𝐬𝐡𝐨𝐮𝐥𝐝 𝐮𝐬𝐞 𝐞𝐚𝐜𝐡 𝐨𝐟 𝐭𝐡𝐞𝐦?",
+      "sourceId": "youssef-hosni-python",
+      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "sourceQuestion": {
         "fingerprint": "1df517ba499d7092e3047c00206df38d38e71d48f44ed773f7af98bae30e3fc1",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/Python%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-python",
-      "retrievedAt": "2026-10-16T04:42:24.006Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2366,14 +2366,14 @@
     },
     {
       "id": "30adc217a15c4ad6c8ff3802",
-      "title": "What are joins in SQL and discuss its types?",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q1-what-are-joins-in-sql-and-discuss-its-types",
+      "title": "What are joins in SQL and discuss its types?",
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "sourceQuestion": {
         "fingerprint": "aa285821e13f3411c6d1b0cf42cdafdcab7ee5a5c2c458bee8bb5bf2ef204435",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-sql",
-      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2384,14 +2384,14 @@
     },
     {
       "id": "901a317bddcd4bf67b85cfca",
-      "title": "Define the primary, foreign, and unique keys and the differences between them?",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q2-define-the-primary-foreign-and-unique-keys-and-the-differences-between-them",
+      "title": "Define the primary, foreign, and unique keys and the differences between them?",
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "sourceQuestion": {
         "fingerprint": "679671b8433441eb0d27765f979d0863fce1b662b7708d43f5c3533f45d701de",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-sql",
-      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2402,14 +2402,14 @@
     },
     {
       "id": "60d369ae12fb0cc1975cb034",
-      "title": "What is the difference between BETWEEN and IN operators in SQL?",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q3-what-is-the-difference-between-between-and-in-operators-in-sql",
+      "title": "What is the difference between BETWEEN and IN operators in SQL?",
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "sourceQuestion": {
         "fingerprint": "f631dad607bfb0fa0932bbdba1779548b4ff90a45a20650904bdbddfbd9458c4",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-sql",
-      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2420,14 +2420,14 @@
     },
     {
       "id": "cecc9769af5b3f4a300fd1b5",
-      "title": "Assume you have the given table below which contains information on user logins. Write a query to obtain the number of reactivated users (Users who did not log in the previous month and then logged in the current month)",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q4-assume-you-have-the-given-table-below-which-contains-information-on-user-logins-write-a-query-to-obtain-the-number-of-reactivated-users-users-who-did-not-log-in-the-previous-month-and-then-logged-in-the-current-month",
+      "title": "Assume you have the given table below which contains information on user logins. Write a query to obtain the number of reactivated users (Users who did not log in the previous month and then logged in the current month)",
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "sourceQuestion": {
         "fingerprint": "d295dab75ee0f100a7cd311921112a0576ccb7cf6cb1294b8ae0a187d7340f5d",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-sql",
-      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2438,14 +2438,14 @@
     },
     {
       "id": "78dcf4f745df88d33ab9c48c",
-      "title": "Describe the advantages and disadvantages of relational database vs NoSQL databases",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q5-describe-the-advantages-and-disadvantages-of-relational-database-vs-nosql-databases",
+      "title": "Describe the advantages and disadvantages of relational database vs NoSQL databases",
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "sourceQuestion": {
         "fingerprint": "f43f1b6f19ad0b9a8f6371acff980748d2df8a982a2e6b939cd295287c145215",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-sql",
-      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2456,14 +2456,14 @@
     },
     {
       "id": "6a6a83bcbf1b637986ec1331",
-      "title": "Assume you are given the table below on user transactions. Write a query to obtain the third transaction of every user",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q6-assume-you-are-given-the-table-below-on-user-transactions-write-a-query-to-obtain-the-third-transaction-of-every-user",
+      "title": "Assume you are given the table below on user transactions. Write a query to obtain the third transaction of every user",
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "sourceQuestion": {
         "fingerprint": "6a6c999ee50439bb1b20b5a77491dfa10225ef6bcdfa6d9ee0af29d086814bb0",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-sql",
-      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2474,14 +2474,14 @@
     },
     {
       "id": "27a533193150b3ef2b1d1d22",
-      "title": "What do you understand by Self Join? Explain using an example",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q7-what-do-you-understand-by-self-join-explain-using-an-example",
+      "title": "What do you understand by Self Join? Explain using an example",
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "sourceQuestion": {
         "fingerprint": "df3901b6c1ef6397c7078d8c4dcfea39539708e835149dc0b3bc1a209083547c",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-sql",
-      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2492,14 +2492,14 @@
     },
     {
       "id": "ea51a088f5d9c1d63bf7e00b",
-      "title": "Write an SQL query to join 3 tables",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q8-write-an-sql-query-to-join-3-tables",
+      "title": "Write an SQL query to join 3 tables",
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "sourceQuestion": {
         "fingerprint": "d4d81f4c68ec0474bb89b7d20c112c3ce0d9f8b434dc3482399d7c8eac6113a1",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-sql",
-      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2510,14 +2510,14 @@
     },
     {
       "id": "e7fc60d4b97095c16ca1d6bb",
-      "title": "Write a SQL query to get the third-highest salary of an employee from employee_table and arrange them in descending order.",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q9-write-a-sql-query-to-get-the-third-highest-salary-of-an-employee-from-employee_table-and-arrange-them-in-descending-order",
+      "title": "Write a SQL query to get the third-highest salary of an employee from employee_table and arrange them in descending order.",
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "sourceQuestion": {
         "fingerprint": "f3fb50064c054fbec89ced6668365a26f61f80032d6b58286f903bb6d867279c",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-sql",
-      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2528,14 +2528,14 @@
     },
     {
       "id": "e12e31b1549ea203a4570222",
-      "title": "What is the difference between temporary tables and common table expressions?",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q10-what-is-the-difference-between-temporary-tables-and-common-table-expressions",
+      "title": "What is the difference between temporary tables and common table expressions?",
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "sourceQuestion": {
         "fingerprint": "6c71156961ac158fc7fd72fb63a201e8224ce523e9612ca51551843f1f21c961",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-sql",
-      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2546,14 +2546,14 @@
     },
     {
       "id": "adc64eca2736b816cf513d8f",
-      "title": "Why use Right Join When Left Join can suffice the requirement?",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q11-why-use-right-join-when-left-join-can-suffice-the-requirement",
+      "title": "Why use Right Join When Left Join can suffice the requirement?",
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "sourceQuestion": {
         "fingerprint": "68a4f8baecd3b909b45e35eb6e740e5eb4db5b4a3189bcdc68078e622be6e5b3",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-sql",
-      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2564,14 +2564,14 @@
     },
     {
       "id": "fd54d75357377bd9aae253c8",
-      "title": "Why Rank skips sequence?",
       "url": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md#q12-why-rank-skips-sequence",
+      "title": "Why Rank skips sequence?",
+      "sourceId": "youssef-hosni-sql",
+      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "sourceQuestion": {
         "fingerprint": "68aced18491f8fa2b60ab99740b44a9f3e870e9edd0894546c2e0c776f900747",
         "documentUrl": "https://github.com/youssefHosni/Data-Science-Interview-Questions-Answers/blob/main/SQL%20%26%20DB%20Interview%20Questions%20%26%20Answers%20for%20Data%20Scientists.md"
       },
-      "sourceId": "youssef-hosni-sql",
-      "retrievedAt": "2026-10-16T04:42:24.015Z",
       "review": {
         "status": "drafted",
         "questionIds": [
@@ -2579,6 +2579,76 @@
         ],
         "note": "Original content passed independent source, mathematical and duplication review. Awaiting maintainer review before publication. One combined original leaderboard scenario covers both sources. Specify NULL handling and deterministic final ORDER BY; ROW_NUMBER is different selection goal."
       }
+    },
+    {
+      "id": "dd1029b4b030aba3c24c66f5",
+      "url": "https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/",
+      "title": "Grounding AI agents in biological reality: Building blocks for autonomous wet labs",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-19T06:16:15.169Z"
+    },
+    {
+      "id": "efcae84cfa43c7d672d0d1ca",
+      "url": "https://blog.scikit-learn.org/team/community-voices-lucy/",
+      "title": "Community Voices: Interview with Lucy Liu, scikit-learn core maintainer",
+      "sourceId": "scikit-learn-blog",
+      "retrievedAt": "2026-10-19T06:16:15.170Z"
+    },
+    {
+      "id": "436fab6b0fb8937fb881d545",
+      "url": "https://github.com/microsoft/LoRA/blob/main/README.md",
+      "title": "Microsoft LoRA",
+      "sourceId": "microsoft-lora",
+      "retrievedAt": "2026-10-19T06:16:15.170Z"
+    },
+    {
+      "id": "4c456e668ef45cba83b59adb",
+      "url": "https://research.google/blog/putting-earth-ai-to-work-geospatial-agents-for-our-planets-biggest-challenges/",
+      "title": "Putting Earth AI to work: Geospatial agents for our planet's biggest challenges",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-19T06:16:15.170Z"
+    },
+    {
+      "id": "6a265691abd4461ea33d5d24",
+      "url": "https://blog.scikit-learn.org/updates/update-on-metadata-routing/",
+      "title": "An Update on Metadata Routing",
+      "sourceId": "scikit-learn-blog",
+      "retrievedAt": "2026-10-19T06:16:15.170Z"
+    },
+    {
+      "id": "6c3fa003d587daac7dd7e8a1",
+      "url": "https://research.google/blog/analyzing-technical-documents-with-deep-review/",
+      "title": "Analyzing technical documents with Deep Review",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-19T06:16:15.170Z"
+    },
+    {
+      "id": "d5c1a93c9616321c0398e8bf",
+      "url": "https://blog.scikit-learn.org/updates/release-1-9/",
+      "title": "scikit-learn release 1.9: better numerics, new core functionality",
+      "sourceId": "scikit-learn-blog",
+      "retrievedAt": "2026-10-19T06:16:15.170Z"
+    },
+    {
+      "id": "f366508f96854306126fa981",
+      "url": "https://research.google/blog/research-2026-10-ways-were-amplifying-human-ingenuity/",
+      "title": "Research@ 2026: 10 ways we're amplifying human ingenuity",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-19T06:16:15.170Z"
+    },
+    {
+      "id": "d034b4f0fbe3c45947a950f6",
+      "url": "https://blog.scikit-learn.org/updates/update-array-api/",
+      "title": "Update on array API adoption in scikit-learn",
+      "sourceId": "scikit-learn-blog",
+      "retrievedAt": "2026-10-19T06:16:15.170Z"
+    },
+    {
+      "id": "b96cc914fffc078602a8102a",
+      "url": "https://research.google/blog/does-better-work-always-mean-better-workers/",
+      "title": "Does better work always mean better workers?",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-10-19T06:16:15.170Z"
     }
   ]
 }
