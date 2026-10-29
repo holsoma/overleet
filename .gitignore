@@ -24,3 +24,8 @@ tmp/
 lib/generated/
 *.log
 .DS_Store
+
+# Local video files and rendering projects
+*.mp4
+/video/
+/docs/media/overleet-promo*

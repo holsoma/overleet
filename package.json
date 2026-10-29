@@ -24,11 +24,7 @@
     "validate:questions": "tsx scripts/validate-questions.ts",
     "collect:questions": "tsx scripts/collect-questions.ts",
     "check:files": "tsx scripts/check-tracked-files.ts",
-    "scan:secrets": "node scripts/scan-secrets.mjs",
-    "video:setup": "npm ci --prefix video",
-    "video:studio": "npm run dev --prefix video -- --no-open",
-    "video:check": "npm run lint --prefix video",
-    "video:render": "npm run render --prefix video"
+    "scan:secrets": "node scripts/scan-secrets.mjs"
   },
   "dependencies": {
     "next": "16.4.1", "react": "19.3.1", "react-dom": "19.3.1", "next-auth": "4.24.15",
