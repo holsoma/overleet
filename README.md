@@ -8,6 +8,18 @@ Browse 320 original questions in this revision, write your answer, reveal the ex
 
 Run locally with PostgreSQL, or use the [free public deployment guide](docs/deployment.md) for Vercel Hobby and Neon Free. No paid model, scraping service or hosted database plan is required.
 
+## Promo
+
+[![Watch the 15-second OVERLEET promo: Think it through.](docs/media/overleet-promo-poster.svg)](docs/media/overleet-promo.mp4)
+
+[Watch or download the promo (MP4)](docs/media/overleet-promo.mp4). 15 seconds, 1080p, with on-screen text and no audio. It shows choosing a question, writing an answer and checking an explanation. The study interface is simplified for the video.
+
+The editable Remotion project and render commands are in [video/README.md](video/README.md).
+
+## Contributing
+
+Contributions can add original questions, correct explanations, fix bugs or improve accessibility. Read [CONTRIBUTING.md](CONTRIBUTING.md) for local setup, content requirements and checks before opening a pull request. Report security issues using [SECURITY.md](SECURITY.md).
+
 ## Requirements
 
 - Node.js 22.20.0 (see `.nvmrc`) and npm 10 or later.

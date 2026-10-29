@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">OVERLEET: Think it through.</title>
+  <desc id="desc">Play the 15-second promo for sourced Data Science interview practice.</desc>
+  <rect width="1920" height="1080" fill="#171b17"/>
+  <path d="M144 182h1632" stroke="#394136" stroke-width="2"/>
+  <text x="144" y="143" fill="#b9dc70" font-family="Consolas,monospace" font-size="48" font-weight="700">OVERLEET</text>
+  <text x="144" y="405" fill="#f0f3e9" font-family="Arial,sans-serif" font-size="172" font-weight="700" letter-spacing="-7">Think it</text>
+  <text x="144" y="580" fill="#b9dc70" font-family="Arial,sans-serif" font-size="172" font-weight="700" letter-spacing="-7">through.</text>
+  <text x="151" y="694" fill="#c1c9ba" font-family="Arial,sans-serif" font-size="46">Sourced Data Science interview practice.</text>
+  <rect x="144" y="817" width="420" height="104" rx="8" fill="#b9dc70"/>
+  <path d="M182 849v40l34-20z" fill="#171b17"/>
+  <text x="242" y="884" fill="#171b17" font-family="Arial,sans-serif" font-size="38" font-weight="700">Play the promo</text>
+  <text x="144" y="990" fill="#9da895" font-family="Consolas,monospace" font-size="28">15 SECONDS / 1080P / MP4</text>
+  <text x="1776" y="990" text-anchor="end" fill="#c1c9ba" font-family="Consolas,monospace" font-size="32">overleet.vercel.app</text>
+</svg>
