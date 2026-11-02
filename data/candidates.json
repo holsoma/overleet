@@ -2649,6 +2649,76 @@
       "title": "Does better work always mean better workers?",
       "sourceId": "google-research",
       "retrievedAt": "2026-10-19T06:16:15.170Z"
+    },
+    {
+      "id": "b49ec3bd8394c6fb4c19e797",
+      "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
+      "title": "The sleep framework: A new way for LLMs to retain knowledge in continual learning",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-11-02T07:44:03.849Z"
+    },
+    {
+      "id": "b33a4878023c55c08244637e",
+      "url": "https://blog.scikit-learn.org/updates/enhancing-user-experience/",
+      "title": "Enhancing user experience through interactive inspection",
+      "sourceId": "scikit-learn-blog",
+      "retrievedAt": "2026-11-02T07:44:03.850Z"
+    },
+    {
+      "id": "32ef7801f5802984dfdd22dd",
+      "url": "https://research.google/blog/bringing-foundational-models-to-the-front-lines-of-tb-screening/",
+      "title": "Bringing foundational models to the front lines of TB screening",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-11-02T07:44:03.850Z"
+    },
+    {
+      "id": "7c3f2c509e34015d962edfbc",
+      "url": "https://blog.scikit-learn.org/team/virgil-chan-interview/",
+      "title": "Interview with Virgil Chan, scikit-learn Team Member",
+      "sourceId": "scikit-learn-blog",
+      "retrievedAt": "2026-11-02T07:44:03.850Z"
+    },
+    {
+      "id": "3bfcd79e09f177c0e0d91fdc",
+      "url": "https://research.google/blog/empowering-frontline-maternal-care-with-ai-assisted-ultrasound/",
+      "title": "Empowering frontline maternal care with AI-assisted ultrasound",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-11-02T07:44:03.850Z"
+    },
+    {
+      "id": "32cd6bc193bcd092cddc038e",
+      "url": "https://blog.scikit-learn.org/press/gh-sosf/",
+      "title": "scikit-learn Completes the GitHub Secure Open Source Training",
+      "sourceId": "scikit-learn-blog",
+      "retrievedAt": "2026-11-02T07:44:03.850Z"
+    },
+    {
+      "id": "c02127d349672db4a213f696",
+      "url": "https://research.google/blog/earth-ais-planetary-geospatial-foundation-models-for-global-public-health/",
+      "title": "Unlocking Earth AI’s planetary geospatial foundation models for global public health",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-11-02T07:44:03.850Z"
+    },
+    {
+      "id": "7b29d582a6e9ac605b552c78",
+      "url": "https://blog.scikit-learn.org/updates/probabl-skolar/",
+      "title": "Skolar: an open-source initiative to democratize open data science",
+      "sourceId": "scikit-learn-blog",
+      "retrievedAt": "2026-11-02T07:44:03.850Z"
+    },
+    {
+      "id": "7eeb0a9dde53453907ecbc46",
+      "url": "https://research.google/blog/open-and-emergent-problems-in-agentic-privacy-and-security-a-contextual-angle/",
+      "title": "Open and Emergent Problems in Agentic Privacy and Security: A Contextual Angle",
+      "sourceId": "google-research",
+      "retrievedAt": "2026-11-02T07:44:03.850Z"
+    },
+    {
+      "id": "f5f95efb5b22ac5a94462358",
+      "url": "https://blog.scikit-learn.org/updates/dev-api/",
+      "title": "Changes and development of scikit-learn’s developer API",
+      "sourceId": "scikit-learn-blog",
+      "retrievedAt": "2026-11-02T07:44:03.850Z"
     }
   ]
 }
